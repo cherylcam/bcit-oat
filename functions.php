@@ -159,4 +159,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Register Custom Post Types
+ */
 require get_template_directory() . '/inc/register-cpt.php';
