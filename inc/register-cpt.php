@@ -48,7 +48,7 @@ function oat_register_custom_post_types() {
     );
     register_post_type( 'oat-cert', $args );
 
-    // this is for Staffs custom post type
+    // this is for Courses custom post type
     $labels = array(
         'name'               => _x( 'Courses', 'post type general name' ),
         'singular_name'      => _x( 'Course', 'post type singular name'),
@@ -102,4 +102,4 @@ function oat_rewrite_flush() {
     oat_register_custom_post_types();
 	flush_rewrite_rules();
 }
-add_action( 'after_switch_theme', 'oat_rewrite_flush' );
+add_action( 'init', 'oat_register_custom_post_types' );
