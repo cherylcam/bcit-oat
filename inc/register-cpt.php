@@ -1,6 +1,6 @@
 <?php
 
-function bcit_oat_register_custom_post_types() {
+function oat_register_custom_post_types() {
     $labels = array(
         'name'               => _x( 'Certifications', 'post type general name' ),
         'singular_name'      => _x( 'Certification', 'post type singular name'),
@@ -46,6 +46,6 @@ function bcit_oat_register_custom_post_types() {
         'menu_icon'          => 'dashicons-admin-network',
         'supports'           => array( 'title', 'thumbnail', 'editor' ),
     );
-    register_post_type( 'bcit-oat-cert', $args );
+    register_post_type( 'oat-cert', $args );
 }
-add_action( 'init', 'bcit_oat_register_custom_post_types' );
+add_action( 'init', 'oat_register_custom_post_types' );
