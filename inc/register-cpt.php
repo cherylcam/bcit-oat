@@ -142,8 +142,6 @@ function oat_register_custom_post_types() {
 }
 add_action( 'init', 'oat_register_custom_post_types' );
 
-
-
 function oat_rewrite_flush() {
     oat_register_custom_post_types();
 	flush_rewrite_rules();
