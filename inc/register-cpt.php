@@ -1,6 +1,8 @@
 <?php
 
 function oat_register_custom_post_types() {
+
+    // this is for Certifications custom post type
     $labels = array(
         'name'               => _x( 'Certifications', 'post type general name' ),
         'singular_name'      => _x( 'Certification', 'post type singular name'),
@@ -67,8 +69,6 @@ function oat_register_custom_post_types() {
 		'insert_into_item'   => __( 'Insert into staff'),
 		'uploaded_to_this_item' => __( 'Uploaded to this staff'),
 		);
-	
-
 
 	$args = array(
 		'labels'             => $labels,
@@ -89,7 +89,7 @@ function oat_register_custom_post_types() {
 	
     register_post_type( 'oat-staff', $args );
 
-        // this is for Courses custom post type
+    // this is for Courses custom post type
     $labels = array(
         'name'               => _x( 'Courses', 'post type general name' ),
         'singular_name'      => _x( 'Course', 'post type singular name'),
@@ -133,14 +133,14 @@ function oat_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 6,
         'menu_icon'          => 'dashicons-book-alt',
-        'supports'           => array( 'title', 'thumbnail', 'editor' ),
+        'supports'           => array( 'title' ),
+        // Prevent moving, inserting, deleting blocks
+		'template_lock' 	 => 'all',
     );
     register_post_type( 'oat-courses', $args );
 
 }
 add_action( 'init', 'oat_register_custom_post_types' );
-
-
 
 function oat_rewrite_flush() {
     oat_register_custom_post_types();
