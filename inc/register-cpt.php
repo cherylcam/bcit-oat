@@ -44,10 +44,9 @@ function oat_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-admin-network',
-        'supports'           => array( 'title', 'thumbnail', 'editor' ),
+        'supports'           => array('title'),
     );
-    register_post_type( 'oat-cert', $args );
-
+    register_post_type( 'oat-certifications', $args );
 
     // Register OAT Faculty Staff CPT
 	$labels = array(
