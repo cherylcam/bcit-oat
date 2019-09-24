@@ -89,12 +89,8 @@ function oat_register_custom_post_types() {
 		);
 	
     register_post_type( 'oat-staff', $args );
-    
 
-}
-add_action( 'init', 'oat_register_custom_post_types' );
-
-    // this is for Courses custom post type
+        // this is for Courses custom post type
     $labels = array(
         'name'               => _x( 'Courses', 'post type general name' ),
         'singular_name'      => _x( 'Course', 'post type singular name'),
@@ -141,8 +137,11 @@ add_action( 'init', 'oat_register_custom_post_types' );
         'supports'           => array( 'title', 'thumbnail', 'editor' ),
     );
     register_post_type( 'oat-courses', $args );
+
 }
 add_action( 'init', 'oat_register_custom_post_types' );
+
+
 
 function oat_rewrite_flush() {
     oat_register_custom_post_types();

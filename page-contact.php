@@ -27,6 +27,30 @@ get_header();
 			endif;
 
 		endwhile; // End of the loop.
+
+		$terms = get_terms( 
+			array(
+				'post_type' => 'oat-staff'
+			)
+		);
+		
+		if( $terms && ! is_wp_error( $terms ) ){
+			echo '<section class="widget">';
+			echo '<h2 class="faculty-staff">Faculty Contact</h2>';
+			echo '<ul>';
+			foreach( $terms as $term ){
+				echo '<li>';
+				echo '<a href="' . get_term_link( $term ) . '">';
+				echo $term->name;
+				echo '</a>';	
+				echo '</li>';
+			}
+			wp_reset_postdata();
+			echo '</ul>';
+			echo '</section>';
+		}	
+
+
 		?>
 
 		</main><!-- #main -->
