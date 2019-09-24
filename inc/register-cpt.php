@@ -133,7 +133,9 @@ function oat_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 6,
         'menu_icon'          => 'dashicons-book-alt',
-        'supports'           => array( 'title', 'thumbnail', 'editor' ),
+        'supports'           => array( 'title' ),
+        // Prevent moving, inserting, deleting blocks
+		'template_lock' 	 => 'all',
     );
     register_post_type( 'oat-courses', $args );
 
