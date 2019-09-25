@@ -25,22 +25,35 @@ get_header();
 				echo '</h1>';
 
 			while ( have_rows('faculty_staff') ) : the_row();
+			
+			?>
+			<div class="staff-container">
+				<p>Name:
+					<?php
+						echo '<b class="schedule-title">' . the_sub_field('faculty_name') . '</b>';
+					?>
+			  	</p>
+				<p> Role: 
+					<?php
+						echo '<b>' . the_sub_field('faculty_position') . '</b>';
+					?>
+				</p>
+				<p> Number: 
+					<?php
+						echo '<b>' . the_sub_field('faculty_number') . '</b>';
+					?>
+				</p>
+				<p> Email: 
+					<?php
+						echo '<b>' . the_sub_field('faculty_email') . '</b>';
+					?>
+				</p>
 
-		
-				echo '<div class="staff-container">';		
-				echo '<p> Name: ';
-				echo '<b class="schedule-title">' . the_sub_field('faculty_name') . '</b>';
-				echo '</p>';
-				echo '<p> Role:  ';
-				echo '<b>' . the_sub_field('faculty_position') . '</b>';
-				echo '</p>';
-				echo '<p> Number:   ';
-				echo '<b>' . the_sub_field('faculty_number') . '</b>';
-				echo '</p>';
-				echo '<p>  Email:   ';
-				echo '<b>' . the_sub_field('faculty_email') . '</b>';
-				echo '</p>';
-				echo '</div>';
+
+
+			</div>	
+
+			<?php
 
 
 			endwhile;
