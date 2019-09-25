@@ -46,9 +46,9 @@ function oat_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-admin-network',
-        'supports'           => array( 'title', 'thumbnail', 'editor' ),
+        'supports'           => array('title'),
     );
-    register_post_type( 'oat-cert', $args );
+    register_post_type( 'oat-certifications', $args );
 
 
 
@@ -96,14 +96,14 @@ function oat_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 6,
         'menu_icon'          => 'dashicons-book-alt',
-        'supports'           => array( 'title', 'thumbnail', 'editor' ),
+        'supports'           => array( 'title' ),
+        // Prevent moving, inserting, deleting blocks
+		'template_lock' 	 => 'all',
     );
     register_post_type( 'oat-courses', $args );
 
 }
 add_action( 'init', 'oat_register_custom_post_types' );
-
-
 
 function oat_rewrite_flush() {
     oat_register_custom_post_types();

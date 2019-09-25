@@ -15,17 +15,26 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bcit-oat' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'bcit-oat' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bcit-oat' ), 'bcit-oat', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+			<!-- Student Links -->
+			<div class="students"></div>
+
+			<!-- Program Links -->
+			<div class="program"></div>
+
+			<!-- Find Us -->			
+			<div class="find-us">
+				<h1>Find Us</h1>
+
+				<!-- Address -->
+				<p class='address'></p>
+
+				<!-- Phone Number -->
+				<p class='phone-number'></p>
+
+				<!-- BCIT Contact Numbers -->
+				<a href='https://www.bcit.ca/contacts/'>More Contact Numbers</a>
+				
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
