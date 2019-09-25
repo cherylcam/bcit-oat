@@ -855,6 +855,54 @@ object {
 /*--------------------------------------------------------------
 # Certifications
 --------------------------------------------------------------*/
+.certifications {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.certifications .certification {
+  border: 1px solid red;
+  max-width: 320px;
+  height: 480px;
+  flex-basis: 100%;
+  border: 1px solid #E0E0E0;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.16);
+  padding: 0 25px;
+  margin: 50px 0;
+}
+.certifications .certification h2 {
+  text-align: center;
+  margin: 25px 0;
+  height: 72px;
+}
+.certifications .certification img {
+  margin: 25px 0;
+}
+.certifications .certification p {
+  margin: 25px 0;
+  height: 120px;
+}
+.certifications .certification a {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  background-color: blue;
+}
+
+@media (min-width: 640px) {
+  .certifications .certification {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1280px) {
+  .certifications .certification {
+    flex-basis: 25%;
+  }
+}
 /*--------------------------------------------------------------
 # Careers
 --------------------------------------------------------------*/
