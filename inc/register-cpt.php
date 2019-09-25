@@ -93,10 +93,10 @@ function oat_register_custom_post_types() {
         'rewrite'            => array( 'slug' => 'courses' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'hierarchical'       => true,
+        'hierarchical'       => false,
         'menu_position'      => 6,
         'menu_icon'          => 'dashicons-book-alt',
-        'supports'           => array( 'title' ),
+        'supports'           => array('title'),
         // Prevent moving, inserting, deleting blocks
 		'template_lock' 	 => 'all',
     );
