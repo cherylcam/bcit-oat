@@ -907,12 +907,15 @@ object {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    grid-gap: 5px; }
+    grid-gap: 10px; }
   .container-main .faculty-container,
   .container-main .program-container {
-    background-color: #21437A;
+    background-color: #4285F4;
     padding: 5px 10px; }
+  .container-main .faculty-container h2 {
+    color: #b6b6b6;
+    border-bottom: 1px solid #b6b6b6; }
   .container-main .faculty-container p {
-    color: #666; }
+    color: #b6b6b6; }
 
 /*# sourceMappingURL=style.css.map */
