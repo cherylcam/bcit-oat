@@ -13,19 +13,20 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main container-main">
+
 
 
 		<?php
 			if( have_rows('faculty_staff') ):
-
+	
 				echo '<h1>';
 				the_title();
 				echo '</h1>';
 
 			while ( have_rows('faculty_staff') ) : the_row();			
 		?>
-		
+	<div class="contact-wrapper">		
 		<section class="faculty-container">
 			<h2>Faculty Contact</h2>
 				<article class="faculty-staff">					
@@ -44,7 +45,7 @@ get_header();
 				</article>
 			</section>	<!-- End of Faculty Contact Container -->
 
-			<!-- Program Info -->
+		<!-- Program Info -->
 		<?php
 			if( have_rows('program_info') ):
 
@@ -116,7 +117,8 @@ get_header();
 			endif;
 		?>
 
-
+	
+	<div> <!-- End of Contact wrapper -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -1,0 +1,12 @@
+.container-main {
+    border: 1px red solid;
+    display: block;
+    margin: 5px 10px;
+
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+}
