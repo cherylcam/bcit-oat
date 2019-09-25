@@ -864,6 +864,13 @@ object {
   .container-main .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
+    grid-template-rows: 1fr;
+    grid-gap: 5px; }
+  .container-main .faculty-container,
+  .container-main .program-container {
+    background-color: #21437A;
+    padding: 5px 10px; }
+  .container-main .faculty-container p {
+    color: #666; }
 
 /*# sourceMappingURL=style.css.map */
