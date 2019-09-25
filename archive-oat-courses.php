@@ -41,7 +41,10 @@ get_header();
 							<?php endif; ?>
 
 							<?php if( $file ): ?>
-									<a href="<?php echo $file['url']; ?>">Download OAT <?php echo ucwords(strtolower(substr(strstr(get_the_title()," "), 1))); ?> Course Outline</a>
+									<div class="course-outline">
+										<i class="fas fa-paperclip"></i>
+										<a href="<?php echo $file['url']; ?>">Download OAT <?php echo ucwords(strtolower(substr(strstr(get_the_title()," "), 1))); ?> Course Outline</a>
+									</div>
 							<?php endif; ?>
 
 							<?php if( get_field('course_image') ): 

@@ -10,6 +10,8 @@
 
     section{
         .course-wrap{
+            margin-bottom: 25px;
+
             .course-heading{
                 font-size: 1.2em;
                 border-bottom: 2px solid $color__main-theme;
@@ -22,10 +24,32 @@
                 }
             } 
 
-            a{
-                text-decoration: none;
-                color: $color__text-main;
-                font-weight: 500;
+            p{
+                margin-bottom: 10px;
+                font-weight: 300;
+            }
+
+            .course-outline{
+               i{
+                    color: $color__main-theme;
+                }
+
+                a{
+                    margin-left: 3px;
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: $color__main-theme;
+                } 
+
+                #{$link-hover-selector} {
+                    i{
+                        color: $color__main-theme-light;
+                    }
+                }
+            } 
+            
+            img{
+                display: none;
             }
         }
     } 
