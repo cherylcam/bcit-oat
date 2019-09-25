@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying archive courses page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -22,22 +22,36 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+		<?php
+		while ( have_posts() ) :
+			the_post();
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+			the_title();
 
-			endwhile;
-
-			the_posts_navigation();
-
+			if( function_exists('get_field') ){
+				$file = get_field('course_outline');
+				if( get_field('credits') ){
+					echo '<span> Credits: ';
+					the_field('credits');
+					echo '</span>';
+				}
+				if( get_field('course_description') ){
+					echo '<p>';
+					the_field('course_description');
+					echo '</p>';
+				}
+				if( $file ){
+				?>
+					<a href="<?php echo $file['url']; ?>">Download OAT <?php echo ucwords(strtolower(substr(strstr(get_the_title()," "), 1))); ?> Course Outline</a>
+				<?php	
+				}		
+				if( get_field('course_image') ){
+					echo wp_get_attachment_image( get_field('course_image'), 'large' );
+				}
+			}
+			
+		endwhile;
+			
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
@@ -49,5 +63,5 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();
