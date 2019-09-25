@@ -847,6 +847,10 @@ object {
       font-weight: 400;
       font-size: 0.8em;
       font-style: italic; }
+  .post-type-archive-oat-courses section .course-wrap a {
+    text-decoration: none;
+    color: #404040;
+    font-weight: 500; }
 
 /*--------------------------------------------------------------
 # Certifications

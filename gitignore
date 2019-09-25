@@ -47,6 +47,8 @@ Temporary Items
 
 .sass-cache
 *.scssc
+.css
+.css.map
 
 # Sublime Text 2 or 3 specific files #
 #################################
