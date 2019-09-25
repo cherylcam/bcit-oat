@@ -50,8 +50,6 @@ function oat_register_custom_post_types() {
     );
     register_post_type( 'oat-certifications', $args );
 
-
-
     // this is for Courses custom post type
     $labels = array(
         'name'               => _x( 'Courses', 'post type general name' ),
