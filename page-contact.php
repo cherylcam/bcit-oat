@@ -15,47 +15,48 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
+
 		<?php
-		while ( have_posts() ) :
-			the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+			if( have_rows('faculty_staff') ):
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+				echo '<h1>';
+				the_title();
+				echo '</h1>';
 
-		endwhile; // End of the loop.
+			while ( have_rows('faculty_staff') ) : the_row();
 
-		$terms = get_terms( 
-			array(
-				'post_type' => 'oat-staff'
-			)
-		);
 		
-		if( $terms && ! is_wp_error( $terms ) ){
-			echo '<section class="widget">';
-			echo '<h2 class="faculty-staff">Faculty Contact</h2>';
-			echo '<ul>';
-			foreach( $terms as $term ){
-				echo '<li>';
-				echo '<a href="' . get_term_link( $term ) . '">';
-				echo $term->name;
-				echo '</a>';	
-				echo '</li>';
-			}
-			wp_reset_postdata();
-			echo '</ul>';
-			echo '</section>';
-		}	
+				echo '<div class="staff-container">';		
+				echo '<p> Name: ';
+				echo '<b class="schedule-title">' . the_sub_field('faculty_name') . '</b>';
+				echo '</p>';
+				echo '<p> Role:  ';
+				echo '<b>' . the_sub_field('faculty_position') . '</b>';
+				echo '</p>';
+				echo '<p> Number:   ';
+				echo '<b>' . the_sub_field('faculty_number') . '</b>';
+				echo '</p>';
+				echo '<p>  Email:   ';
+				echo '<b>' . the_sub_field('faculty_email') . '</b>';
+				echo '</p>';
+				echo '</div>';
 
 
+			endwhile;
+
+			else :
+
+			// no rows found
+
+			endif;
 		?>
+
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();
