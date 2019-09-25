@@ -1,5 +1,4 @@
 .container-main {
-    border: 1px red solid;
     display: block;
     margin: 5px 10px;
 
@@ -7,17 +6,25 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        grid-gap: 5px;
+        grid-gap: 10px;
     }
 
-    .faculty-container,
-    .program-container {
-        background-color: $color__main-theme;
+    .faculty-staff,
+    .program-info {
+        background-color: $color__main-theme-light;
         padding: 5px 10px;
     }
 
-    .faculty-container p {
-        color: $color__text-input;
+    .faculty-container  {
+        
+        h2 {
+        color: $color__text-main;
+        }
+
+        p {
+        color: $color__text-input-light;
+        }
+        
     }
 
 }
