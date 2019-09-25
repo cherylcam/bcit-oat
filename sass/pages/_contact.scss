@@ -7,6 +7,17 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        grid-gap: 5px;
+    }
+
+    .faculty-container,
+    .program-container {
+        background-color: $color__main-theme;
+        padding: 5px 10px;
+    }
+
+    .faculty-container p {
+        color: $color__text-input;
     }
 
 }

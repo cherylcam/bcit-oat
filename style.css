@@ -976,6 +976,11 @@ object {
   font-size: 0.8em;
   font-style: italic;
 }
+.post-type-archive-oat-courses section .course-wrap a {
+  text-decoration: none;
+  color: #404040;
+  font-weight: 500;
+}
 
 /*--------------------------------------------------------------
 # Certifications
@@ -1043,6 +1048,15 @@ object {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  grid-gap: 5px;
+}
+.container-main .faculty-container,
+.container-main .program-container {
+  background-color: #21437A;
+  padding: 5px 10px;
+}
+.container-main .faculty-container p {
+  color: #666;
 }
 
 /*# sourceMappingURL=style.css.map */
