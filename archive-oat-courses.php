@@ -28,27 +28,31 @@ get_header();
 
 			the_title();
 
-			if( function_exists('get_field') ){
+			if( function_exists('get_field') ):
 				$file = get_field('course_outline');
-				if( get_field('credits') ){
+				if( get_field('credits') ):
 					echo '<span> Credits: ';
 					the_field('credits');
 					echo '</span>';
-				}
-				if( get_field('course_description') ){
+				endif;
+
+				if( get_field('course_description') ):
 					echo '<p>';
 					the_field('course_description');
 					echo '</p>';
-				}
-				if( $file ){
+				endif;
+
+				if( $file ):
 				?>
 					<a href="<?php echo $file['url']; ?>">Download OAT <?php echo ucwords(strtolower(substr(strstr(get_the_title()," "), 1))); ?> Course Outline</a>
 				<?php	
-				}		
-				if( get_field('course_image') ){
+				endif;
+
+				if( get_field('course_image') ):
 					echo wp_get_attachment_image( get_field('course_image'), 'large' );
-				}
-			}
+				endif;
+
+			endif;
 			
 		endwhile;
 			
