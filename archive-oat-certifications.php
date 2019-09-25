@@ -18,35 +18,44 @@ get_header();
 			<header class="page-header">
 				<h1 class="page-title">Certifications</h1>
 			</header><!-- .page-header -->
-			<?php
-				while(have_posts()): 
-			?>
 
-			<?php
-					the_post();
-					the_title();
-					if(function_exists('get_field')):
-						if(get_field('logo')):
-			?>
-							<img src="<?php the_field('logo'); ?>">
-			<?php
-						endif;
+			<div class="certifications"><!-- .certifications -->
+				<?php
+					while(have_posts()): 
+				?>
 
-						if(get_field('description')):
-							the_field('description');
-						endif;
+				<div class="certification"><!-- .certification -->
+				<?php
+						the_post();
+				?>
+						<h2><?php the_title(); ?></h2>
+				<?php
+						if(function_exists('get_field')):
+							if(get_field('logo')):
+				?>
+								<img src="<?php the_field('logo'); ?>">
+				<?php
+							endif;
 
-						if(get_field('url')):
-			?>
-							<a href="<?php the_field('url'); ?>">More Info</a>
-			<?php
+							if(get_field('description')):
+				?>
+								<p><?php the_field('description'); ?></p>
+				<?php
+							endif;
+
+							if(get_field('url')):
+				?>
+								<a href="<?php the_field('url'); ?>" target="_blank">More Info</a>
+				<?php
+							endif;
 						endif;
-					endif;
-				endwhile;
-			?>
+				?>
+				</div>
+				<?php
+					endwhile;
+				?>
+			</div>
 		<?php endif; ?>
-		
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
