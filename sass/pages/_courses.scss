@@ -47,10 +47,32 @@
                     }
                 }
             } 
-            
-            img{
-                display: none;
-            }
         }
     } 
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media only screen and (min-width: 500px){
+    .post-type-archive-oat-courses{
+
+        section{
+            .course-wrap{
+                margin-bottom: 25px;
+    
+                .course-heading{
+                    font-size: 1.4em;
+                    display: grid;
+                    grid-template-columns: 1fr 100px;
+            
+                    .credits{
+                        justify-self: flex-end;
+                        line-height: 30px;
+                    }
+                } 
+            }
+        } 
+    }
 }
