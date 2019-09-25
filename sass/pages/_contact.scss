@@ -1,5 +1,4 @@
 .container-main {
-    border: 1px red solid;
     display: block;
     margin: 5px 10px;
 
@@ -10,8 +9,8 @@
         grid-gap: 10px;
     }
 
-    .faculty-container,
-    .program-container {
+    .faculty-staff,
+    .program-info {
         background-color: $color__main-theme-light;
         padding: 5px 10px;
     }
@@ -19,8 +18,7 @@
     .faculty-container  {
         
         h2 {
-        color: $color__text-input-light;
-        border-bottom: 1px solid $color__text-input-light;
+        color: $color__text-main;
         }
 
         p {
