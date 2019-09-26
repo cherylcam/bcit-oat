@@ -15,14 +15,19 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container-main">
 
-
-
+			
 		<?php
+		while ( have_posts() ) :
+			the_post();
+			?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+	<?php
 			if( have_rows('faculty_staff') ):
-	
-				echo '<h1>';
-				the_title();
-				echo '</h1>';
 
 			while ( have_rows('faculty_staff') ) : the_row();			
 		?>
@@ -48,6 +53,13 @@ get_header();
 					</p>
 				</article>
 			</section>	<!-- End of Faculty Contact Container -->
+				<?php
+				
+					endwhile;
+					endif;
+
+						
+				?>
 
 		<!-- Program Info -->
 		<?php
@@ -88,43 +100,34 @@ get_header();
 				</article>	
 			</section>  <!-- End of Program Location Container -->
 
+			<?php
+			
+				endwhile;
+				endif;
+
+			?>
+
 			<div class="bcit-map">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.6312010021024!2d-123.11752518431048!3d49.28338507933136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867178c92a69b9%3A0x6b40938af55472d6!2s555+Seymour+St%2C+Vancouver%2C+BC+V6B+3H6!5e0!3m2!1sen!2sca!4v1566424196502!5m2!1sen!2sca" width="500" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
 			</div>
-			
+
+
 		<?php
-		while ( have_posts() ) :
-			the_post();
+		the_content();
 
-			get_template_part( 'template-parts/content', 'page' );
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bcit-oat' ),
+			'after'  => '</div>',
+		) );
+		?>
+	</div><!-- .entry-content -->
+</article><!-- #post-<?php the_ID(); ?> -->
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			
+			<?php
 
 		endwhile; // End of the loop.
 		?>
-
-		<?php
-		
-			endwhile;
-
-			else :
-
-			// no rows found
-
-			endif;
-
-			endwhile;
-
-			else :
-
-			// no rows found
-
-			endif;
-		?>
-
 	
 	<div> <!-- End of Contact wrapper -->
 
