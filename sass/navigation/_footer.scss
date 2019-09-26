@@ -1,16 +1,29 @@
-.site-footer {
-    color: white;
-    .site-info{
+.site-info {
+    padding: 0 6%;
+    .footer-headings {
         display: flex;
-        justify-content: space-evenly;
-        .footer-group {
+
+        h3 {
             flex: 1;
-            h3 {
-                font-weight: 300;
-                padding: 10px;
-                width: 100%;
-                background-color: #838383;
+        }
+    }
+
+    .footer-links {
+        display: flex;
+
+        .footer-section{
+            flex: 1;
+
+            .menu {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    list-style: none;
+                }
             }
         }
     }
+
+
 }

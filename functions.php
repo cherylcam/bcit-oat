@@ -44,7 +44,9 @@ if ( ! function_exists( 'bcit_oat_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'bcit-oat' ),
+			'primary' => esc_html__( 'Primary', 'bcit-oat' ),
+			'footer-students' => esc_html__( 'Footer Menu Students', 'bcit-oat' ),
+			'footer-program' => esc_html__( 'Footer Menu Program', 'bcit-oat' )
 		) );
 
 		/*
