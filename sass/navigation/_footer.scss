@@ -28,8 +28,8 @@
         width: 75px;
         height: auto;
         position: absolute;
-        display: none;
-        top: 0;
+        bottom: 0;
+        left: 0;
     }
 
     .footer-section{
@@ -92,6 +92,10 @@
 
     .footer-links{
         padding: 20px 6%;
+
+        img {
+            left: 6%;
+        }
     }
 }
 
@@ -105,15 +109,7 @@
 
         img {
             display: block;
-            right: 2.5%;
-        }
-    }
-}
-
-@media (min-width: 1250px){
-    .footer-links {
-        img{
-            right: 5%;  
+            left: 12%;
         }
     }
 }
@@ -126,7 +122,10 @@
     .footer-links{
         padding: 20px 18%;
         img {
-            right: 10%;
+            left: initial;
+            top: initial;
+            right: 12%;
+            top: 0;
         }
     }
 }
