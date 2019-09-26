@@ -9,7 +9,9 @@
         margin-top: 50px;
         .course-wrap{
             margin-bottom: 20px;
-
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            
             .course-info{
                 .course-heading{
                     font-size: 1.2em;
@@ -54,6 +56,20 @@
                 height: 100%;
             }
         }
+
+        .course-wrap.right{
+            grid-template-areas: 
+                     "top"
+                     "bottom";
+
+            .course-info{
+                grid-area: top;
+            }
+
+            img{
+                grid-area: bottom;
+            }
+        }
     } 
 }
 
@@ -64,10 +80,10 @@
 @media only screen and (min-width: 500px){
     .post-type-archive-oat-courses{
         section{
-            padding: 0 5%;
+            padding: 0 4%;
 
             .course-wrap{
-                margin-bottom: 25px;
+                margin-bottom: 40px;
     
                 .course-heading{
                     font-size: 1.4em;
@@ -94,29 +110,30 @@
 @media only screen and (min-width: 700px){
     .post-type-archive-oat-courses{
         section{
+            padding: 0 6%;
             .course-wrap{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                grid-gap: 40px; 
+                grid-template-rows: none;
+                grid-gap: 45px; 
 
                 .course-info{
                     .course-heading{
                         display: block;
                         margin-top: 0;
-
-                        .credits{
-                            right: 0;
-                        }
                     }
+                }
+            }
 
-                    p{
-                        font-size: 1.1em;
-                    }
-
-                    .course-outline{
-                        margin: 20px 0 0 0;
-                        font-size: 1.1em;
-                    } 
+            .course-wrap.right{
+                grid-template-areas:  "left right";
+    
+                .course-info{
+                    grid-area: right;
+                }
+    
+                img{
+                    grid-area: left;
                 }
             }
         } 
@@ -130,8 +147,26 @@
                 margin-bottom: 50px;
                 .course-info{
                     padding-bottom: 7%;
-                   .course-outline{
-                        margin-bottom: 0;
+
+                    .course-heading{
+                        font-size: 1.5em;
+                        display: grid;
+                        grid-template-columns: 1fr 120px;
+
+                        .credits{
+                            font-size: 0.8em;
+                            justify-self: flex-end;
+                            margin: auto 0;
+                        }
+                    }
+
+                    p{
+                        font-size: 1.1em;
+                    }
+
+                    .course-outline{
+                        margin: 20px 0 0 0;
+                        font-size: 1.1em;
                     } 
                 }
                 

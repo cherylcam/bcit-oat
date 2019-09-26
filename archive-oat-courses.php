@@ -13,11 +13,11 @@ get_header();
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
-			<?php $postCounter = 0; 
-			?>
+			<?php $postCounter = 0; ?>
+
 			<header class="page-header">
 				<h1 class="page-title">Courses</h1>
-			</header><!-- .page-header -->
+			</header><!-- page-header -->
 
 			<section>
 			<?php while ( have_posts() ) :
@@ -25,74 +25,77 @@ get_header();
 					$evenPostIdNumber = $postCounter % 2;
 					
 					if( $evenPostIdNumber == 0 ): ?>
-						<div class="course-wrap">
-						<div class="course-info">
-							<h1 class="course-heading"><?php the_title(); ?>
-								<?php if( function_exists('get_field') ):
-									$file = get_field('course_outline'); ?>
+						<div class="course-wrap left">
 
-								<?php if( get_field('credits') ): ?>
+							<div class="course-info">
+								<h1 class="course-heading"><?php the_title(); ?>
+									<?php if( function_exists('get_field') ):
+										$file = get_field('course_outline'); ?>
+									<?php if( get_field('credits') ): ?>
 										<span class="credits">Credits: <?php the_field('credits'); ?></span>
-								<?php endif; ?>
-							</h1>
+									<?php endif; ?>
+								</h1>
 
-							<?php if( get_field('course_description') ): ?>
+								<?php if( get_field('course_description') ): ?>
 									<p><?php the_field('course_description'); ?></p>
-							<?php endif; ?>
+								<?php endif; ?>
 
-							<?php if( $file ): ?>
+								<?php if( $file ): ?>
 									<div class="course-outline">
 										<i class="fas fa-paperclip"></i>
 										<a href="<?php echo $file['url']; ?>">Download OAT <?php echo ucwords(strtolower(substr(strstr(get_the_title()," "), 1))); ?> Course Outline</a>
 									</div>
-							<?php endif; ?>
-						</div> <!--end course info-->
-						<!-- <div class="course-img"> -->
+								<?php endif; ?>
+							</div> <!--end course info-->
+
 							<?php if( get_field('course_image') ): ?>
-								
-									<?php echo wp_get_attachment_image( get_field('course_image'), 'large' ); ?>
-								
-							<?php endif; ?>
-						<!-- </div> -->
-						<?php endif; ?>		
-					</div> <!---end course wrap--->
-								<?php else: ?>
-				<div class="course-wrap">
-					<!-- <div class="course-img"> -->
-					<?php if( get_field('course_image') ): ?>								
+								<?php echo wp_get_attachment_image( get_field('course_image'), 'large' ); ?>								
+							<?php endif; ?>	
+							
+						</div> <!---end course wrap--->
+
+					<?php endif; ?>	
+
+					<?php else: ?>
+						<div class="course-wrap right">
+
+							<?php if( get_field('course_image') ): ?>								
 								<?php echo wp_get_attachment_image( get_field('course_image'), 'large' ); ?>							
-						<?php endif; ?>
-					<!-- </div> -->
-						<div class="course-info">
-							<h1 class="course-heading"><?php the_title(); ?>
-								<?php if( function_exists('get_field') ):
-									$file = get_field('course_outline'); ?>
+							<?php endif; ?>
 
-								<?php if( get_field('credits') ): ?>
-										<span class="credits">Credits: <?php the_field('credits'); ?></span>
+							<div class="course-info">
+								<h1 class="course-heading"><?php the_title(); ?>
+									<?php if( function_exists('get_field') ):
+										$file = get_field('course_outline'); ?>
+									<?php if( get_field('credits') ): ?>
+											<span class="credits">Credits: <?php the_field('credits'); ?></span>
+									<?php endif; ?>
+								</h1>
+
+								<?php if( get_field('course_description') ): ?>
+										<p><?php the_field('course_description'); ?></p>
 								<?php endif; ?>
-							</h1>
 
-							<?php if( get_field('course_description') ): ?>
-									<p><?php the_field('course_description'); ?></p>
-							<?php endif; ?>
+								<?php if( $file ): ?>
+										<div class="course-outline">
+											<i class="fas fa-paperclip"></i>
+											<a href="<?php echo $file['url']; ?>">Download OAT <?php echo ucwords(strtolower(substr(strstr(get_the_title()," "), 1))); ?> Course Outline</a>
+										</div>
+								<?php endif; ?>
+							</div> <!--end course info-->
 
-							<?php if( $file ): ?>
-									<div class="course-outline">
-										<i class="fas fa-paperclip"></i>
-										<a href="<?php echo $file['url']; ?>">Download OAT <?php echo ucwords(strtolower(substr(strstr(get_the_title()," "), 1))); ?> Course Outline</a>
-									</div>
-							<?php endif; ?>
-						</div> <!--end course info-->
-						<?php endif; ?>		
-					</div> <!---end course wrap--->
+						</div> <!---end course wrap--->
+					
+					<?php endif; ?>	
+
 				<?php endif;?>
 
-				<?php
-				$postCounter++; ?>
+				<?php $postCounter++; ?>
 
 			<?php endwhile; ?>
+
 			</section>
+
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
