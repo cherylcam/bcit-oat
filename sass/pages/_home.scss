@@ -4,9 +4,7 @@
 
 .home{
     .home-page{
-        .site-header{
-            width: 100%;
-        }
+
         .content-area{
             background-image: url(./images/home-page-background.png);
             height: 100vh;
@@ -14,16 +12,43 @@
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
+            z-index: -1;
 
             /* Add the blur effect */
             filter: blur(5px);
             -webkit-filter: blur(5px);
         }
         
-        header{
+        .site-header{
+            width: 100%;
             position: absolute;
-            top: 40px;
-            z-index: 2;
+            top: 32px;
+            background-color: rgba(0, 0, 0, 0.11);
+
+            .site-branding{
+                .site-title{
+                    text-shadow: 5px 5px 10px rgb(68, 65, 65);    
+                }
+
+                .site-description{
+                    p{
+                        color: white;   
+                        text-shadow: 2px 0.5px 5px black;           
+                    }
+                }
+            }
+
+            nav{
+                ul{
+                    li{
+                        a{
+                            color: $color__text-input-light;
+                            // -webkit-text-stroke: 0.5px black;
+                            text-shadow: 2px 0.5px 5px black;
+                        }
+                    }
+                }
+            }
         }
     }  
 }
