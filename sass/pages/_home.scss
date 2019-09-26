@@ -4,6 +4,9 @@
 
 .home{
     .home-page{
+        .site-header{
+            width: 100%;
+        }
         .content-area{
             background-image: url(./images/home-page-background.png);
             height: 100vh;
@@ -19,7 +22,7 @@
         
         header{
             position: absolute;
-            top:0;
+            top: 40px;
             z-index: 2;
         }
     }  
