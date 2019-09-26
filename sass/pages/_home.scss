@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+# Home Page
+--------------------------------------------------------------*/
+
+.home{
+    .home-page{
+        .content-area{
+            background-image: url(./images/home-page-background.png);
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+
+            /* Add the blur effect */
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+        }
+        
+        header{
+            position: absolute;
+            top:0;
+            z-index: 2;
+        }
+    }  
+}
