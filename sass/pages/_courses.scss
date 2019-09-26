@@ -4,53 +4,172 @@
 .post-type-archive-oat-courses{
     font-family: 'Roboto', sans-serif;
 
-    .site-content{
-        padding: 0 1%;
-    }
-
     section{
+        padding: 0 1%;
+        margin-top: 50px;
         .course-wrap{
-            margin-bottom: 25px;
-
-            .course-heading{
-                font-size: 1.2em;
-                border-bottom: 2px solid $color__main-theme;
-        
-                .credits{
-                    margin-left: 10px;
-                    font-weight: 400;
-                    font-size: 0.8em;
-                    font-style: italic;
-                }
-            } 
-
-            p{
-                margin-bottom: 10px;
-                font-weight: 300;
-            }
-
-            .course-outline{
-               i{
-                    color: $color__main-theme;
-                }
-
-                a{
-                    margin-left: 3px;
-                    text-decoration: none;
-                    font-weight: 500;
-                    color: $color__main-theme;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            
+            .course-info{
+                .course-heading{
+                    font-size: 1.2em;
+                    border-bottom: 2px solid $color__main-theme;
+                    padding-bottom: 5px;
+            
+                    .credits{
+                        margin-left: 5%;
+                        font-weight: 400;
+                        font-size: 85%;
+                        font-style: italic;
+                        right: 0;
+                    }
                 } 
 
-                #{$link-hover-selector} {
-                    i{
-                        color: $color__main-theme-light;
-                    }
+                p{
+                    margin-bottom: 10px;
+                    font-weight: 300;
                 }
-            } 
-            
+
+                .course-outline{
+                i{
+                        color: $color__main-theme;
+                    }
+
+                    a{
+                        margin-left: 3px;
+                        text-decoration: none;
+                        font-weight: 500;
+                        color: $color__main-theme;
+                    } 
+
+                    #{$link-hover-selector} {
+                        i{
+                            color: $color__main-theme-light;
+                        }
+                    }
+                } 
+            }
+
             img{
-                display: none;
+                height: 100%;
+            }
+        }
+
+        .course-wrap.right{
+            grid-template-areas: 
+                     "top"
+                     "bottom";
+
+            .course-info{
+                grid-area: top;
+            }
+
+            img{
+                grid-area: bottom;
             }
         }
     } 
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media only screen and (min-width: 500px){
+    .post-type-archive-oat-courses{
+        section{
+            padding: 0 4%;
+
+            .course-wrap{
+                margin-bottom: 40px;
+    
+                .course-heading{
+                    font-size: 1.4em;
+                    display: grid;
+                    grid-template-columns: 1fr 120px;
+            
+                    .credits{
+                        justify-self: flex-end;
+                        line-height: 30px;
+                        font-size: 80%;
+                    }
+                } 
+
+                .course-outline{
+                    margin-bottom: 20px;
+                }
+
+
+            }
+        } 
+    }
+}
+
+@media only screen and (min-width: 700px){
+    .post-type-archive-oat-courses{
+        section{
+            padding: 0 6%;
+            .course-wrap{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: none;
+                grid-gap: 45px; 
+
+                .course-info{
+                    .course-heading{
+                        display: block;
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .course-wrap.right{
+                grid-template-areas:  "left right";
+    
+                .course-info{
+                    grid-area: right;
+                }
+    
+                img{
+                    grid-area: left;
+                }
+            }
+        } 
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .post-type-archive-oat-courses{
+        section{
+            .course-wrap{
+                margin-bottom: 50px;
+                .course-info{
+
+                    .course-heading{
+                        font-size: 1.5em;
+                        display: grid;
+                        grid-template-columns: 1fr 120px;
+
+                        .credits{
+                            font-size: 0.8em;
+                            justify-self: flex-end;
+                            margin: auto 0;
+                        }
+                    }
+
+                    p{
+                        font-size: 1.1em;
+                    }
+
+                    .course-outline{
+                        margin: 20px 0 0 0;
+                        font-size: 1.1em;
+                    } 
+                }
+                
+            }
+        } 
+    }
 }

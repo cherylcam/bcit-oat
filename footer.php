@@ -16,14 +16,18 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<!-- Student Links -->
-			<div class="students"></div>
+			<div class="footer-group students">
+				<h3>Students</h3>
+			</div>
 
 			<!-- Program Links -->
-			<div class="program"></div>
+			<div class="footer-group program">
+				<h3>Program</h3>
+			</div>
 
 			<!-- Find Us -->			
-			<div class="find-us">
-				<h1>Find Us</h1>
+			<div class="footer-group find-us">
+				<h3>Find Us</h3>
 
 				<!-- Address -->
 				<p class='address'></p>
