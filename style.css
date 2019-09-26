@@ -918,14 +918,49 @@ object {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    grid-gap: 10px; }
-  .container-main .faculty-staff,
-  .container-main .program-info {
-    background-color: #4285F4;
-    padding: 5px 10px; }
-  .container-main .faculty-container h2 {
-    color: #404040; }
-  .container-main .faculty-container p {
+    grid-gap: 15px;
+    justify-items: center; }
+    .container-main .contact-wrapper .faculty-staff,
+    .container-main .contact-wrapper .program-info {
+      background-color: #4285F4;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.16);
+      max-width: 320px;
+      line-height: 1.5;
+      padding: 5px 25px; }
+    .container-main .contact-wrapper .phone-svg,
+    .container-main .contact-wrapper .mail-svg,
+    .container-main .contact-wrapper .website-svg {
+      fill: white;
+      margin-right: 10px; }
+  .container-main .faculty-container h2,
+  .container-main .program-container h2 {
+    color: #404040;
+    text-transform: uppercase; }
+  .container-main .faculty-container p,
+  .container-main .program-container p {
+    color: white;
+    margin: 5px; }
+  .container-main .faculty-container .faculty-name,
+  .container-main .faculty-container .program-name,
+  .container-main .program-container .faculty-name,
+  .container-main .program-container .program-name {
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px white solid; }
+  .container-main .faculty-container .faculty-staff,
+  .container-main .program-container .faculty-staff {
+    height: auto; }
+  .container-main .faculty-container .program-info,
+  .container-main .program-container .program-info {
+    height: auto; }
+  .container-main .faculty-container .program-website a,
+  .container-main .faculty-container .bcit-website a,
+  .container-main .program-container .program-website a,
+  .container-main .program-container .bcit-website a {
+    text-decoration: none;
     color: white; }
+  .container-main .bcit-map {
+    max-width: 320px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.16); }
 
 /*# sourceMappingURL=style.css.map */
