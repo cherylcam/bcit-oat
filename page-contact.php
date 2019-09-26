@@ -108,7 +108,7 @@ get_header();
 			?>
 
 			<div class="bcit-map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.6312010021024!2d-123.11752518431048!3d49.28338507933136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867178c92a69b9%3A0x6b40938af55472d6!2s555+Seymour+St%2C+Vancouver%2C+BC+V6B+3H6!5e0!3m2!1sen!2sca!4v1566424196502!5m2!1sen!2sca" width="1000" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.6312010021024!2d-123.11752518431048!3d49.28338507933136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867178c92a69b9%3A0x6b40938af55472d6!2s555+Seymour+St%2C+Vancouver%2C+BC+V6B+3H6!5e0!3m2!1sen!2sca!4v1566424196502!5m2!1sen!2sca" width="1250" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
 			</div>
 		<?php
 		the_content();

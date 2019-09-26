@@ -4,6 +4,8 @@
 .container-main {
     display: block;
     font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    width: 100%;
 
     .contact-wrapper {
         display: grid;
@@ -16,9 +18,10 @@
         .program-info {
             background-color: $color__main-theme-light;
             box-shadow: 10px 10px 10px rgba(0,0,0,0.16);
+            min-height: 205px;
             width: 320px;
             line-height: $font__line-height-body;
-            padding: 5px 25px;
+            padding: 20px 25px;
 
         }   
        
@@ -76,14 +79,17 @@
 
     .wpcf7 {
         width: 320px;
-
+        height: auto;
        input{
         width: 320px;
        } 
 
+       .contact-form-heading {
+           text-transform: uppercase;
+       }
        .wpcf7-submit {
         display: block;
-        width: 120px;
+        width: 100%;
         margin: 0 auto;
         padding: 10px 20px;
         text-decoration: none;
@@ -106,10 +112,10 @@
 
     .contact-wrapper {
         margin: 0 auto;
-        width: 700px;
+        width: 900px;
         grid-row-gap: 50px;
+        grid-gap: 50px;
         grid-template-columns: 1fr 1fr;
-        // grid-template-rows:  1fr;
         grid-template-areas: 
         "a b"
         "c b"
@@ -121,6 +127,73 @@
 
         .wpcf7 {
             grid-area: b;
+            width: 550px;
+
+            input {
+                width: 550px;
+            }
+
+        }
+
+        .faculty-container,
+        .program-container {
+            margin-right: 30px;
+   
+
+            .faculty-staff,
+            .program-info {
+                width: 450px;
+            }
+        }
+
+        .bcit-map {
+            grid-area: e;
+            width: auto;
+            max-height: 300px;
+        }
+    }
+
+    
+
+
+}
+// Media Query at 900
+@media only screen and (min-width: 900px){
+
+    .contact-wrapper {
+        margin: 0 auto;
+        width: 1250px;
+        grid-row-gap: 50px;
+        grid-gap: 50px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "a b"
+        "c b"
+        "e e";
+
+        .program-container {
+            grid-area: c;
+        }
+
+        .wpcf7 {
+            grid-area: b;
+            width: 650px;
+
+            input {
+                width: 650px;
+            }
+
+        }
+
+        .faculty-container,
+        .program-container {
+            margin-right: 40px;
+   
+
+            .faculty-staff,
+            .program-info {
+                width: 550px;
+            }
         }
 
         .bcit-map {
