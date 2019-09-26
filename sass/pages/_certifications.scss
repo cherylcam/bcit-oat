@@ -5,7 +5,7 @@
     .certification{
         border: 1px solid red;
         max-width: 320px;
-        height: 480px;
+        height: 520px;
         flex-basis: 100%;
         border: 0.5px solid #E0E0E0;
         box-shadow: 10px 10px 10px rgba(0,0,0,0.16);
@@ -16,6 +16,8 @@
             text-align: center;
             margin: 25px 0;
             height: 72px;
+            font-weight: 300;
+            font-size: 1.5em;
         }
 
         img {
@@ -23,15 +25,15 @@
         }
 
         p {
-            margin: 25px 0;
+            margin: 25px 0 50px 0;
             height: 120px;
         }
 
         a {
             display: block;
-            width: 100px;
+            width: 120px;
             margin: 0 auto;
-            padding: 5px 10px;
+            padding: 10px 20px;
             text-decoration: none;
             text-align: center;
             color: white;
