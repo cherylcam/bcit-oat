@@ -1,14 +1,16 @@
+/*--------------------------------------------------------------
+# Courses Page
+--------------------------------------------------------------*/
 .container-main {
     display: block;
-    margin: 5px 10px;
+    font-family: 'Roboto', sans-serif;
 
     .contact-wrapper {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
         grid-gap: 15px;
         justify-items: center;
         padding: 0px 5px;
+
        
         .faculty-staff,
         .program-info {
@@ -68,6 +70,7 @@
 
     .bcit-map {
         width: 320px;
+        height: 300px;
         box-shadow: 10px 10px 10px rgba(0,0,0,0.16);
     }
 
@@ -79,26 +82,55 @@
        } 
 
        .wpcf7-submit {
-        border: 1px solid;
-        border-color: $color__border-button;
-        border-radius: 3px;
-        background: $color__background-button;
-        color: rgba(0, 0, 0, .8);
-        @include font-size(0.75);
-        line-height: 1;
-        padding: .6em 1em .4em;
-    
-        &:hover {
-            border-color: $color__border-button-hover;
-        }
-    
-        &:active,
-        &:focus {
-            border-color: $color__border-button-focus;
-        }
+        display: block;
+        width: 120px;
+        margin: 0 auto;
+        padding: 10px 20px;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        background-color: #21437A;
        } 
 
 
     }
  
+}
+
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media only screen and (min-width: 600px){
+
+    .contact-wrapper {
+        margin: 0 auto;
+        width: 700px;
+        grid-row-gap: 50px;
+        grid-template-columns: 1fr 1fr;
+        // grid-template-rows:  1fr;
+        grid-template-areas: 
+        "a b"
+        "c b"
+        "e e";
+
+        .program-container {
+            grid-area: c;
+        }
+
+        .wpcf7 {
+            grid-area: b;
+        }
+
+        .bcit-map {
+            grid-area: e;
+            width: auto;
+            max-height: 300px;
+        }
+    }
+
+    
+
+
 }
