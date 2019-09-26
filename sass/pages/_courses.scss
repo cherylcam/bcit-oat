@@ -4,11 +4,9 @@
 .post-type-archive-oat-courses{
     font-family: 'Roboto', sans-serif;
 
-    .site-content{
-        padding: 0 1%;
-    }
-
     section{
+        padding: 0 1%;
+
         .course-wrap{
             margin-bottom: 25px;
 
@@ -57,8 +55,9 @@
 
 @media only screen and (min-width: 500px){
     .post-type-archive-oat-courses{
-
         section{
+            padding: 0 5%;
+
             .course-wrap{
                 margin-bottom: 25px;
     
@@ -77,7 +76,54 @@
                     margin-bottom: 20px;
                 }
 
+
+            }
+        } 
+    }
+}
+
+@media only screen and (min-width: 700px){
+    .post-type-archive-oat-courses{
+        section{
+            .course-wrap{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 40px; 
+
+                .course-heading{
+                    display: block;
+                    margin-top: 0;
+
+                    .credits{
+                        right: 0;
+                    }
+                }
+
+                .course-outline{
+                    margin-bottom: 0;
+                }
+
+                // img{
+                //     height: 90%;
+                // }
+
                 
+            }
+        } 
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .post-type-archive-oat-courses{
+        section{
+            .course-wrap{
+                .course-heading{
+                    font-size: 1.5em;
+                }
+
+                .course-outline{
+                    margin-bottom: 0;
+                }
             }
         } 
     }
