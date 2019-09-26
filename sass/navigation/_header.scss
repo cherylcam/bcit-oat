@@ -32,4 +32,26 @@
             }
         }
     }
+
+    nav{
+        position: relative;
+        ul{
+            display: flex;
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%);
+            width: 100%;
+
+            li{
+                flex: 1;
+                text-align: center;
+                font-size: 1.1em;
+                font-weight: 500;
+                
+                a{
+                    color: $color__main-theme;
+                }
+            }
+        }
+    }
 }
