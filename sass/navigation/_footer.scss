@@ -1,16 +1,131 @@
-.site-footer {
+.footer-headings {
+    padding: 0 0;
+    background-color: #808080;
     color: white;
-    .site-info{
+
+    .footer-headings-row{
         display: flex;
-        justify-content: space-evenly;
-        .footer-group {
+        
+        h3 {
             flex: 1;
-            h3 {
-                font-weight: 300;
-                padding: 10px;
-                width: 100%;
-                background-color: #838383;
+            font-weight: 300;
+            font-size: 1.3em;
+            margin: 0;
+            line-height: 40px;
+        }
+    }
+}
+
+.footer-links {
+    display: flex;
+    background-color: #606060;
+    color: white;
+    padding: 20px 0;
+    font-size: 0.866em;
+    position: relative;
+
+    img {
+        width: 75px;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .footer-section{
+        flex: 1;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
             }
+
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            
+            li {
+                list-style: none;
+                
+                a{
+                    color: white;
+                    text-decoration: none;
+                    font-weight: 300;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        
+    }
+}
+
+.copyright {
+    color: white;
+    background-color: #404040;
+    width: 100%;
+    margin: 0;
+    display: block;
+    line-height: 40px;
+    font-size: 0.866em;
+    text-align: center;
+}
+
+@media (min-width: 500px){
+    .footer-headings {
+        padding: 0 6%;
+    }
+
+    .footer-links{
+        padding: 20px 6%;
+
+        img {
+            left: 6%;
+        }
+    }
+}
+
+@media (min-width: 1000px){
+    .footer-headings{
+        padding: 0 12%;
+    }
+
+    .footer-links {
+        padding: 20px 12%;
+
+        img {
+            display: block;
+            left: 12%;
+        }
+    }
+}
+
+@media (min-width: 1500px){
+    .footer-headings{
+        padding: 0 18%;
+    }
+
+    .footer-links{
+        padding: 20px 18%;
+        img {
+            left: initial;
+            top: initial;
+            right: 12%;
+            top: 0;
         }
     }
 }

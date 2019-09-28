@@ -2,17 +2,16 @@
 # Courses Page
 --------------------------------------------------------------*/
 .post-type-archive-oat-courses{
-    font-family: 'Roboto', sans-serif;
-
     section{
         padding: 0 1%;
         margin-top: 50px;
+        margin-bottom: 100px;
         .course-wrap{
             margin-bottom: 20px;
             display: grid;
             grid-template-rows: 1fr 1fr;
             
-            .course-info{
+            .course-info-wrap{
                 .course-heading{
                     font-size: 1.2em;
                     border-bottom: 2px solid $color__main-theme;
@@ -62,7 +61,7 @@
                      "top"
                      "bottom";
 
-            .course-info{
+            .course-info-wrap{
                 grid-area: top;
             }
 
@@ -117,7 +116,7 @@
                 grid-template-rows: none;
                 grid-gap: 45px; 
 
-                .course-info{
+                .course-info-wrap{
                     .course-heading{
                         display: block;
                         margin-top: 0;
@@ -128,7 +127,7 @@
             .course-wrap.right{
                 grid-template-areas:  "left right";
     
-                .course-info{
+                .course-info-wrap{
                     grid-area: right;
                 }
     
@@ -145,30 +144,39 @@
         section{
             .course-wrap{
                 margin-bottom: 50px;
-                .course-info{
 
-                    .course-heading{
-                        font-size: 1.5em;
-                        display: grid;
-                        grid-template-columns: 1fr 120px;
+                .course-info-wrap{
+                    // position: relative;
+                    .course-info{
+                        // position: absolute;
+                        // top: 50%;
+                        // left: 50%;
+                        // transform: translate(-50%, -50%);
+                        // width: 100%;
+                        // height: 100%;
 
-                        .credits{
-                            font-size: 0.8em;
-                            justify-self: flex-end;
-                            margin: auto 0;
+                        .course-heading{
+                            font-size: 1.5em;
+                            display: grid;
+                            grid-template-columns: 1fr 120px;
+
+                            .credits{
+                                font-size: 0.8em;
+                                justify-self: flex-end;
+                                margin: auto 0;
+                            }
                         }
-                    }
 
-                    p{
-                        font-size: 1.1em;
-                    }
+                        p{
+                            font-size: 1.1em;
+                        }
 
-                    .course-outline{
-                        margin: 20px 0 0 0;
-                        font-size: 1.1em;
-                    } 
-                }
-                
+                        .course-outline{
+                            margin: 20px 0 0 0;
+                            font-size: 1.1em;
+                        } 
+                    }
+                }               
             }
         } 
     }
