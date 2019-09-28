@@ -122,7 +122,14 @@ add_action( 'widgets_init', 'bcit_oat_widgets_init' );
 function bcit_oat_scripts() {
 	wp_enqueue_style( 'bcit-oat-style', get_stylesheet_uri() );
 
+
+
 	wp_enqueue_script( 'bcit-oat-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'bcit-oat-swiper', get_template_directory_uri() . '/js/swiper.js', array(), '20190921', true );
+
+	wp_enqueue_script( 'bcit-oat-swiper-settings', get_template_directory_uri() . '/js/swiper-settings.js', array(), '20190921', true );
+
 
 	wp_enqueue_script( 'bcit-oat-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
