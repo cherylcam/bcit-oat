@@ -39,7 +39,7 @@
         }
     }
 
-    nav{
+    .main-navigation{
         position: relative;
         ul{
             display: flex;
@@ -75,8 +75,7 @@
                     transition: all 0.3s ease-in-out;
                 }
                 
-                a:hover::after,
-                .is-active::after {
+                a:hover::after{
                     visibility: visible;
                     -webkit-transform: scaleX(1);
                     transform: scaleX(1);
@@ -84,4 +83,11 @@
             }
         }
     }
+}
+
+.site-header .main-navigation .menu-main-menu-container .nav-menu .current-menu-item > a:after,
+.site-header .main-navigation .menu-main-menu-container .nav-menu .current-menu-item > a:after{
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
