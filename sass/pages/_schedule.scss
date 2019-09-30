@@ -1,0 +1,25 @@
+.schedule {
+    h1{
+        text-align: center;
+        margin: 0;
+    }
+    .buttons {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+    }
+
+    .schedule-header{
+        position: relative;
+        margin: 20px;
+    }
+
+
+
+}
