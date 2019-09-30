@@ -20,6 +20,74 @@
         margin: 20px;
     }
 
+    
+    .grid-container {
+        // width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-row-gap: 15px;
+    }
+
+    .grid-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .date {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color:rgb(231, 231, 231);
+            max-width: 90px;
+            width: 100%;
+            padding: 15px;
+            border-right: 3px solid $color__main-theme;
+            box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+
+
+
+            p {
+                margin: 0;
+                font-weight: 800;
+
+            }
+
+            
+
+
+        }
+
+        .day-info {
+            max-width: 200px;
+            width: 100%;
+            padding-left: 15px;
+            background-color: rgba(236, 236, 236, 0.404);
+            box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+
+           
+        }
+
+        .class {
+            font-weight: 700;
+        }
+
+    }
+
+    .weekend {
+        .date{
+        background-color: $color__main-theme-light;
+        color: white;
+        }
+
+        .day-info {
+            background-color:rgb(231, 231, 231);
+
+        }
+    }
+
+
+
 
 
 }
