@@ -23,7 +23,7 @@
             width: 100%;
             position: absolute;
             top: 32px;
-            background-color: rgba(0, 0, 0, 0.11);
+            background-color: rgba(0, 0, 0, 0.178);
 
             .site-branding{
                 .site-title{
@@ -43,8 +43,11 @@
                     li{
                         a{
                             color: $color__text-input-light;
-                            // -webkit-text-stroke: 0.5px black;
                             text-shadow: 2px 0.5px 5px black;
+                        }
+
+                        a:after {
+                            background: $color__text-input-light;
                         }
                     }
                 }
