@@ -37,7 +37,6 @@
 			
 			<div class='footer-section'>
 				<?php
-
 					wp_nav_menu( array(
 						'theme_location' => 'footer-program',
 						'menu_id'        => 'footer-program',
