@@ -28,9 +28,9 @@ get_header();
 			while ($query->have_posts()):
 				$query->the_post();
 				$table_data 	= json_decode(get_the_content());
-				$table_headers	= array("Weekday","Week","Date", "Class", "Room", "Instructor");
 			foreach ($table_data as $item):
 				$month = date("F", strtotime($item[1]));
+				$year = date("Y", strtotime($item[1]));
 				$schedule[$month][] = $item;
 			endforeach;?>
 			
@@ -45,45 +45,61 @@ get_header();
 						<?php foreach ($schedule as $month => $monthlySchedule):?>
 							<div class="swiper-slide">
 								<div class="schedule-header">
-									<h1><?php echo $month; ?></h1>	
+									<h1><?php echo $month . " " . $year; ?></h1>	
 								</div>								
-								<table>
-									<?php foreach ($table_headers as $table_header):?>
-										<th><?php echo $table_header; ?> </th>
-									<?php endforeach;?>
+								<div class="grid-container">
+								
+								
 
 									<?php foreach ($monthlySchedule as $weeks):
 									// Add the appropriate weekday to the array 
-									$weekday = date("D", strtotime($weeks[1])); 
+									$weekday = date("l", strtotime($weeks[1])); 
 									array_unshift($weeks, $weekday);
 
-									// Format the date
+									// Format the date and define all the variables
 									for ($i = 0; $i < count($weeks); $i++):
-										$formatedDate = date("F d, Y", strtotime($weeks[2]));
-										$weeks[2] = $formatedDate;
-									endfor;
-									?>
-										<tr>
-											<?php 
-											for ($j=0; $j < count($table_headers);$j++):
-												if ($weeks[6]):?>
-													<td class="weekend">
-														<?php echo $weeks[$j]; ?>
-													</td>
-												<?php else: ?>
-													<td class="weekday">
-														<?php echo $weeks[$j] ?>
-													</td>
-												<?php endif; ?>
+										$formatedDate = date("F d", strtotime($weeks[2]));
+										$weekday 	= $weeks[0];
+										$week 	 	= $weeks[1];
+										$date 		= $formatedDate;
+										$class	 	= $weeks[3];
+										$room		= $weeks[4];
+										$instructor	= $weeks[5];
+										$isWeekend	= $weeks[6];
+									endfor;?>
+										<?php if ($isWeekend): ?>
+											<div class="weekend grid-item">
+												<div class="date">
+													<p id="day"><?php  echo $weekday ?></p>
+													<p id="date"><?php  echo $date ?></p>
+												</div>
+												<div class="day-info">
+													<p class="holiday"><?php  echo $class  ?></p>
+												</div>
+											</div>
+										<?php else: ?>
+											<div class=<?php echo "'week " . $week . " grid-item'"?> id=<?php echo "'" . $date . "'" ?>>
+											<div class="date">
+												<p id="day"><?php  echo $weekday ?></p>
+												<p id="date"><?php  echo $date ?></p>
+											</div>
+											<div class="day-info">
+												<p class="class"><?php  echo $class  ?></p>
+												<p class="instructor"> <?php echo $instructor ?> </p>
+												<p class="room">Room: <?php echo $room?> </p>
+											</div>
+											</div>
+										<?php endif; ?>
+										
 
-											<?php endfor;?>
-										</tr>
+										
+
 									<?php endforeach;?>
-								</table>
+								</div>
 							</div>
 						<?php endforeach; ?>
 					</div>
-					    <div class="swiper-pagination"></div>
+					<div class="swiper-pagination"></div>
 
 				</div>
 				</div>
@@ -101,3 +117,5 @@ get_header();
 
 	get_footer();
 				
+
+
