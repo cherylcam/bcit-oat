@@ -22,7 +22,7 @@
             background-color: $color__main-theme-light;
             box-shadow: 10px 10px 10px rgba(0,0,0,0.16);
             min-height: 205px;
-            width: 280px;
+            width: auto;
             line-height: $font__line-height-body;
             padding: 20px 20px;
 
@@ -75,16 +75,16 @@
 
 
     .bcit-map {
-        width: 280px;
+        width: auto;
         height: 300px;
         box-shadow: 10px 10px 10px rgba(0,0,0,0.16);
     }
 
     .wpcf7 {
-        width: 280px;
+        width: auto;
         height: auto;
        input{
-        width: 280px;
+        width: 100%;
        } 
 
        .contact-form-heading {
