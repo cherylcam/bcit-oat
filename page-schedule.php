@@ -55,6 +55,7 @@ get_header();
 									// Add the appropriate weekday to the array 
 									$weekday = date("l", strtotime($weeks[1])); 
 									array_unshift($weeks, $weekday);
+									
 
 									// Format the date and define all the variables
 									for ($i = 0; $i < count($weeks); $i++):
@@ -68,7 +69,7 @@ get_header();
 										$isWeekend	= $weeks[6];
 									endfor;?>
 										<?php if ($isWeekend): ?>
-											<div class="weekend grid-item">
+											<div class="weekend grid-item" id=<?php echo "'" . $weeks[2] . "'" ?>>
 												<div class="date">
 													<p id="day"><?php  echo $weekday ?></p>
 													<p id="date"><?php  echo $date ?></p>
@@ -78,15 +79,17 @@ get_header();
 												</div>
 											</div>
 										<?php else: ?>
-											<div class=<?php echo "'week " . $week . " grid-item'"?> id=<?php echo "'" . $date . "'" ?>>
+											<div class=<?php echo "'week " . $week . " grid-item'"?> id=<?php echo "'" . $weeks[2] . "'" ?>> 
 											<div class="date">
 												<p id="day"><?php  echo $weekday ?></p>
 												<p id="date"><?php  echo $date ?></p>
 											</div>
 											<div class="day-info">
 												<p class="class"><?php  echo $class  ?></p>
+												<div class="class-info">
 												<p class="instructor"> <?php echo $instructor ?> </p>
 												<p class="room">Room: <?php echo $room?> </p>
+												</div>
 											</div>
 											</div>
 										<?php endif; ?>

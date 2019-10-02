@@ -2,6 +2,7 @@
     h1{
         text-align: center;
         margin: 0;
+        
     }
     .buttons {
         width: 50%;
@@ -12,7 +13,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 999;
+        z-index: 9999;
     }
 
     .schedule-header{
@@ -22,7 +23,6 @@
 
     
     .grid-container {
-        // width: 80%;
         margin: 0 auto;
         display: grid;
         grid-row-gap: 15px;
@@ -32,24 +32,30 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        max-width: 310px;
+        width: 100%;
+        height: 150px;
+        margin: 0 auto;
+        box-shadow: 0 3px 2px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+        border-radius: 4px;
+
 
         .date {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color:rgb(231, 231, 231);
+            background-color:rgba(231, 231, 231, 0.507);
             max-width: 90px;
             width: 100%;
             padding: 15px;
-            border-right: 3px solid $color__main-theme;
-            box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+            border-right: 2px solid $color__main-theme;
 
 
 
             p {
                 margin: 0;
-                font-weight: 800;
+                font-weight: 400;
 
             }
 
@@ -59,17 +65,26 @@
         }
 
         .day-info {
-            max-width: 200px;
+            max-width: 210px;
             width: 100%;
             padding-left: 15px;
-            background-color: rgba(236, 236, 236, 0.404);
+            background-color: rgba(236, 236, 236, 0.205);
             box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            color: rgba(0, 0, 0, 0.719);
 
+            p {
+                margin: 0;
+            }
            
         }
 
         .class {
-            font-weight: 700;
+            font-weight: 400;
+            color:black;
         }
 
     }
@@ -77,14 +92,21 @@
     .weekend {
         .date{
         background-color: $color__main-theme-light;
+        border-right: 2px solid rgb(255, 166, 0);
+
         color: white;
         }
 
         .day-info {
-            background-color:rgb(231, 231, 231);
+            background-color:rgba(231, 231, 231, 0.493);
+
 
         }
     }
+
+    // .today {
+    //     border: 5px solid rgb(255, 166, 0);
+    // }
 
 
 
