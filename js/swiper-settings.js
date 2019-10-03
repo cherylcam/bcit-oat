@@ -15,9 +15,13 @@ jQuery(document).ready(function($){
     let todaysDate = year + "-" + month + "-" + day;   
     $("#" + todaysDate).css("border","5px solid rgb(255, 166, 0)" );
 
-    // Getting today slide
+    // Getting to today slide
     let todaysSlide = $(".swiper-slide").find("#"+todaysDate).parent().parent().attr("slide_index");
     mySwiper.slideToLoop(todaysSlide, 800,false);
+    $("html,body").animate({scrollTop: $("#"+todaysDate).offset().top}, 2000)
+
+  
+
 })
 
 let mySwiper = new Swiper ('.swiper-container', 
@@ -47,5 +51,9 @@ let mySwiper = new Swiper ('.swiper-container',
     
   })
 
-  // mySwiper.slideTo(4)
+$("#button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#myDiv").offset().top
+    }, 2000);
+});
 
