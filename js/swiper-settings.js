@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
     // Getting to today slide
     let todaysSlide = $(".swiper-slide").find("#"+todaysDate).parent().parent().attr("slide_index");
     mySwiper.slideToLoop(todaysSlide, 800,false);
-    $("html,body").animate({scrollTop: $("#"+todaysDate).offset().top}, 2000)
+    // $("html,body").animate({scrollTop: $("#"+todaysDate).offset().top},800)
 
   
 
@@ -30,10 +30,12 @@ let mySwiper = new Swiper ('.swiper-container',
     direction: 'horizontal',
     loop: false,
     initialSlide: 0,
+
     
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
+      clickable: true
     },
 
     

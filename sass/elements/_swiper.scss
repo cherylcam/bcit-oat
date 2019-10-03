@@ -133,7 +133,7 @@
   scroll-snap-type: y mandatory;
 }
 :root {
-  --swiper-navigation-size: 44px;
+  --swiper-navigation-size: 30px;
   /*
   --swiper-navigation-color: var(--swiper-theme-color);
   */
@@ -234,8 +234,8 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  width: 16px;
+  height: 16px;
   display: inline-block;
   border-radius: 100%;
   background: #000;
