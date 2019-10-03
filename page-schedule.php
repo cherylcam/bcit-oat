@@ -42,8 +42,10 @@ get_header();
 			
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
+					<?php $slide_index=0;?>
+
 						<?php foreach ($schedule as $month => $monthlySchedule):?>
-							<div class="swiper-slide">
+							<div class="swiper-slide" slide_index=<?php echo $slide_index ?>>
 								<div class="schedule-header">
 									<h1><?php echo $month . " " . $year; ?></h1>	
 								</div>								
@@ -100,6 +102,8 @@ get_header();
 									<?php endforeach;?>
 								</div>
 							</div>
+							
+							<?php $slide_index++?>
 						<?php endforeach; ?>
 					</div>
 					<div class="swiper-pagination"></div>
