@@ -24,7 +24,7 @@
 
 		<div class='footer-links'>
 
-			<img src="http://bcitoat.bcitwebdeveloper.ca/wp-content/uploads/2019/09/bcit-logo.png">
+			<img src="http://bcitoat.bcitwebdeveloper.ca/wp-content/uploads/2019/10/bcit_cmyk-logo.png">
 		
 			<div class='footer-section'>
 				<?php
