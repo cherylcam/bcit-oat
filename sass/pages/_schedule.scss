@@ -4,6 +4,10 @@
         margin: 0;
         
     }
+
+    .schedule-header {
+        height: 60px;
+    }
     .buttons {
         width: 50%;
         margin: 0 auto;
@@ -26,6 +30,8 @@
         margin: 0 auto;
         display: grid;
         grid-row-gap: 15px;
+        height: 900px;
+        overflow: auto;
     }
 
     .grid-item{

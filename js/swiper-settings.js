@@ -17,8 +17,8 @@ jQuery(document).ready(function($){
 
     // Getting to today slide
     let todaysSlide = $(".swiper-slide").find("#"+todaysDate).parent().parent().attr("slide_index");
-    mySwiper.slideToLoop(todaysSlide, 800,false);
-    // $("html,body").animate({scrollTop: $("#"+todaysDate).offset().top},800)
+    mySwiper.slideToLoop(todaysSlide, 900,false);
+    $(".grid-container").animate({scrollTop: $("#"+todaysDate).offset().top - 120},800)
 
   
 
