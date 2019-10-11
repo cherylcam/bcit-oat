@@ -45,8 +45,7 @@ get_header();
 												<a href="<?php echo $file['url']; ?>">Download OAT <?php echo ucwords(strtolower(substr(strstr(get_the_title()," "), 1))); ?> Course Outline</a>
 											</div>
 										<?php endif; ?>
-									</div> <!-- end course info -->
-											
+									</div> <!-- end course info -->											
 								</div> <!--end course info wrap -->
 
 								<?php if( get_field('course_image') ): ?>
