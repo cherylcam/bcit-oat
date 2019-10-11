@@ -1,3 +1,5 @@
+
+
 let todaysSlide ;
 jQuery(document).ready(function($){
 
@@ -11,6 +13,7 @@ jQuery(document).ready(function($){
         day = "0" + day;
     }
 
+
     month = month+1
     let todaysDate = year + "-" + month + "-" + day;   
     $("#" + todaysDate).css("border","5px solid rgb(255, 166, 0)");
@@ -18,9 +21,7 @@ jQuery(document).ready(function($){
     // Getting to today slide
     let todaysSlide = $(".swiper-slide").find("#"+todaysDate).parent().parent().attr("slide_index");
     mySwiper.slideToLoop(todaysSlide, 900,false);
-    $(".grid-container").animate({scrollTop: $("#"+todaysDate).offset().top - 180},800)
-  
-
+    $(".grid-container").animate({scrollTop: $("#"+todaysDate).offset().top - 360},1200)
 })
 
 let mySwiper = new Swiper ('.swiper-container', 
@@ -52,9 +53,4 @@ let mySwiper = new Swiper ('.swiper-container',
     
   })
 
-$("#button").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#myDiv").offset().top
-    }, 2000);
-});
 
