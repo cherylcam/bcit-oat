@@ -22,10 +22,10 @@ get_header();
 			<section>
 			<?php while ( have_posts() ) :
 					the_post(); 
-					$evenPostIdNumber = $postCounter % 2;
+					// $evenPostIdNumber = $postCounter % 2;
 					
-					if( $evenPostIdNumber == 0 ): ?>
-						<div class="course-wrap left">
+					// if( $evenPostIdNumber == 0 ): ?>
+						<div class="course-wrap">
 
 							<div class="course-info-wrap">
 
@@ -33,6 +33,7 @@ get_header();
 									<h1 class="course-heading"><?php the_title(); ?>
 										<?php if( function_exists('get_field') ):
 											$file = get_field('course_outline'); ?>
+										<?php endif; ?>
 										<?php if( get_field('credits') ): ?>
 											<span class="credits">Credits: <?php the_field('credits'); ?></span>
 										<?php endif; ?>
@@ -58,47 +59,13 @@ get_header();
 							
 						</div> <!---end course wrap--->
 
-					<?php endif; ?>	
+				
 
-					<?php else: ?>
-						<div class="course-wrap right">
-
-							<?php if( get_field('course_image') ): ?>								
-								<?php echo wp_get_attachment_image( get_field('course_image'), 'large' ); ?>							
-							<?php endif; ?>
-
-							<div class="course-info-wrap">
-
-								<div class="course-info">
-									<h1 class="course-heading"><?php the_title(); ?>
-										<?php if( function_exists('get_field') ):
-											$file = get_field('course_outline'); ?>
-										<?php if( get_field('credits') ): ?>
-												<span class="credits">Credits: <?php the_field('credits'); ?></span>
-										<?php endif; ?>
-									</h1>
-
-									<?php if( get_field('course_description') ): ?>
-											<p><?php the_field('course_description'); ?></p>
-									<?php endif; ?>
-
-									<?php if( $file ): ?>
-											<div class="course-outline">
-												<i class="fas fa-paperclip"></i>
-												<a href="<?php echo $file['url']; ?>">Download OATP <?php echo ucwords(strtolower(substr(strstr(get_the_title()," "), 1))); ?> Course Outline</a>
-											</div>
-									<?php endif; ?>
-								</div> <!-- end course info -->
-
-							</div> <!-- end course info wrap -->
-
-						</div> <!---end course wrap--->
 					
-					<?php endif; ?>	
 
-				<?php endif;?>
+				
 
-				<?php $postCounter++; ?>
+				
 
 			<?php endwhile; ?>
 
