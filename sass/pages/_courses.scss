@@ -3,11 +3,11 @@
 --------------------------------------------------------------*/
 .post-type-archive-oat-courses{
     section{
-        padding: 0 1%;
-        margin-top: 50px;
+        padding: 0 2vw;
+        margin-top: 100px;
         margin-bottom: 100px;
         .course-wrap{
-            margin-bottom: 50px;
+            margin-bottom: 100px;
             display: grid;
             grid-template-rows: 1fr 1fr;
             
@@ -32,7 +32,7 @@
                 }
 
                 .course-outline{
-                i{
+                    i{
                         color: $color__main-theme;
                     }
 
@@ -98,7 +98,7 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: none;
-                grid-gap: 45px; 
+                grid-gap: 50px; 
 
                 .course-info-wrap{
                     .course-heading{
@@ -127,7 +127,7 @@
     .post-type-archive-oat-courses{
         section{
             .course-wrap{
-                margin-bottom: 50px;
+                margin-bottom: 150px;
 
                 .course-info-wrap{
                     // position: relative;
