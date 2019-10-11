@@ -19,42 +19,44 @@ get_header();
 				<h1 class="page-title">Certifications</h1>
 			</header><!-- .page-header -->
 
-			<div class="certifications"><!-- .certifications -->
-				<?php
-					while(have_posts()): 
-				?>
+			<div class="master-wrapper">
+				<div class="certifications"><!-- .certifications -->
+					<?php
+						while(have_posts()): 
+					?>
 
-				<div class="certification"><!-- .certification -->
-				<?php
-						the_post();
-				?>
-						<h2><?php the_title(); ?></h2>
-				<?php
-						if(function_exists('get_field')):
-							if(get_field('logo')):
-				?>
-								<img src="<?php the_field('logo'); ?>">
-				<?php
-							endif;
+					<div class="certification"><!-- .certification -->
+					<?php
+							the_post();
+					?>
+							<h2><?php the_title(); ?></h2>
+					<?php
+							if(function_exists('get_field')):
+								if(get_field('logo')):
+					?>
+									<img src="<?php the_field('logo'); ?>">
+					<?php
+								endif;
 
-							if(get_field('description')):
-				?>
-								<p><?php the_field('description'); ?></p>
-				<?php
-							endif;
+								if(get_field('description')):
+					?>
+									<p><?php the_field('description'); ?></p>
+					<?php
+								endif;
 
-							if(get_field('url')):
-				?>
-								<a href="<?php the_field('url'); ?>" target="_blank">More Info</a>
-				<?php
+								if(get_field('url')):
+					?>
+									<a href="<?php the_field('url'); ?>" target="_blank">More Info</a>
+					<?php
+								endif;
 							endif;
-						endif;
-				?>
+					?>
+					</div>
+					<?php
+						endwhile;
+					?>
 				</div>
-				<?php
-					endwhile;
-				?>
-			</div>
+			</div> <!-- End master wrap -->
 		<?php endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->

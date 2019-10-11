@@ -12,7 +12,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area contact-page">
 		<main id="main" class="site-main container-main">
 
 			
@@ -31,8 +31,7 @@ get_header();
 
 			while ( have_rows('faculty_staff') ) : the_row();			
 		?>
-	<div class="contact-wrapper">	
-		
+	<div class="master-wrapper">
 		<div class="contact-left-container">			
 		<section class="faculty-container">
 				<h2>Faculty Contact</h2>	

@@ -5,7 +5,6 @@
     display: none;
 }
 
-
 @media only screen and (min-width: 700px){
     .site-header{
         display: grid;
@@ -33,23 +32,11 @@
             }
     
             .site-description{
-                position: relative;
                 p{
-                    position: absolute;
-                    top: 50%;
-                    transform: translate(0%, -50%);
-                    margin: 0;
-                    line-height: 20px;               
+                    margin-top: 24px;   
                 }
             }
         }
     
-    }
-    
-    .site-header .main-navigation .menu-main-menu-container .nav-menu .current-menu-item > a:after,
-    .site-header .main-navigation .menu-main-menu-container .nav-menu .current-menu-item > a:after{
-        visibility: visible;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
     }
 }

@@ -46,7 +46,7 @@ function oat_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-admin-network',
-        'supports'           => array('title'),
+        'supports'           => array('page-attributes'),
     );
     register_post_type( 'oat-certifications', $args );
 
@@ -94,7 +94,7 @@ function oat_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 6,
         'menu_icon'          => 'dashicons-book-alt',
-        'supports'           => array('title'),
+        'supports'           => array('page-attributes'),
         // Prevent moving, inserting, deleting blocks
 		'template_lock' 	 => 'all',
     );

@@ -3,11 +3,11 @@
 --------------------------------------------------------------*/
 .post-type-archive-oat-courses{
     section{
-        padding: 0 1%;
-        margin-top: 50px;
+        padding: 0 2vw;
+        margin-top: 100px;
         margin-bottom: 100px;
         .course-wrap{
-            margin-bottom: 20px;
+            margin-bottom: 100px;
             display: grid;
             grid-template-rows: 1fr 1fr;
             
@@ -32,7 +32,7 @@
                 }
 
                 .course-outline{
-                i{
+                    i{
                         color: $color__main-theme;
                     }
 
@@ -53,20 +53,6 @@
 
             img{
                 height: 100%;
-            }
-        }
-
-        .course-wrap.right{
-            grid-template-areas: 
-                     "top"
-                     "bottom";
-
-            .course-info-wrap{
-                grid-area: top;
-            }
-
-            img{
-                grid-area: bottom;
             }
         }
     } 
@@ -99,8 +85,6 @@
                 .course-outline{
                     margin-bottom: 20px;
                 }
-
-
             }
         } 
     }
@@ -114,7 +98,7 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: none;
-                grid-gap: 45px; 
+                grid-gap: 50px; 
 
                 .course-info-wrap{
                     .course-heading{
@@ -124,7 +108,7 @@
                 }
             }
 
-            .course-wrap.right{
+            .course-wrap:nth-of-type(even){
                 grid-template-areas:  "left right";
     
                 .course-info-wrap{
@@ -143,7 +127,7 @@
     .post-type-archive-oat-courses{
         section{
             .course-wrap{
-                margin-bottom: 50px;
+                margin-bottom: 150px;
 
                 .course-info-wrap{
                     // position: relative;
