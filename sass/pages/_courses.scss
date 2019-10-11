@@ -55,20 +55,6 @@
                 height: 100%;
             }
         }
-
-        .course-wrap.right{
-            grid-template-areas: 
-                     "top"
-                     "bottom";
-
-            .course-info-wrap{
-                grid-area: top;
-            }
-
-            img{
-                grid-area: bottom;
-            }
-        }
     } 
 }
 
@@ -99,8 +85,6 @@
                 .course-outline{
                     margin-bottom: 20px;
                 }
-
-
             }
         } 
     }
@@ -124,7 +108,7 @@
                 }
             }
 
-            .course-wrap.right{
+            .course-wrap:nth-of-type(even){
                 grid-template-areas:  "left right";
     
                 .course-info-wrap{
