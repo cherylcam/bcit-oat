@@ -2,7 +2,6 @@
 # Courses Page
 --------------------------------------------------------------*/
 
-
 .container-main {
     display: block;
     font-family: 'Roboto', sans-serif;
@@ -10,7 +9,7 @@
  
 
 
-    .contact-wrapper {
+    .master-wrapper {
         justify-items: center;
         padding: 0px 20px;
         margin: 0 auto; 
@@ -113,7 +112,7 @@
 --------------------------------------------------------------*/
 
 @media only screen and (min-width: 500px){
-    .contact-wrapper {
+    .master-wrapper {
         display: flex;
         flex-wrap: wrap;
         flex-basis: 100%;
@@ -156,7 +155,7 @@
 @media only screen and (min-width: 700px){
 
     
-    .contact-wrapper {
+    .master-wrapper {
         width: 1000px;
         
         .faculty-container,
@@ -194,7 +193,7 @@
 @media only screen and (min-width: 1200px){
 
     
-    .contact-wrapper {
+    .master-wrapper {
       max-width: 1300px;
         
         .faculty-container,
