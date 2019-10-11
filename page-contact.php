@@ -31,8 +31,7 @@ get_header();
 
 			while ( have_rows('faculty_staff') ) : the_row();			
 		?>
-	<div class="contact-wrapper">	
-		
+	<div class="master-wrapper">
 		<div class="contact-left-container">			
 		<section class="faculty-container">
 				<h2>Faculty Contact</h2>	
