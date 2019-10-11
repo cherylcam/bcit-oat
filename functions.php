@@ -132,6 +132,9 @@ function bcit_oat_scripts() {
 	wp_enqueue_script( 'bcit-oat-swiper', get_template_directory_uri() . '/js/swiper.js', array(), '20190930', true );
 
 	wp_enqueue_script( 'bcit-oat-swiper-settings', get_template_directory_uri() . '/js/swiper-settings.js', array(), '20190930', true );
+		
+	wp_enqueue_script( 'bcit-oat-schedule', get_template_directory_uri() . '/js/schedule.js', array(), '20191005', true );
+
 
 
 	wp_enqueue_script( 'bcit-oat-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
