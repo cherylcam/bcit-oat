@@ -173,3 +173,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Register Custom Post Types
  */
 require get_template_directory() . '/inc/register-cpt.php';
+
+/**
+ * Post Order By Menu Order
+ */
+require get_template_directory() . '/inc/post-menu-order.php';
