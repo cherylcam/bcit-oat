@@ -16,9 +16,9 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
-		
-		?>
+		</div class="schedule-calendar">
+				<?php get_template_part( 'template-parts/schedule', 'widget' ); ?>
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

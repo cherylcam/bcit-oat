@@ -43,7 +43,6 @@ while ($query->have_posts()):
 					<!-- <div class="swiper-slide" slide_index=<?php echo $monthIndex?>>  -->
 						<div class="schedule-header">
 							<h1><?php echo $month . " " . $year ?> </h1>
-							<?php print_r(count($schedule[$month])); ?>
 						</div>
 						<div class="calendar">
 							<div class="weekdays-grid">
@@ -54,11 +53,12 @@ while ($query->have_posts()):
 								<p class="weekday">Friday</p>
 								<p class="weekday">Saturday</p>
 								<p class="weekday">Sunday</p>
+		
 							</div>
 								<?php $dayOfMonth = 1 ?>
 								<div class="date-grid">
 									<?php for ($i = 0 ; $i < 5; $i ++): // Create table rows?> 
-											<?php for ($j = 0; $j < 7; $j++ ): //Creating the individual cells ?>  
+											<?php for ($j = 0; $j < 7; $j++ ): //Creating the individual columns ?>  
 												<?php if ($i == 0 && $j < $firstDay - 1):  ?>
 													<div class="beginning-month">
 													</div>
@@ -68,22 +68,32 @@ while ($query->have_posts()):
 		
 												<?php else: ?>
 													<div class="day-of-month" id=<?php echo "'" . $schedule[$month][$dayOfMonth - 1][1] . "'"?> >
-														<?php echo $dayOfMonth ?>
-														<span class="class">
-															<?php echo ($schedule[$month][$dayOfMonth - 1][2]) ?> 
-														</span>
-																
-														<span class="instructor">
-															<?php echo ($schedule[$month][$dayOfMonth - 1][4])// Multidimensional array can be accessed with brackets - [2] is  the postion of the instructor ?> 
-														</span>
+
+														<div class=<?php if ($schedule[$month][$dayOfMonth - 1][5] == 1):?>
+																<?php echo "holiday"; 
+																else:
+																echo "weekday";
+																endif; ?>>
+															<div class="day-info">
+															<span class="class">
+																<?php echo ($schedule[$month][$dayOfMonth - 1][2]) ?>
+															</span>
+															<span class="instructor">
+																<?php echo ($schedule[$month][$dayOfMonth - 1][4])// Multidimensional array can be accessed with brackets - [2] is  the postion of the instructor ?> 
+															</span>
 															<?php if ($schedule[$month][$dayOfMonth - 1][5] != 1): ?>
-																	<span class="room">
-																		Room: <?php echo ($schedule[$month][$dayOfMonth - 1][3]) ?> 
-																	</span>
-																	
+																<span class="room">
+																Room: <?php echo ($schedule[$month][$dayOfMonth - 1][3 ])// Multidimensional array can be accessed with brackets - [2] is  the postion of the instructor ?> 
+																</span>
 															<?php endif; ?>
+															 
+															</div>
+														</div>
+														<span class="date">
+															<?php echo $dayOfMonth ?>
+														</span>
 													</div>
-					
+													
 													<?php $dayOfMonth++; ?>
 												<?php endif; ?>
 											<?php endfor;?>
@@ -93,6 +103,7 @@ while ($query->have_posts()):
 								
 						
 					</table>
+					</div>
 					<!-- </div> 	END SWIPERSLIDE -->
 					<?php $monthIndex++ ?>
 				<?php endforeach; ?>

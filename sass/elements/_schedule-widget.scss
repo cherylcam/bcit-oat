@@ -1,0 +1,43 @@
+.schedule-widget{
+    // background-color: $color__main-theme;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+
+     p {
+            margin: 0;
+            color: white;
+        }
+
+    .widget-date{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+        padding-right: 15px;
+
+
+       
+    }
+
+    .widget-info {
+        display: flex;
+        flex-direction: column;
+        padding-left: 15px;
+
+        border-left: 3px solid $color__main-theme;
+
+
+    }
+
+
+
+}
