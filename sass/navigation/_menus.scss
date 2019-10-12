@@ -1,5 +1,17 @@
+@media only screen and (min-width: 300px) {
+.main-navigation {
+	// bottom: 0;
+    // position: fixed;
+    // background: white;
+    // width: 100%;
+
+}
+
+
 @media only screen and (min-width: 700px) {
 	.main-navigation{
+		// position: fixed;
+		// top: 0;
 		ul{
 			display: flex;
 			list-style: none;
