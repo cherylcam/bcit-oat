@@ -84,9 +84,9 @@ if ( ! function_exists( 'bcit_oat_setup' ) ) :
 
 		if( function_exists('acf_add_options_page')){
 			acf_add_options_page(array(
-				'page_title'	=>	'Footer Link Settings',
-				'menu_title'	=>	'Footer Links',
-				'menu_slug'		=>	'footer-link-settings',
+				'page_title'	=>	'Contact Information Settings',
+				'menu_title'	=>	'Contact Information',
+				'menu_slug'		=>	'contact-information-settings',
 				'capability'	=>	'edit_posts',
 				'redirect'		=> 	false,
 			));
