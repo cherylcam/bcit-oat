@@ -81,6 +81,16 @@ if ( ! function_exists( 'bcit_oat_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		if( function_exists('acf_add_options_page')){
+			acf_add_options_page(array(
+				'page_title'	=>	'Footer Link Settings',
+				'menu_title'	=>	'Footer Links',
+				'menu_slug'		=>	'footer-link-settings',
+				'capability'	=>	'edit_posts',
+				'redirect'		=> 	false,
+			));
+		}
 	}
 endif;
 add_action( 'after_setup_theme', 'bcit_oat_setup' );
