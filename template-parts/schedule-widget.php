@@ -19,19 +19,20 @@ while ($query->have_posts()):
 		$schedule[$month][] = $item; //Add the month as a key to the array
 	endforeach;
 
+    date_default_timezone_set('America/Vancouver');
+
     //Formats to get the correct schedule data
     $currentMonth = date('F');
-    $today = date("j"); 
+    $today = date("j") ;
+    
 
     //Formats for the UI
     $weekdayUI = date("D");
-    $monthUI    = date("M") 
-    
-    
-    ?>
+    $monthUI    = date("M");
 
-     
- 
+    $weekdayUItomorrow = date("D"); 
+    ?>
+   
 
     <div class="schedule-widget">
         <div class="widget-date">
@@ -39,18 +40,67 @@ while ($query->have_posts()):
                 <?php echo $weekdayUI; ?>
             </p>
             <p class="widget-month">
-                <?php echo $monthUI . "/" . $today ?>
+                <?php echo $monthUI ?>
+            </p>
+            <p class="widget-day">
+                <?php echo $today ?>
+            </p>
+
         </div>
         <div class="widget-info">
-            <p class="widget-class">
-                <?php echo ($schedule[$currentMonth][$today][2]) ?>
-            </p>
-            <p class="widget-instructor">
-                <?php echo ($schedule[$currentMonth][$today][4]) ?>
-            </p>
-            <p class="widget-room">
-              Room:  <?php echo ($schedule[$currentMonth][$today][3]) ?>
-            </p>
+            <?php if (date("H") >= 17 || $weekdayUI == "Sun" || $schedule[$month][$today][5] == 1): // after 17, Sunday, or holiday  ?> 
+                <h3>Tomorrow's class</h3>
+                <p class="widget-class">
+                    <?php echo ($schedule[$currentMonth][$today][2])  // Weekdays start at 1 in php?> 
+                </p>
+                <p class="widget-instructor">
+                    <?php echo ($schedule[$currentMonth][$today][4]) ?>
+                </p>
+                <?php if ($schedule[$month][$today][5] != 1): ?>
+                    <p class="widget-room ">
+                    Room:  <?php echo ($schedule[$currentMonth][$today][3]) ?>
+                    </p>
+                <?php endif; ?>
+            <?php elseif ($weekday == "Sat"):?>
+                <h3>Mondays's class</h3>
+                <p class="widget-class ">
+                    <?php echo ($schedule[$currentMonth][$today + 1][2]) ?> 
+                </p>
+                <p class="widget-instructor ">
+                    <?php echo ($schedule[$currentMonth][$today + 1][4]) ?>
+                </p>
+                <?php if ($schedule[$month][$today + 1 ][5] != 1): ?>
+                    <p class="widget-room ">
+                    Room:  <?php echo ($schedule[$currentMonth][$today + 1][3]) ?>
+                    </p>
+                <?php endif; ?>
+            <?php elseif ($weekday == "Fri" && date("H") >= 17):?>
+                <h3>Mondays's class</h3>
+                <p class="widget-class ">
+                    <?php echo ($schedule[$currentMonth][$today + 2][2])  ?> 
+                </p>
+                <p class="widget-instructor ">
+                    <?php echo ($schedule[$currentMonth][$today + 2][4]) ?>
+                </p>
+                <?php if ($schedule[$month][$today + 2][5] != 1): ?>
+                    <p class="widget-room ">
+                    Room:  <?php echo ($schedule[$currentMonth][$today + 2][3]) ?>
+                    </p>
+                <?php endif; ?>
+            <?php else: ?>
+            <h3>Today's class</h3>
+                <p class="widget-class">
+                    <?php echo ($schedule[$currentMonth][$today - 1][2])  // Minus 1 because weekdays start at 1 in php?> 
+                </p>
+                <p class="widget-instructor">
+                    <?php echo ($schedule[$currentMonth][$today - 1][4]) ?>
+                </p>
+                 <?php if ($schedule[$month][$today - 1][5] != 1): ?>
+                    <p class="widget-room ">
+                    Room:  <?php echo ($schedule[$currentMonth][$today - 1][3]) ?>
+                    </p>
+                <?php endif; ?>
+            <?php endif; ?>
         </div>
     </div>
 
