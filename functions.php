@@ -81,6 +81,16 @@ if ( ! function_exists( 'bcit_oat_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		if( function_exists('acf_add_options_page')){
+			acf_add_options_page(array(
+				'page_title'	=>	'Contact Information Settings',
+				'menu_title'	=>	'Contact Information',
+				'menu_slug'		=>	'contact-information-settings',
+				'capability'	=>	'edit_posts',
+				'redirect'		=> 	false,
+			));
+		}
 	}
 endif;
 add_action( 'after_setup_theme', 'bcit_oat_setup' );

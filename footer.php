@@ -45,11 +45,21 @@
 			</div>
 
 			<div class='footer-section'>
-				<p>British Columbia Institute of Technology<br>555 Seymour St<br>Vancouver, BC<br>V6B 3H6<br><br></p>
-				
-				<p>Telephone: 604-434-5734</p>
-				<p>Toll-free (Can/US): 1-866-434-1610<br><br></p>
-				
+				<?php
+					if(function_exists('the_field')):
+				?>
+						<p><?php the_field('company_name', 'option'); ?> <p>
+						<p><?php the_field('street_address', 'option'); ?><p>
+						<p><?php the_field('city', 'option'); ?>, <?php the_field('province', 'option'); ?></p>
+						<p><?php the_field('zip_code', 'option'); ?></p>
+						<br />
+						<p>Telephone: <?php the_field('telephone', 'option') ?></p>
+						<p>Toll-free: <?php the_field('toll_free', 'option') ?></p>
+				<?php
+					endif;
+				?>
+
+				<br>
 				<a href='https://www.bcit.ca/contacts/'>More Contact Numbers</a>
 			</div>
 	</footer><!-- #colophon -->
