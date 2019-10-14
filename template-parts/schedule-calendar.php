@@ -35,7 +35,7 @@ while ($query->have_posts()):
 		
 			
 		<div class="schedule-calendar">
-				<button class="goto"><a href=#<?php echo date("o-m-d")?>>Go to today</a> </button>
+				<button class="goto"><span>Go to today</span></button>
 			<?php foreach ($months as $month):
 					$monthAsNumber = date("n", strtotime($month)); // Converting the months to a number so they can be used in cal_days_in_month function
 					array_push($numberOfDaysInMonth, cal_days_in_month(CAL_GREGORIAN, $monthAsNumber, $year)); // Push the number of days for each month in an array

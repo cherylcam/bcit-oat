@@ -21,6 +21,19 @@ jQuery(document).ready(function($){
     // Getting to today slide
     let todaysSlide = $(".swiper-slide").find("#"+todaysDate).parent().parent().attr("slide_index");
     mySwiper.slideToLoop(todaysSlide, 900,false);
+
+    document.querySelector(".goto").addEventListener("click",function(e){
+    // dynamically determining the height of your navbar
+    let navbar = document.querySelector("nav");
+    let navbarheight = parseInt(window.getComputedStyle(navbar).height,10);
+    // show 5 pixels of previous section just for illustration purposes 
+    let scrollHeight = document.querySelector("[id='" + todaysDate + "'").offsetTop - navbarheight - 5;
+    window.scroll(0,scrollHeight);
+    /*properly updating the window location*/
+    window.location.hash = e.target.hash;
+    /* do not execute default action*/
+    e.preventDefault();
+});
 })
 
 let mySwiper = new Swiper ('.swiper-container', 
