@@ -12,6 +12,7 @@ while ($query->have_posts()):
 	$query->the_post();
 	$table_data 	= json_decode(get_the_content()); // Parsing the json into an object.
 	$allMonths = array();
+	// print_r($table_data);
 
 		foreach ($table_data as $item):
 			$month = date("F", strtotime($item[1]));//Format the month to text
@@ -19,6 +20,8 @@ while ($query->have_posts()):
 			array_push($allMonths, $month);	// Push all months in an array --> It going to add the month info for every day
 			$schedule[$month][] = $item; //Add the month as a key to the array
 		endforeach;
+		// print_r($schedule["April"]);
+
 ?>
 		
 		
@@ -36,7 +39,8 @@ while ($query->have_posts()):
 			<?php foreach ($months as $month):
 					$monthAsNumber = date("n", strtotime($month)); // Converting the months to a number so they can be used in cal_days_in_month function
 					array_push($numberOfDaysInMonth, cal_days_in_month(CAL_GREGORIAN, $monthAsNumber, $year)); // Push the number of days for each month in an array
-					$firstDay = date("N",  mktime(0, 0, 0, $monthAsNumber, 1, $year)); // Getting the first weekday of month.?>
+					$firstDay = date("N",  mktime(0, 0, 0, $monthAsNumber, 1, $year)); // Getting the first weekday of month. Number between 1 - 6?>
+
 						<div class="schedule-header" id=<?php echo $month?>>
 							<h1><?php echo $month . " " . $year ?> </h1>
 						</div>
@@ -52,7 +56,7 @@ while ($query->have_posts()):
 							</div>
 								<?php $dayOfMonth = 1 ?>
 								<div class="date-grid">
-									<?php for ($i = 0 ; $i < 5; $i ++): // Create table rows?> 
+									<?php for ($i = 0 ; $i < 5; $i ++): // Create rows?> 
 											<?php for ($j = 0; $j < 7; $j++ ): //Creating the individual cells ?>  
 												<?php if ($i == 0 && $j < $firstDay - 1):  ?> 
 													<div class="beginning-month">
@@ -97,19 +101,10 @@ while ($query->have_posts()):
 									</div><!-- END date-grid -->
 						</table>
 					</div>
-					<!-- </div> 	END SWIPERSLIDE -->
 					<?php $monthIndex++ ?>
 				<?php endforeach; ?>
-			<!-- </div>  END SWIPERWRAPPER -->
-		<!--</div>END SWIPPERCONTAINER -->
-		</div> <!-- .END SCHEDULE-CALENDAR -->
-
 		<?php endwhile;
-
-		wp_reset_postdata();
-
-		/* Start the Loop */
-	
+		wp_reset_postdata();	
 		?>
 
 			</main><!-- #main -->

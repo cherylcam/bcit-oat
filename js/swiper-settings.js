@@ -13,15 +13,14 @@ jQuery(document).ready(function($){
         day = "0" + day;
     }
 
-
     month = month+1
     let todaysDate = year + "-" + month + "-" + day;   
-    $("#" + todaysDate).css("border","5px solid rgb(255, 166, 0)");
+    $("[id='" + todaysDate + "'").css("border","5px solid rgb(255, 166, 0)");
+    
 
     // Getting to today slide
     let todaysSlide = $(".swiper-slide").find("#"+todaysDate).parent().parent().attr("slide_index");
     mySwiper.slideToLoop(todaysSlide, 900,false);
-    $(".grid-container").animate({scrollTop: $("#"+todaysDate).offset().top - 360},1200)
 })
 
 let mySwiper = new Swiper ('.swiper-container', 
