@@ -33,7 +33,7 @@ while ($query->have_posts()):
     $weekdayUItomorrow = date("D"); 
     ?>
    
-
+    <a href="/oat/schedule">
     <div class="schedule-widget">
         <div class="widget-date">
             <p class="widget-weekday">
@@ -103,6 +103,7 @@ while ($query->have_posts()):
             <?php endif; ?>
         </div>
     </div>
+    </a>
 
     
 

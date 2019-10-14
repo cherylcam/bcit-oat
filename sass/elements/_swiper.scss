@@ -194,6 +194,8 @@
   transition: 300ms opacity;
   transform: translate3d(0, 0, 0);
   z-index: 10;
+  left: 50%;
+  transform: translate(-50%);
 }
 .swiper-pagination.swiper-pagination-hidden {
   opacity: 0;
@@ -240,6 +242,8 @@
   border-radius: 100%;
   background: #000;
   opacity: 0.2;
+  margin: 10px 3px;
+
 }
 button.swiper-pagination-bullet {
   border: none;

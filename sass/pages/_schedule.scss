@@ -5,6 +5,11 @@
 .schedule-list {
 
     margin-bottom: 35px;
+    
+    .swiper-navigation{
+        margin: 0 auto;
+    }
+    
     h1{
         text-align: center;
         margin: 0;
@@ -25,12 +30,13 @@
         position: absolute;
         left: 50%;
         transform: translate(-50%, 50%);
-        z-index: 9999;
+        z-index: 2;
     }
 
     .schedule-header{
         position: relative;
         margin: 20px;
+
     }
 
     
@@ -43,6 +49,7 @@
         width: 350px;
         max-width: 100%;
         overflow: auto;
+        border-top: 2px solid rgba(128, 128, 128, 0.507);
     }
 
     .grid-item{
@@ -167,13 +174,61 @@
 --------------------------------------------------------------*/
 
 .schedule-calendar {
-   margin: 0 auto;
+   margin: 60px auto;
    max-width:1000px;
 
+   .schedule-header {
+       margin-top: 40px;
+   }
+
+  
+
+       button {
+        border-radius: 45px;
+        width: 150px;
+        height: 35px;
+        background-color: $color__main-theme-light;
+        border: none;
+        box-shadow: 0 5px 10px rgba(154, 160, 185, 0.315), 0 15px 40px rgba(166, 173, 201, 0.514);
+        margin-bottom: 20px;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+
+            &:hover {
+                  transform: translateY(-3px);
+                  border:  2px solid $color__main-theme-light;
+                    background-color: #fff;
+
+
+
+            }
+
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            padding: 55px 0;
+
+             &:hover {
+                  color: $color__main-theme-light;
+
+
+
+            }
+                     
+        }
+
+    }
  
 
+
+   
+
+    
+
    .calendar{
-        box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+        box-shadow: 0 5px 10px rgba(154, 160, 185, 0.26), 0 15px 40px rgba(166, 173, 201, 0.336);
 
    }
 
@@ -187,6 +242,8 @@
 
        
    }
+
+ 
 
    
     .weekdays-grid,
@@ -231,8 +288,9 @@
         margin-bottom: 0px;
     }
     .class {
-        color: $color__main-theme-light;
-        font-weight: 400;
+        color: $color__main-theme;
+        font-size: 1rem;
+        font-weight: 500;
 
     }
 
@@ -247,7 +305,6 @@
     }
 
     .instructor {
-        color: $color__main-theme;
         font-weight: 400;
     }
 

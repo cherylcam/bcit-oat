@@ -11,7 +11,7 @@
     transform: translate(-50%, 50%);
     padding: 20px;
     background-color: rgba(90, 90, 90, 0.377);
-    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.089), 0 15px 40px rgba(166, 173, 201, 0.233);
     border-radius: 4px;
 
 
@@ -48,7 +48,6 @@
         display: flex;
         flex-direction: column;
         padding-left: 15px;
-
         border-left: 3px solid $color__main-theme;
 
 
@@ -60,6 +59,11 @@
         }
     }
 
+    .widget-instructor,
+    .widget-room  {
+        font-weight: 300;
+
+    }
 
 
 }
