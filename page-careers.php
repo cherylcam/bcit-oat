@@ -32,6 +32,47 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+
+		<?php
+			$url = "https://www.civicjobs.ca/rss/pc?id=36"; // Civic Jobs Office Administration
+			$feeds = file_get_contents($url);
+			$rss = simplexml_load_string($feeds);
+			$number_of_posts_to_show = 4;
+
+			$items = [];
+
+			foreach($rss->channel->item as $entry):
+				$items[] = [
+					'title' 		=> $entry->title,			// Title
+					'link' 			=> $entry->link,			// Link
+					'description' 	=> $entry->description,		// Description
+					'pubDate' 		=> $entry->pubDate,			// Publication Date
+				];
+			endforeach;
+
+			$counter = 0;
+			foreach($items as $item):
+				/* Show a set number of most recent Posts */
+				if($counter === $number_of_posts_to_show):
+					break;
+				endif;
+
+				/* Parse XML Object into Usable String */
+				$title = $item['title']->__toString();
+				$link = $item['link']->__toString();
+				$description = $item['description']->__toString();
+				$pubDate = $item['pubDate']->__toString();
+		?>
+			<div class='jobPosting'>
+				<a class='title' href='<?php print_r($link); ?>'><h1><?php print_r($title); ?></h1></a>
+				<span class='pubDate'><?php print_r($pubDate); ?></span>
+				<p class='description'><?php print_r($description); ?></p>
+				<a class='viewJob' href='<?php print_r($link); ?>'>View Posting</a>
+			</div>
+		<?php
+				$counter++;
+			endforeach;
+		?>
 	
 
 		</main><!-- #main -->
