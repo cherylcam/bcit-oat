@@ -12,10 +12,14 @@
         padding: 10px 20px;
 
         .title{
-            font-weight: 300;
+            font-weight: 400;
             height: 150px;
             margin: 0;
             padding: 0;
+            
+            a{
+                color: #707070;
+            }
         }
 
         .pubDate{
