@@ -181,9 +181,7 @@
        margin-top: 40px;
    }
 
-  
-
-       button {
+    button {
         border-radius: 45px;
         width: 150px;
         height: 35px;
@@ -194,12 +192,11 @@
         transition: all 0.3s ease 0s;
         cursor: pointer;
 
-            &:hover {
-                  transform: translateY(-3px);
-                  border:  2px solid $color__main-theme-light;
-                    background-color: #fff;
-            }
-
+        &:hover {
+            transform: translateY(-3px);
+            border:  2px solid $color__main-theme-light;
+            background-color: #fff;
+        }
 
         span {
             text-decoration: none;
@@ -207,21 +204,15 @@
             font-size: 1rem;
             padding: 55px 0;
 
-             &:hover {
-                  color: $color__main-theme-light;
-
-
-
-            }
-                     
-        }
-
+            &:hover {
+                color: $color__main-theme-light;
+            }        
+        }      
     }
 
     .calendar{
         box-shadow: 0 5px 10px rgba(154, 160, 185, 0.26), 0 15px 40px rgba(166, 173, 201, 0.336);
-
-   }
+    }
 
    .day-info {
        height: 130px;
@@ -229,14 +220,9 @@
        display: flex;
        flex: 1;
        flex-direction: column;
-       justify-content: start;
-
-       
-   }
-
- 
-
-   
+       justify-content: start;   
+    }
+  
     .weekdays-grid,
     .date-grid {
         display: grid;
@@ -249,19 +235,14 @@
         color: white;
         text-align: center;
 
-           
-    
-            .weekday {
-                background-color:$color__text-screen;
-                line-height: 50px;
-                margin:0;
-                vertical-align: middle;
-            }
-
-          
-           
-        
+        .weekday {
+            background-color:$color__text-screen;
+            line-height: 50px;
+            margin:0;
+            vertical-align: middle;
+        }      
     }
+
     .day-of-month {
         height: 210px;
         background-color:rgba(231, 231, 231, 0.493);
@@ -269,7 +250,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-
     }
 
     .date{
@@ -282,13 +262,10 @@
         color: $color__main-theme;
         font-size: 1rem;
         font-weight: 500;
-
     }
 
     .holiday .class {
-         color:rgb(255, 166, 0);
-
-
+        color:rgb(255, 166, 0);
     }
 
     .room {
@@ -297,9 +274,5 @@
 
     .instructor {
         font-weight: 400;
-    }
-
-  
+    } 
 }
-
-
