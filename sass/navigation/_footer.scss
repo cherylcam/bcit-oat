@@ -42,7 +42,6 @@ footer{
                 height: auto;
                 position: absolute;
                 bottom: 0;
-                left: 30px;
             }
         
             .footer-section{
@@ -112,10 +111,6 @@ footer{
 
     .footer-links{
         padding: 20px 6%;
-
-        img {
-            left: 6%;
-        }
     }
 }
 
@@ -129,7 +124,6 @@ footer{
 
         img {
             display: block;
-            left: 12%;
         }
     }
 }
@@ -145,7 +139,7 @@ footer{
         img {
             left: initial;
             top: initial;
-            right: 12%;
+            right: 6%;
             top: 0;
         }
     }
