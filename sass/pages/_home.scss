@@ -4,15 +4,6 @@
 
 .home{
     .home-page{
-
-        .site-title{
-            a{
-                // -webkit-text-stroke-width: 2px;
-                // -webkit-text-stroke-color: #fff;
-                // color: #21437A;
-            }
-        }
-
         .content-area{
             background-image: url(./images/home-page-background.png);
             height: 100vh;
@@ -30,31 +21,13 @@
         .site-header{
             width: 100%;
             position: absolute;
-            top: 32px;
-            background-color: rgba(0, 0, 0, 0.178);
-            // background-color: transparent;
 
-            .site-branding{
-                .site-title{
-                    // text-shadow: 5px 5px 10px rgb(68, 65, 65);    
-                }
-
-                .site-description{
-                    p{
-                        color: white;   
-                        // text-shadow: 2px 0.5px 5px black;           
-                    }
-                }
             }
 
             nav{
                 ul{
                     li{
-                        a{
-                            color: $color__text-input-light;
-                            // text-shadow: 2px 0.5px 5px black;
-                        }
-
+                       
                         a:after {
                             background: $color__text-input-light;
                         }
