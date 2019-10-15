@@ -1,89 +1,109 @@
-.footer-headings {
-    padding: 0 0;
-    background-color: #808080;
-    color: white;
+footer{
 
-    .footer-headings-row{
-        display: flex;
-        
-        h3 {
-            flex: 1;
-            font-weight: 300;
-            font-size: 1.3em;
-            margin: 0;
-            line-height: 40px;
-        }
-    }
-}
+    .footer-headings-wrap{
+        background-color: #808080;
 
-.footer-links {
-    display: flex;
-    background-color: #606060;
-    color: white;
-    padding: 20px 0;
-    font-size: 0.866em;
-    position: relative;
-
-    img {
-        width: 75px;
-        height: auto;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
-
-    .footer-section{
-        flex: 1;
-
-        a {
+        .footer-headings {
+            max-width: 1550px;
+            margin: 0 auto;
+            padding: 0 30px;
+            background-color: #808080;
             color: white;
-            text-decoration: none;
-            font-weight: 600;
-
-            &:hover {
-                text-decoration: underline;
-            }
-
-        }
-
-        ul {
-            margin: 0;
-            padding: 0;
-            
-            li {
-                list-style: none;
+        
+            .footer-headings-row{
+                display: flex;
                 
-                a{
-                    color: white;
-                    text-decoration: none;
+                h3 {
+                    flex: 1;
                     font-weight: 300;
-
-                    &:hover{
-                        text-decoration: underline;
-                    }
+                    font-size: 1.3em;
+                    margin: 0;
+                    line-height: 40px;
                 }
             }
         }
+    }
 
-        p {
-            padding: 0;
-            margin: 0;
-        }
+    .footer-links-wrap{
+        background-color: #606060;
 
+        .footer-links {
+            max-width: 1550px;
+            margin: 0 auto;
+            display: flex;
+            background-color: #606060;
+            color: white;
+            padding: 20px 30px;
+            font-size: 0.866em;
+            position: relative;
         
+            img {
+                width: 75px;
+                height: auto;
+                position: absolute;
+                bottom: 0;
+                left: 30px;
+            }
+        
+            .footer-section{
+                flex: 1;
+        
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: 600;
+        
+                    &:hover {
+                        text-decoration: underline;
+                    }
+        
+                }
+        
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    
+                    li {
+                        list-style: none;
+                        
+                        a{
+                            color: white;
+                            text-decoration: none;
+                            font-weight: 300;
+        
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+        
+                p {
+                    padding: 0;
+                    margin: 0;
+                }
+        
+                
+            }
+        }
+    }
+
+}
+
+.copyright-wrap{
+    background-color: #404040;
+    .copyright {
+        color: white;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        line-height: 40px;
+        font-size: 0.866em;
+        text-align: center;
+        max-width: 1550px;
     }
 }
 
-.copyright {
-    color: white;
-    background-color: #404040;
-    width: 100%;
-    margin: 0;
-    display: block;
-    line-height: 40px;
-    font-size: 0.866em;
-    text-align: center;
-}
 
 @media (min-width: 500px){
     .footer-headings {
@@ -113,6 +133,7 @@
         }
     }
 }
+
 
 @media (min-width: 1500px){
     .footer-headings{
