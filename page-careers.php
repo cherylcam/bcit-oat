@@ -67,17 +67,21 @@ get_header();
 			?>
 					<div class='posting'>
 						<h2 class='title'><a href='<?php print_r($link); ?>'><?php print_r($title); ?></a></h2>
-						<p class='pubDate'>Posted <?php print_r($pubDate_daysElapsed); ?> days ago</p>
 						<p class='description'><?php print_r($description); ?></p>
-						<p class='viewJob'><a href='<?php print_r($link); ?>'>View Posting</a><p>
+						<p class='jobInfo'>
+							<span class='pubDate'>Posted <?php print_r($pubDate_daysElapsed); ?> days ago</span>
+							<a href='<?php print_r($link); ?>' target="_blank" class='viewJob'>View Posting</a>
+						</p>
 					</div>
 			<?php
 					$counter++;
 				endforeach;
 			?>
 			</div>
+			<span class='viewMore'>
+				<a href='https://www.civicjobs.ca/jobs' class="viewMoreBtn" target="_blank">View More</a>
+			</span>
 		</div>
-	
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
