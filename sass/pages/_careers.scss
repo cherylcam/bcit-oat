@@ -1,0 +1,64 @@
+.careers-wrapper{
+    
+}
+
+.jobPostings{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:  20px 20px;
+    .posting{
+        border: 1px solid red;
+
+        .title{
+            font-weight: 300;
+            height: 125px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pubDate{
+            margin: 0;
+            padding: 0;
+        }
+
+        .description{
+            display: none;
+        }
+
+        .viewJob{
+            text-align: right;
+        }
+
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+@media (min-width: 640px){
+    .jobPostings{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width: 1024px){
+    .careers-wrapper{
+        padding: 0 50px 0 50px;
+    }
+}
+
+@media (min-width: 1366px){
+    .careers-wrapper{
+        padding: 0 0 0 100px;
+    }
+    .jobPostings{
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 960px;
+    }
+}
+
+@media(min-width: 1600px){
+    .jobPostings{
+        max-width: 1280px;
+    }
+}
