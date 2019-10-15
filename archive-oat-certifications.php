@@ -47,10 +47,10 @@ get_header();
 								if(get_field('url')):
 					?>
 									<div class="more-info-btn">
-									<a href="<?php the_field('url'); ?>" target="_blank">
-										<span>More Info</span>
-										<div class="transition"></div>
-									</a>
+										<a href="<?php the_field('url'); ?>" target="_blank">
+											<span>More Info</span>
+											<div class="transition"></div>
+										</a>
 									</div>
 					<?php
 								endif;
