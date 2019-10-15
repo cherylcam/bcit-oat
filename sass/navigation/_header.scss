@@ -1,28 +1,27 @@
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.site-header{
-    display: none;
-}
+// .site-header{
+//     display: none;
+// }
 
-@media only screen and (min-width: 300px){
     .site-header{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        // display: flex;
         padding: 0 10px;
-        position: fixed;
-        width: 100vw;
-        height: 96px;
+        // flex-direction: column;
+        // width: 100vw;
+        height: auto;
         background-color: $color__background-body;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
         z-index: 999;
     
         .site-branding{
-            display: grid;
-            grid-template-columns: 150px 1fr;
+           display: flex;
+           justify-content: space-between;
+           width: 300px;
     
-            .site-title{
-                font-size: 4em;
+            .site-title{    
+                font-size: 3em;
                 margin: 0;
     
                 a{
@@ -33,10 +32,45 @@
     
             .site-description{
                 p{
-                    margin-top: 24px;   
+                    margin-top: 15px;   
+                    margin-left: 15px;
                 }
             }
         }
     
     }
-}
+
+    @media only screen and (min-width: 700px) {
+            .site-header {
+                
+                .site-branding{
+                    width: 90%;
+                    align-items: center;
+                    .site-title {
+                        font-size: 5em;
+                    }
+                    .site-description{
+                        p{
+                          margin: 0;  
+                          font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+    }
+
+    @media only screen and (min-width: 850px) {
+        .site-header{
+            .site-branding{
+                width: 70%;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1050px) {
+        .site-header{
+            .site-branding{
+                width: 45%;
+            }
+        }
+    }

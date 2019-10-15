@@ -31,7 +31,7 @@
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">OAT</a>
 			</h1>
 			<div class="site-description">
-				<p>OFFICE ADMINISTRATOR <br> WITH TECHNOLOGY PROGRAM</p>
+				<p>Office Administrator with Technology Program</p>
 			</div>
 		</div><!-- .site-branding -->
 

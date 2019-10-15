@@ -1,89 +1,64 @@
-@media only screen and (min-width: 300px) {
 	.main-navigation{
 		position: fixed;
 		bottom: 0;
-		left: 0;
+		left: 0	;
 		background-color: rgba(0, 0, 0, 0.171);
 		width: 100%;
 		height: 100px;
+		z-index: 999;
+
 		.menu-main-menu-container {
 			position: relative;
+	
 		}
 
 		ul{
 			display: flex;
+			justify-content: space-between;
 			list-style: none;
-			margin: 0;
-			padding: 0;
+			margin: 0 10px;
 			line-height: 96px;
-
-			.sub-menu {
-				flex-direction: column;
-				position: absolute;
-				text-align-last: right;
-				border: none;
-				display: none;
-			}
-
-			.menu-item-138:hover .sub-menu {
-				display: block;
-			}
-		
+			text-align: center;
+			padding: 0;
 
 			li{
-				flex: auto;
-				text-align: center;
-				font-size: 1.1em;
-				font-weight: 500;
-				
+			
 				a{
-					color: $color__main-theme;
-					margin: 0 15px;
-					position: relative;
-					text-decoration: none;
-
-					
-				}
-
-				a:after {
-					content: '';
-					position: absolute;
-					width: 100%;
-					height: 3px;
-					bottom: -5px;
-					left: 0;
-					background: $color__main-theme;
-					visibility: hidden;
-					-webkit-transform: scaleX(0);
-					transform: scaleX(0);
-					-webkit-transition: all 0.3s ease-in-out 0s;
-					transition: all 0.3s ease-in-out;
-				}
+					.menu-image {
+						padding: 0px;
 				
-				a:hover::after{
-					visibility: visible;
-					-webkit-transform: scaleX(1);
-					transform: scaleX(1);
+					}
+					span {
+						display: none;
+					}
+
+					.menu-image-title-after{
+						padding: 0px;
+					}
 				}
 			}
+
+
 		}
 	}
 
-	#masthead.site-header .main-navigation .menu-main-menu-container .menu .current-menu-item > a:after{
-        visibility: visible;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-    }
 
-}
 
 @media only screen and (min-width: 700px) {
 	.main-navigation{
 		position: static;
 		background-color: rgba(0, 0, 0, 0);
+		height: 30px;
+		
 		
 		.menu-main-menu-container {
-			position: relative;
+			position: absolute;
+			width: 70%;
+			// top: 7%;
+			right: 5%;
+			
+	
+			
 		}
 
 		ul{
@@ -91,20 +66,15 @@
 			list-style: none;
 			margin: 0;
 			padding: 0;
-			line-height: 96px;
+			line-height: 0;
 
-			.sub-menu {
-				flex-direction: column;
-				position: absolute;
-				text-align-last: right;
-				border: none;
-				display: none;
+			li {
+				a {
+					span {
+						display: inline-block;
+					}
+				}
 			}
-
-			.menu-item-138:hover .sub-menu {
-				display: block;
-			}
-		
 
 			li{
 				flex: auto;
@@ -114,14 +84,19 @@
 				
 				a{
 					color: $color__main-theme;
-					margin: 0 15px;
+					// margin: 0 15px;
 					position: relative;
 					text-decoration: none;
 
-					
+					.menu-image {
+						display: none;
+					}
+					.menu-image-title-after.menu-image-title {
+						padding: 0;
+					}
 				}
-
-				a:after {
+				
+				.menu-image-title-after .menu-image-title:after {
 					content: '';
 					position: absolute;
 					width: 100%;
@@ -136,16 +111,18 @@
 					transition: all 0.3s ease-in-out;
 				}
 				
-				a:hover::after{
+				.menu-image-title-after .menu-image-title:hover::after{
 					visibility: visible;
 					-webkit-transform: scaleX(1);
 					transform: scaleX(1);
 				}
+
+			
 			}
 		}
 	}
 
-	#masthead.site-header .main-navigation .menu-main-menu-container .menu .current-menu-item > a:after{
+	#masthead.site-header .main-navigation .menu-main-menu-container .menu .current-menu-item > .menu-image-title-after .menu-image-title:after{
         visibility: visible;
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
