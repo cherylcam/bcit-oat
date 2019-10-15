@@ -72,6 +72,7 @@
                 text-decoration: none;
                 color: $color__text-input-light;
             }
+
         } 
     
     
@@ -84,27 +85,33 @@
         .wpcf7 {
             width: auto;
             height: auto;
-            input{
-                width: 100%;
-            } 
+        input{
+            width: 100%;
+        } 
 
-            .contact-form-heading {
-            text-transform: uppercase;
-            }
-
-            .wpcf7-submit {
-                display: block;
-                width: 100%;
-                margin: 0 auto;
-                padding: 10px 20px;
-                text-decoration: none;
-                text-align: center;
-                color: white;
-                background-color: #21437A;
-                outline: none;
-                font-size: 1.1em;
-            } 
+        .contact-form-heading {
+        text-transform: uppercase;
         }
+
+        .wpcf7-form-control.wpcf7-submit {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            background-color: #21437A;
+            outline: none;
+            font-size: 1.1em;
+            cursor: pointer;
+        } 
+
+        .wpcf7-form-control.wpcf7-submit:hover{
+            background-color: $color__main-theme-light;
+            font-stretch: 20px;
+        }
+    }
     }
 }
 
@@ -153,7 +160,7 @@
         }
     }
 }
-// Media Query at 900
+// Media Query at 700
 @media only screen and (min-width: 700px){
 
     .contact-page{
@@ -190,7 +197,7 @@
     }
 }
 
-// Media Query at 1200
+// Media Query at 1100
 @media only screen and (min-width: 1100px){
 
     .contact-page{
