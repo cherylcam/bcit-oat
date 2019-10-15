@@ -57,12 +57,17 @@ get_header();
 
 					/* Regex to Remove Time and Timezone */
 					$reg = '/\s[0-9]{2}:[0-9]{2}:[0-9]{2}\s[A-Z]{3}/m';
-					$pubDate = preg_replace($reg, "", $item['pubDate']->__toString());
+					$pubDate_formatted = preg_replace($reg, "", $item['pubDate']->__toString());
 					
+					/* Calculate how many days ago the Job was posted */
+					$pubDate_seconds = strtotime($item['pubDate']->__toString());
+					$date = strtotime('now');
+					
+					$pubDate_daysElapsed = floor(($date - $pubDate_seconds)/(60*60*24));
 			?>
 					<div class='posting'>
 						<h2 class='title'><a href='<?php print_r($link); ?>'><?php print_r($title); ?></a></h2>
-						<p class='pubDate'>Posted on <?php print_r($pubDate); ?></p>
+						<p class='pubDate'>Posted <?php print_r($pubDate_daysElapsed); ?> days ago</p>
 						<p class='description'><?php print_r($description); ?></p>
 						<p class='viewJob'><a href='<?php print_r($link); ?>'>View Posting</a><p>
 					</div>
