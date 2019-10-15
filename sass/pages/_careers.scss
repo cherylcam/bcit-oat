@@ -7,11 +7,13 @@
     grid-template-columns: 1fr;
     grid-gap:  20px 20px;
     .posting{
-        border: 1px solid red;
+        background-color: #F8F8F8;
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+        padding: 10px 20px;
 
         .title{
             font-weight: 300;
-            height: 125px;
+            height: 150px;
             margin: 0;
             padding: 0;
         }
