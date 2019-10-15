@@ -54,7 +54,11 @@ get_header();
 					$title = $item['title']->__toString();
 					$link = $item['link']->__toString();
 					$description = $item['description']->__toString();
-					$pubDate = $item['pubDate']->__toString();
+
+					/* Regex to Remove Time and Timezone */
+					$reg = '/\s[0-9]{2}:[0-9]{2}:[0-9]{2}\s[A-Z]{3}/m';
+					$pubDate = preg_replace($reg, "", $item['pubDate']->__toString());
+					
 			?>
 					<div class='posting'>
 						<h2 class='title'><a href='<?php print_r($link); ?>'><?php print_r($title); ?></a></h2>
