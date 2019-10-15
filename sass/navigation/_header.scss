@@ -6,20 +6,25 @@
 // }
 
 .site-header{
+    width: 100%;
     padding: 0 10px;
-    height: 50px;
+    height: 85px;
     background-color: $color__background-body;
     z-index: 999;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    .header-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        max-width: 1550px;
+    }
 
     .site-branding{
        display: flex;
        justify-content: space-between;
-       width: 290px;
+       width: 300px;
 
         .site-title{    
-            font-size: 3em;
+            font-size: 3.5em;
             margin: 0;
 
             a{
@@ -32,6 +37,7 @@
             p{
                 margin-top: 15px;   
                 margin-left: 10px;
+                font-size: 1em;
             }
         }
     }
@@ -40,17 +46,16 @@
 
 @media only screen and (min-width: 700px) {
         .site-header {
+            position: fixed;
             
             .site-branding{
                 width: 330px;
                 align-items: center;
-                .site-title {
-                    font-size: 3.5em;
-                }
+
                 .site-description{
                     p{
                       margin: 0 0 0 10px;  
-                      font-size: 1em;
+                  
                     }
                 }
             }

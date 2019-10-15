@@ -14,13 +14,12 @@
             z-index: -1;
 
             /* Add the blur effect */
-            filter: blur(2px);
-            -webkit-filter: blur(2px);
+            // filter: blur(2px);
+            // -webkit-filter: blur(2px);
         }
         
         .site-header{
-            width: 100%;
-            position: absolute;
+          height: 85px;
 
             }
 
