@@ -64,10 +64,10 @@ get_header();
 				$pubDate = $item['pubDate']->__toString();
 		?>
 			<div class='jobPosting'>
-				<a href='<?php print_r($link); ?>'><h1><?php print_r($title); ?></h1></a>
+				<a class='title' href='<?php print_r($link); ?>'><h1><?php print_r($title); ?></h1></a>
 				<span class='pubDate'><?php print_r($pubDate); ?></span>
 				<p class='description'><?php print_r($description); ?></p>
-				<a href='<?php print_r($link); ?>'>View Posting</a>
+				<a class='viewJob' href='<?php print_r($link); ?>'>View Posting</a>
 			</div>
 		<?php
 				$counter++;
