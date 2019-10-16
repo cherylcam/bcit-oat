@@ -24,12 +24,9 @@ jQuery(document).ready(function($){
       $("button").css("display", "none") // Only show button when the current date is on the schedule
     }
 
-    if ($("#" + todaysDate).length > 0 ){
-      showWidget = true
-      if (!$showWidget) {
-          $(".schedule-widget").css("display", "none")
-      } 
-    }
+
+
+
 
     document.querySelector(".goto").addEventListener("click",function(e){
     // dynamically determining the height of your navbar
