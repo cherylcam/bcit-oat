@@ -23,6 +23,7 @@
             height: 150px;
             margin: 0 auto;
             padding: 0;
+            font-size: 1.25em;
             
             a{
                 color: #707070;
@@ -40,6 +41,7 @@
                 margin: 0;
                 padding: 0;
                 font-weight: 300;
+                font-size: 0.9em;
             }
             
             .viewJob{
@@ -47,10 +49,11 @@
                 border: 1px solid $color__main-theme-light;
                 background-color: $color__main-theme-light;
                 //21437A
-                padding: 7.5px 15px;
+                padding: 5px 10px;
                 text-align: center;
                 border-radius: 20px;
                 transition: all 0.3s ease;
+                font-size: 0.9em;
 
                 &:hover{
                     color: $color__main-theme-light;
@@ -148,6 +151,27 @@ a{
 @media(min-width: 1024px){
     .careers-wrapper{
         // padding: 0 50px 0 50px;
+    }
+
+    .jobPostings{
+        .posting{    
+            .title{
+                font-size: 1.5em;
+            }
+             
+            .jobInfo{
+                display: flex;
+                justify-content: space-between;
+                .pubDate{
+                    font-size: 1em;
+                }
+                
+                .viewJob{
+                    padding: 7.5px 15px;
+                    font-size: 1em;
+                }
+            }
+        }
     }
 }
 
