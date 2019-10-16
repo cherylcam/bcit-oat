@@ -44,15 +44,17 @@ while ($query->have_posts()):
     <a href="/oat/schedule">
     <div class="schedule-widget">
         <div class="widget-date">
-            <p class="widget-weekday">
-                <?php echo $weekdayUI; ?>
+            <p class="widget-day">
+                <?php echo $today ?>
             </p>
             <p class="widget-month">
                 <?php echo $monthUI ?>
             </p>
-            <p class="widget-day">
-                <?php echo $today ?>
+            <p class="widget-weekday">
+                <?php echo $weekdayUI; ?>
             </p>
+            
+            
         </div>
         
       
