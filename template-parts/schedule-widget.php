@@ -19,6 +19,10 @@ while ($query->have_posts()):
 		$schedule[$month][] = $item; //Add the month as a key to the array
 	endforeach;
 
+    	$totalNumberOfDays = count($allMonths);
+		 
+		//  while $totalNumberOfDays > currentNumber of day
+
     date_default_timezone_set('America/Vancouver');
 
     //Formats to get the correct schedule data

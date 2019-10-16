@@ -20,7 +20,8 @@ while ($query->have_posts()):
 			array_push($allMonths, $month);	// Push all months in an array --> It going to add the month info for every day
 			$schedule[$month][] = $item; //Add the month as a key to the array
 		endforeach;
-		// print_r($schedule["April"]);
+
+	
 
 ?>
 		
@@ -40,6 +41,7 @@ while ($query->have_posts()):
 					$monthAsNumber = date("n", strtotime($month)); // Converting the months to a number so they can be used in cal_days_in_month function
 					array_push($numberOfDaysInMonth, cal_days_in_month(CAL_GREGORIAN, $monthAsNumber, $year)); // Push the number of days for each month in an array
 					$firstDay = date("w",  mktime(0, 0, 0, $monthAsNumber, 1, $year)); // Getting the first weekday of month. Number between 1 - 6?>
+
 
 						<div class="schedule-header" id=<?php echo $month?>>
 							<h1><?php echo $month . " " . $year ?> </h1>
