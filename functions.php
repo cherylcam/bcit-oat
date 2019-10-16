@@ -145,7 +145,7 @@ function bcit_oat_scripts() {
 		
 	wp_enqueue_script( 'bcit-oat-schedule', get_template_directory_uri() . '/js/schedule.js', array(), '20191005', true );
 
-
+	wp_enqueue_script('bcit-oat-slideToggle', get_template_directory_uri() . '/js/slideToggle.js', array(), '20191005', true);
 
 	wp_enqueue_script( 'bcit-oat-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
