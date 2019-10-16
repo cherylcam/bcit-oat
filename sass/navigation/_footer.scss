@@ -91,6 +91,7 @@ footer{
 
 .copyright-wrap{
     background-color: #404040;
+    margin-bottom: 100px;
     .copyright {
         color: white;
         width: 100%;
@@ -125,6 +126,10 @@ footer{
         img {
             display: block;
         }
+    }
+
+    .copyright-wrap{
+        margin-bottom: 0;
     }
 }
 
