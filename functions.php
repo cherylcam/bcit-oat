@@ -90,14 +90,6 @@ if ( ! function_exists( 'bcit_oat_setup' ) ) :
 				'capability'	=>	'edit_posts',
 				'redirect'		=> 	false,
 			));
-
-			acf_add_options_page(array(
-				'page_title'	=>	'Career Links Settings',
-				'menu_title'	=>	'Career Links',
-				'menu_slug'		=>	'career-links-settings',
-				'capability'	=>	'edit_posts',
-				'redirect'		=>	false,
-			));
 		}
 	}
 endif;
