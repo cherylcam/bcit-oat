@@ -3,6 +3,7 @@ let mySwiper = new Swiper ('.swiper-container',
 {
     // Optional parameters
     direction: 'horizontal',
+    autoHeight: true,
     loop: false,
     initialSlide: 0,
 

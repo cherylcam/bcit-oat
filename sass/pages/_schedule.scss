@@ -50,6 +50,7 @@
         max-width: 100%;
         overflow: auto;
         border-top: 2px solid rgba(128, 128, 128, 0.507);
+        padding-bottom: 40px;
     }
 
     .grid-item{
@@ -179,35 +180,24 @@
        margin-top: 40px;
    }
 
-    button {
+    button  {
         border-radius: 2px;
         width: 150px;
         height: 35px;
-        background-color: $color__main-theme;
+        background-color:$color__main-theme;
         border: none;
         box-shadow: $oat-box-shadow;
         transition: all 0.3s ease 0s;
+        color: white;
+        font-size: 1em;
         cursor: pointer;
 
         &:hover {
-            transform: translateY(-3px);
-            border:  2px solid $color__main-theme-light;
-            background-color: #fff;
-            border-radius: 20px;
-
-            span{
-                color: $color__main-theme-light;
-                letter-spacing: 3px;
-            }
-        }
-
-        span {
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-            letter-spacing: 0px;
-            transition: letter-spacing 0.5s;     
-        }      
+                transform: translateY(-3px);
+                background-color: $color__main-theme-light;
+            }    
+        
+    
     }
 
     .calendar{

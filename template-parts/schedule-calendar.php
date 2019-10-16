@@ -35,7 +35,7 @@ while ($query->have_posts()):
 		
 			
 		<div class="schedule-calendar">
-				<button class="goto"><span>Go to today</span></button>
+				<button class="goto">Go to today</button>
 			<?php foreach ($months as $month):
 					
 					$currentYear = date("Y", strtotime($schedule[$month][0][1])); // Get the year in the right format
