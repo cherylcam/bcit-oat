@@ -1,7 +1,7 @@
 .schedule-widget{
     // background-color: $color__main-theme;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
     max-width: 310px;
     margin: 0 auto;
@@ -10,13 +10,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: rgba(199, 198, 198, 0.616);
+    background-color: rgba(240, 240, 240, 0.445);
     box-shadow: 0 5px 10px rgba(154, 160, 185, 0.089), 0 15px 40px rgba(166, 173, 201, 0.233);
     border-radius: 4px;
 
     p {
         margin: 0;
-        color: white;
+        color: rgb(112, 112, 112);
     }
 
     .widget-date{
@@ -24,17 +24,28 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 15px;
-        padding-right: 15px;
 
-        .widget-weekday {
+      
+
+        .widget-day {
             font-weight: 400;
+            font-size: 3em;
+        }
+        .widget-month {
+            font-weight: 400;
+            font-size: 1.5em;
+            margin-top: -20px;
+            text-transform: uppercase;
         }
 
-        p {
-            font-size: 1.2rem;
-            font-weight: 300;
-        }       
+        .widget-weekday {
+            font-weight: 200;
+            font-size: 1.3rem;
+            margin-top: -10px;
+            text-transform: uppercase;
+        }
+
+        
     }
 
     .widget-info {
@@ -42,19 +53,29 @@
         flex-direction: column;
         padding-left: 15px;
         border-left: 3px solid white;
+        justify-content: center;
 
+        .widget-class {
+            font-size: 1.3rem;
+
+        }
 
         h3 {
             color: white;
             margin: 0;
             font-weight: 400;
+            font-size: 1.5em;
             color: $color__main-theme;
         }
     }
 
     .widget-instructor,
     .widget-room  {
-        font-weight: 300;
+        font-weight: 200;
+        font-size: 1.3rem;
+
+
+
 
     }
 }

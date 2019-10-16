@@ -94,6 +94,10 @@
             transition: all 1s ease;
         }
 
+        &:focus {
+            outline: none;
+        }
+
         span {
             font-size: 0.9em;
         }
