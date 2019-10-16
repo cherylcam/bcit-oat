@@ -19,7 +19,8 @@ while ($query->have_posts()):
 		$schedule[$month][] = $item; //Add the month as a key to the array
 	endforeach;
 
-    	$totalNumberOfDays = count($allMonths);
+    $totalNumberOfDays = count($allMonths);
+    $currentDay = 0;
 		 
 		//  while $totalNumberOfDays > currentNumber of day
 
@@ -36,6 +37,7 @@ while ($query->have_posts()):
 
     $weekdayUItomorrow = date("D"); 
     ?>
+
    
     <a href="/oat/schedule">
     <div class="schedule-widget">
@@ -51,6 +53,7 @@ while ($query->have_posts()):
             </p>
 
         </div>
+
         <div class="widget-info">
             <?php if (date("H") >= 17 || $weekdayUI == "Sun" || $schedule[$month][$today][5] == 1): // after 17, Sunday, or holiday  ?> 
                 <h3>Tomorrow's class</h3>
@@ -105,6 +108,7 @@ while ($query->have_posts()):
                     </p>
                 <?php endif; ?>
             <?php endif; ?>
+            <?php $currentDay++; ?>
         </div>
     </div>
     </a>

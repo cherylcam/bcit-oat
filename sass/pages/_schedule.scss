@@ -63,6 +63,8 @@
         box-shadow: $oat-box-shadow;
         border-radius: 4px;
 
+         
+
 
         .date {
             display: flex;
@@ -74,6 +76,8 @@
             width: 100%;
             padding: 15px;
             border-right: 2px solid $color__main-theme;
+
+           
 
 
 
@@ -223,7 +227,7 @@
     .date-grid {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        grid-gap: 2px 2px;
+        grid-gap: 0.1%;
 
     }
 
@@ -259,6 +263,14 @@
         margin-left: 75%;
         margin-bottom: 0px;
     }
+
+    .date-holiday {
+        color: rgba(36, 36, 36, 0.411);
+        font-size: 2rem;
+        margin-left: 75%;
+        margin-bottom: 0px;
+    }
+
     .class {
         color: $color__main-theme;
         font-size: 1rem;
