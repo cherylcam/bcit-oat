@@ -19,6 +19,7 @@ while ($query->have_posts()):
 		$schedule[$month][] = $item; //Add the month as a key to the array
 	endforeach;
 
+
     $totalNumberOfDays = count($allMonths);
     $currentDay = 0;
 		 
@@ -29,6 +30,7 @@ while ($query->have_posts()):
     //Formats to get the correct schedule data
     $currentMonth = date('F');
     $today = date("j") ;
+    $todaysDate = date("md");
     
 
     //Formats for the UI
@@ -51,10 +53,17 @@ while ($query->have_posts()):
             <p class="widget-day">
                 <?php echo $today ?>
             </p>
-
         </div>
-
+        
+      
         <div class="widget-info">
+              <?php if ($todaysDate > 1015 && $todaysDate < 1017 ): ?>
+                <h3> The new semester starts in October <?php $schedule[$currentMonth][0][1] ?> </h3>
+            <?php elseif ($todaysDate > 07-02 && $todaysDate < 01-04): ?>
+                <h3> The new semester starts in April </h3>
+            <?php endif; ?>
+             
+
             <?php if (date("H") >= 17 || $weekdayUI == "Sun" || $schedule[$month][$today][5] == 1): // after 17, Sunday, or holiday  ?> 
                 <h3>Tomorrow's class</h3>
                 <p class="widget-class">
@@ -112,6 +121,8 @@ while ($query->have_posts()):
         </div>
     </div>
     </a>
+
+
 
     
 
