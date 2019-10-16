@@ -13,10 +13,11 @@
 <?php get_header(); ?>
 
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area" style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>)">
+
 		<main id="main" class="site-main">
 
-		</div class="schedule-calendar">
+			</div class="schedule-calendar">
 				<?php get_template_part( 'template-parts/schedule', 'widget' ); ?>
 			</div>
 
