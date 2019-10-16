@@ -51,13 +51,11 @@ while ($query->have_posts()):
 								<p class="weekday">Wednesday</p>
 								<p class="weekday">Thursday</p>
 								<p class="weekday">Friday</p>
-								<p class="weekday">Saturday</p>
-								<p class="weekday">Sunday</p>
 							</div>
 								<?php $dayOfMonth = 1 ?>
 								<div class="date-grid">
 									<?php for ($i = 0 ; $i < 5; $i ++): // Create rows?> 
-											<?php for ($j = 0; $j < 7; $j++ ): //Creating the individual cells ?>  
+											<?php for ($j = 0; $j < 5; $j++ ): //Creating the individual cells ?>  
 												<?php if ($i == 0 && $j < $firstDay - 1):  ?> 
 													<div class="beginning-month">
 													</div>
