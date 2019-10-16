@@ -5,17 +5,12 @@
 .home{
     .home-page{
         .content-area{
-            // background-image: url(./images/home-page-background.png);
             height: 100vh;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
-            z-index: -1;
-
-            /* Add the blur effect */
-            // filter: blur(2px);
-            // -webkit-filter: blur(2px);
+            
         }
         
         .site-header{

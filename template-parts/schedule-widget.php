@@ -59,19 +59,14 @@ while ($query->have_posts()):
         
       
         <div class="widget-info">
-              <?php if ($todaysDate > 0705 && $todaysDate < 1015 ): ?>
-                <h3> The new semester starts   
-                    <?php if ($schedule[$currentMonth][0][1]): // Display the startdate of new semester only if a new schedule is uploaded, else just output April
-                    echo date("F d, Y", strtotime($schedule[$currentMonth][0][1]));
-                    else:?> in October. </h3>
-                    <?php endif; ?>
-            <?php elseif ($todaysDate > 0207 && $todaysDate < 0401): ?>
-                <h3> The new semester starts   
-                    <?php if ($schedule[$currentMonth][0][1]):
-                    echo date("F d, Y", strtotime($schedule[$currentMonth][0][1]));
-                    else:?> in April. </h3>
-                    <?php endif; ?>
-            <?php elseif (date("H") >= 17 || $weekdayUI == "Sun" || $schedule[$month][$today][5] == 1): // after 17, Sunday, or holiday  ?> 
+              <?php if ($todaysDate > 1015 && $todaysDate < 1017 ): ?>
+                <h3> The new semester starts in October <?php $schedule[$currentMonth][0][1] ?> </h3>
+            <?php elseif ($todaysDate > 07-02 && $todaysDate < 01-04): ?>
+                <h3> The new semester starts in April </h3>
+            <?php endif; ?>
+             
+
+            <?php if (date("H") >= 17 || $weekdayUI == "Sun" || $schedule[$month][$today][5] == 1): // after 17, Sunday, or holiday  ?> 
                 <h3>Tomorrow's class</h3>
                 <p class="widget-class">
                     <?php echo ($schedule[$currentMonth][$today][2])  // Weekdays start at 1 in php?> 

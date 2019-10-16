@@ -108,10 +108,16 @@
             transition: all 0.3s ease 0s;
 
             &:hover {
+<<<<<<< HEAD
                 transform: translateY(-3px);
                 // border:  2px solid $color__main-theme-light;
                 background-color: $color__main-theme-light;
                 // letter-spacing: 3px;
+=======
+                letter-spacing: 100px;
+                background-color: $color__main-theme-light;
+
+>>>>>>> 7dd860e53ed73951b9f0fe7520fa765c1d10efa9
             }    
         } 
     }
