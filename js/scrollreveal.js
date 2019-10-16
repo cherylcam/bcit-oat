@@ -1,5 +1,7 @@
 //scroll reveal effect //
 window.sr = ScrollReveal();
-sr.reveal('.scrollReveal', {
-  duration: 2800
+
+ScrollReveal().reveal('.scrollReveal', {
+  delay: 100,
+  duration: 2000,
 });
