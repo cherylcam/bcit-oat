@@ -50,13 +50,15 @@ get_header();
 					if (have_rows('job_sites')):
 				?>
 						<div class='careerLinks jobSites'>
+							<ul>
 					<?php
 						while(have_rows('job_sites')) : the_row();
 					?>
-							<a href='<?php the_sub_field('url'); ?>'><?php the_sub_field('website_name'); ?></a>
+							<li><a href='<?php the_sub_field('url'); ?>'><?php the_sub_field('website_name'); ?></a></li>
 					<?php
 						endwhile;
 					?>
+							</ul>
 						</div>
 				<?php 
 					endif;

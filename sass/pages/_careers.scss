@@ -1,5 +1,5 @@
 .careers-wrapper{
-    width: 100%;
+    width: 90%;
     max-width: 1550px;
     margin: 0 auto;
 
@@ -44,11 +44,18 @@
             
             .viewJob{
                 color: white;
+                border: 1px solid $color__main-theme-light;
                 background-color: $color__main-theme-light;
                 //21437A
                 padding: 7.5px 15px;
                 text-align: center;
                 border-radius: 20px;
+                transition: all 0.3s ease;
+
+                &:hover{
+                    color: $color__main-theme-light;
+                    background-color: white;
+                }
             }
         }
 
@@ -61,7 +68,7 @@
     margin: 25px auto;
     width: 100%;
 
-    button{
+    .careersBtn{
         cursor: pointer;
         background-color: #F8F8F8;
         width: 100%;
@@ -83,14 +90,25 @@
             transform: rotate(180deg);
             transition: all 1s ease;
         }
+
+        span {
+            font-size: 0.9em;
+        }
     }
 
     .careerLinks{
         display: none;
 
-        a{
-            display: block;
-            padding: 0px 24px;
+        ul {
+            margin: 0;
+            padding: 20px 24px;
+            li {
+                list-style: none;
+
+                a{
+                    display: block;
+                }
+            }
         }
     }
 }
