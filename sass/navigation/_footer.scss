@@ -4,7 +4,7 @@ footer{
 
 .copyright-wrap{
     background-color: #404040;
-    margin-bottom: 100px;
+    margin-bottom: 62px;
     .copyright {
         color: white;
         width: 100%;
@@ -126,7 +126,7 @@ footer{
     }
 }
 
-@media (min-width: 500px){
+@media (min-width: 600px){
     footer{
         .footer-headings-wrap{
             .footer-headings{
@@ -140,6 +140,9 @@ footer{
         
             }
         }
+    }
+    .copyright-wrap{
+        margin-bottom: 100px;
     }
 }
 
