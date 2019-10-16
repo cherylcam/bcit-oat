@@ -25,7 +25,7 @@ get_header();
 						while(have_posts()): 
 					?>
 
-					<div class="certification"><!-- .certification -->
+					<div class="certification scrollReveal load-hidden"><!-- .certification -->
 					<?php
 							the_post();
 					?>
