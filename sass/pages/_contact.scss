@@ -21,7 +21,7 @@
             .faculty-staff,
             .program-info {
                 background-color: $color__main-theme-light;
-                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.205), 0 2px 5px 0 rgba(0, 0, 0, 0.253);
+                box-shadow: $contact-box-shadow;
                 min-height: 205px;
                 width: auto;
                 line-height: $font__line-height-body;
@@ -79,7 +79,7 @@
         .bcit-map {
             width: auto;
             height: 300px;
-            box-shadow: 10px 10px 10px rgba(0,0,0,0.16);
+            box-shadow: $contact-box-shadow;
         }
 
         .wpcf7 {
@@ -105,12 +105,15 @@
             outline: none;
             font-size: 1.1em;
             cursor: pointer;
-        } 
+            transition: all 0.3s ease 0s;
 
-        .wpcf7-form-control.wpcf7-submit:hover{
-            background-color: $color__main-theme-light;
-            font-stretch: 20px;
-        }
+            &:hover {
+                transform: translateY(-3px);
+                border:  2px solid $color__main-theme-light;
+                background-color: $color__main-theme-light;
+                letter-spacing: 3px;
+            }    
+        } 
     }
     }
 }

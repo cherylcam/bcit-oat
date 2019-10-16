@@ -1,7 +1,18 @@
+.careers-wrapper{
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+
+    h2{
+        margin: 25px auto;
+    }
+}
+
 .jobPostings{
     display: grid;
     grid-template-columns: 1fr;
     grid-gap:  20px 20px;
+    margin: 0 auto;
     .posting{
         background-color: #F8F8F8;
         box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
@@ -10,7 +21,7 @@
         .title{
             font-weight: 400;
             height: 150px;
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
             
             a{
@@ -33,23 +44,64 @@
             
             .viewJob{
                 color: white;
-                background-color: #21437A;
+                background-color: $color__main-theme-light;
+                //21437A
                 padding: 7.5px 15px;
                 text-align: center;
+                border-radius: 20px;
             }
         }
 
     }
 }
 
+.careerToggle{
+    background-color: #F8F8F8;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+    margin: 25px auto;
+    width: 100%;
+
+    button{
+        cursor: pointer;
+        background-color: #F8F8F8;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #D0D0D0;
+        text-align: left;
+        font-size: 1.5em;
+        color: #707070;
+        display: flex;
+        justify-content: space-between;
+        
+        .fa-chevron-down{
+            transition: all 1s ease;
+            color: #707070;
+        }
+
+        .active{
+            transform: rotate(180deg);
+            transition: all 1s ease;
+        }
+    }
+
+    .careerLinks{
+        display: none;
+
+        a{
+            display: block;
+            padding: 0px 24px;
+        }
+    }
+}
+
 .viewMore{
-    display: inline-block;
+    display: block;
     width: 100%;
     text-align: right;
-    margin: 50px 0;
+    margin: 50px auto;
 
     .viewMoreBtn{
-        // float: right;
         color: white;
         background-color: #21437A;
         display:inline-block;
@@ -68,6 +120,7 @@ a{
     text-decoration: none;
 }
 
+
 @media (min-width: 640px){
     .jobPostings{
         grid-template-columns: 1fr 1fr;
@@ -76,30 +129,45 @@ a{
 
 @media(min-width: 1024px){
     .careers-wrapper{
-        padding: 0 50px 0 50px;
+        // padding: 0 50px 0 50px;
     }
 }
 
 @media (min-width: 1366px){
     .careers-wrapper{
-        padding: 0 0 0 100px;
+        // padding: 0 0 0 100px;
+
+        h2{
+            max-width: 1280px;
+        }
     }
     .jobPostings{
         grid-template-columns: 1fr 1fr 1fr;
-        max-width: 960px;
+        max-width: 1280px;
     }
 
-    .viewMore{
-        max-width: 960px;
+    .careerToggle, .viewMore{
+        max-width: 1280px;
     }
 }
 
 @media(min-width: 1600px){
-    .jobPostings{
-        max-width: 1280px;
-    }
 
-    .viewMore{
-        max-width: 1280px;
-    }
+    // .careers-wrapper{
+    //     h2{
+    //         max-width: 1280px;
+    //     }
+    // }
+
+    // .jobPostings{
+    //     max-width: 1280px;
+    // }
+
+    // .careerToggle{
+    //     max-width: 1280px;
+    // }
+
+    // .viewMore{
+    //     max-width: 1280px;
+    // }
 }

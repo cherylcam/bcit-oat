@@ -17,14 +17,52 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-		
-
+	
 		<header class="page-header">
 			<h1 class="page-title">Careers</h1>
 		</header><!-- .page-header -->
-		
+	
 		<div class='careers-wrapper'>
-			<h1>Civic Jobs BC</h1>
+			<div class='careerToggle'>
+				<button class='careersBtn recruitmentAgencies'><span>Recruitment Agencies</span><i class="fas fa-chevron-down"></i></button>
+				<?php 
+					if (have_rows('recruitment_agencies')):
+				?>
+						<div class='careerLinks recruitmentAgencies'>
+							<ul>
+					<?php
+						while(have_rows('recruitment_agencies')) : the_row();
+					?>
+							<li><a href='<?php the_sub_field('url'); ?>'><?php the_sub_field('agency_name'); ?></a></li>
+					<?php
+						endwhile;
+					?>
+							</ul>
+						</div>
+				<?php 
+					endif;
+				?>
+			</div>
+
+			<div class='careerToggle'>
+				<button class='careersBtn jobSites'><span>Job Sites</span><i class="fas fa-chevron-down"></i></button>
+				<?php 
+					if (have_rows('job_sites')):
+				?>
+						<div class='careerLinks jobSites'>
+					<?php
+						while(have_rows('job_sites')) : the_row();
+					?>
+							<a href='<?php the_sub_field('url'); ?>'><?php the_sub_field('website_name'); ?></a>
+					<?php
+						endwhile;
+					?>
+						</div>
+				<?php 
+					endif;
+				?>
+			</div>
+			<h2>Civic Jobs BC</h2>
 			<div class='jobPostings'>
 			<?php
 				$url = "https://www.civicjobs.ca/rss/pc?id=36"; // Civic Jobs Office Administration
