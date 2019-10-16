@@ -3,40 +3,30 @@ $args = array(
 	'post_type' 		=> 'tablepress_table',
 	'posts_per_page'	=> -1 
 );
-
 $query = new WP_Query( $args );
-
 while ($query->have_posts()):
 	$query->the_post();
 	$table_data 	= json_decode(get_the_content()); // Parsing the json into an object.
 	$allMonths = array();
-
-
 	foreach ($table_data as $item):
 		$month = date("F", strtotime($item[1]));//Format the month to text
 		$year = date("Y", strtotime($item[1])); // Get the year in the right format
 		array_push($allMonths, $month);	// Push all months in an array --> It going to add the month info for every day
 		$schedule[$month][] = $item; //Add the month as a key to the array
 	endforeach;
-
-
     $totalNumberOfDays = count($allMonths);
     $currentDay = 0;
 		 
 		//  while $totalNumberOfDays > currentNumber of day
-
     date_default_timezone_set('America/Vancouver');
-
     //Formats to get the correct schedule data
     $currentMonth = date('F');
     $today = date("j") ;
     $todaysDate = date("md");
     
-
     //Formats for the UI
     $weekdayUI = date("D");
     $monthUI    = date("M");
-
     $weekdayUItomorrow = date("D"); 
     ?>
 
@@ -50,23 +40,27 @@ while ($query->have_posts()):
             <p class="widget-month">
                 <?php echo $monthUI ?>
             </p>
-            <p class="widget-weekday">
+             <p class="widget-weekday">
                 <?php echo $weekdayUI; ?>
             </p>
-            
             
         </div>
         
       
         <div class="widget-info">
-              <?php if ($todaysDate > 1015 && $todaysDate < 1017 ): ?>
-                <h3> The new semester starts in October <?php $schedule[$currentMonth][0][1] ?> </h3>
-            <?php elseif ($todaysDate > 07-02 && $todaysDate < 01-04): ?>
-                <h3> The new semester starts in April </h3>
-            <?php endif; ?>
-             
-
-            <?php if (date("H") >= 17 || $weekdayUI == "Sun" || $schedule[$month][$today][5] == 1): // after 17, Sunday, or holiday  ?> 
+              <?php if ($todaysDate > 0705 && $todaysDate < 1015 ): ?>
+                <h3> The new semester starts   
+                    <?php if ($schedule[$currentMonth][0][1]): // Display the startdate of new semester only if a new schedule is uploaded, else just output April
+                    echo date("F d, Y", strtotime($schedule[$currentMonth][0][1]));
+                    else:?> in October. </h3>
+                    <?php endif; ?>
+            <?php elseif ($todaysDate > 0207 && $todaysDate < 0401): ?>
+                <h3> The new semester starts   
+                    <?php if ($schedule[$currentMonth][0][1]):
+                    echo date("F d, Y", strtotime($schedule[$currentMonth][0][1]));
+                    else:?> in April. </h3>
+                    <?php endif; ?>
+            <?php elseif (date("H") >= 17 || $weekdayUI == "Sun" || $schedule[$month][$today][5] == 1): // after 17, Sunday, or holiday  ?> 
                 <h3>Tomorrow's class</h3>
                 <p class="widget-class">
                     <?php echo ($schedule[$currentMonth][$today][2])  // Weekdays start at 1 in php?> 
@@ -129,5 +123,4 @@ while ($query->have_posts()):
     
 
 <?php endwhile; ?>
-
 
