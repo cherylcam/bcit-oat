@@ -67,7 +67,7 @@
 			</div>
 		</div>
 	</footer><!-- #colophon -->
-	<div class="copyright-wrap"><span class='copyright'>Copyright &copy; BCIT OAT 2019. All rights reserved.</span></div>
+	<div class="copyright-wrap"><span class='copyright'>Copyright &copy; BCIT OAT <?php print_r(date('Y')); ?>. All rights reserved.</span></div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

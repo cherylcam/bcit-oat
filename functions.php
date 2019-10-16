@@ -145,7 +145,7 @@ function bcit_oat_scripts() {
 		
 	wp_enqueue_script( 'bcit-oat-schedule', get_template_directory_uri() . '/js/schedule.js', array(), '20191005', true );
 
-
+	wp_enqueue_script('bcit-oat-slideToggle', get_template_directory_uri() . '/js/slideToggle.js', array(), '20191005', true);
 
 	wp_enqueue_script( 'bcit-oat-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -191,3 +191,13 @@ require get_template_directory() . '/inc/register-cpt.php';
  * Post Order By Menu Order
  */
 require get_template_directory() . '/inc/post-menu-order.php';
+
+
+/**
+ * ScrollReveal Scripts
+ */
+
+function oat_scroll_reveal() {
+	wp_enqueue_script ('scrollreveal', get_stylesheet_directory_uri() . '/js/scrollReveal.min.js', array( 'jquery' ),'2.0.5',true );
+}
+add_action( 'wp_enqueue_scripts', 'oat_scroll_reveal' );

@@ -23,7 +23,7 @@ get_header();
 				<div class="master-wrapper">
 					<?php while ( have_posts() ) :
 						the_post(); ?>
-							<div class="course-wrap">
+							<div class="course-wrap scrollReveal">
 								<div class="course-info-wrap">
 									<div class="course-info">
 										<h1 class="course-heading"><?php the_title(); ?>
