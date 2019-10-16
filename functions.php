@@ -195,9 +195,9 @@ require get_template_directory() . '/inc/post-menu-order.php';
 
 /**
  * ScrollReveal Scripts
- */
+*/
 
 function oat_scroll_reveal() {
-	wp_enqueue_script ('scrollreveal', get_stylesheet_directory_uri() . '/js/scrollReveal.min.js', array( 'jquery' ),'2.0.5',true );
+	wp_enqueue_script ('scrollreveal', get_stylesheet_directory_uri() . '/js/scrollreveal.js', array( 'jquery' ),'20191015',true );
 }
 add_action( 'wp_enqueue_scripts', 'oat_scroll_reveal' );
