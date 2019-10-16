@@ -2,6 +2,11 @@
 # Courses Page
 --------------------------------------------------------------*/
 .post-type-archive-oat-courses{
+
+    html.sr .load-hidden {
+        visibility: hidden;
+    }
+    
     section{
         padding: 0 2vw;
         margin-top: 100px;

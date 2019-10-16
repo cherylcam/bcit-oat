@@ -22,7 +22,6 @@
 					<div class="swiper-button-prev"></div>
 				</div>
 				
-			
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<?php $slide_index=0;?>
@@ -34,8 +33,6 @@
 								</div>								
 								<div class="grid-container">
 								
-								
-
 									<?php foreach ($monthlySchedule as $weeks):
 									// Add the appropriate weekday to the array 
 									$weekday = date("l", strtotime($weeks[1])); 
@@ -54,12 +51,8 @@
 										$isWeekend	= $weeks[6];
 									endfor;?>
 									
-									
-
-		
-
 										<?php if ($isWeekend): ?>
-											<div class="weekend grid-item" id=<?php echo "'" . $weeks[2] . "'" ?>>
+											<div class="weekend grid-item scrollReveal load-hidden" id=<?php echo "'" . $weeks[2] . "'" ?>>
 												<div class="date">
 													<p id="day"><?php  echo $weekday ?></p>
 													<p id="date"><?php  echo $date ?></p>
@@ -69,7 +62,7 @@
 												</div>
 											</div>
 										<?php else: ?>
-											<div class=<?php echo "'week " . $week . " grid-item'"?> id=<?php echo "'" . $weeks[2] . "'" ?>> 
+											<div class=<?php echo "'week " . $week . " grid-item scrollReveal load-hidden'"?> id=<?php echo "'" . $weeks[2] . "'" ?>> 
 											<div class="date">
 												<p id="day"><?php  echo $weekday ?></p>
 												<p id="date"><?php  echo $date ?></p>
