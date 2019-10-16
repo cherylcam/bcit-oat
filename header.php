@@ -26,23 +26,25 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bcit-oat' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<h1 class="site-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">OAT</a>
-			</h1>
-			<div class="site-description">
-				<p>OFFICE ADMINISTRATOR <br> WITH TECHNOLOGY PROGRAM</p>
-			</div>
-		</div><!-- .site-branding -->
+		<div class="header-wrap">
+			<div class="site-branding">
+				<h1 class="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">OAT</a>
+				</h1>
+				<div class="site-description">
+					<p>Office Administrator<br>with Technology Program</p>
+				</div>
+			</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+			<nav id="site-navigation" class="main-navigation">
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+				?>
+			</nav><!-- #site-navigation -->
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

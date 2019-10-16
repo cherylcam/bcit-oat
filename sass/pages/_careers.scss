@@ -1,0 +1,105 @@
+.jobPostings{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:  20px 20px;
+    .posting{
+        background-color: #F8F8F8;
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+        padding: 10px 20px;
+
+        .title{
+            font-weight: 400;
+            height: 150px;
+            margin: 0;
+            padding: 0;
+            
+            a{
+                color: #707070;
+            }
+        }
+
+        .description{
+            display: none;
+        }
+         
+        .jobInfo{
+            display: flex;
+            justify-content: space-between;
+            .pubDate{
+                margin: 0;
+                padding: 0;
+                font-weight: 300;
+            }
+            
+            .viewJob{
+                color: white;
+                background-color: #21437A;
+                padding: 7.5px 15px;
+                text-align: center;
+            }
+        }
+
+    }
+}
+
+.viewMore{
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    margin: 50px 0;
+
+    .viewMoreBtn{
+        // float: right;
+        color: white;
+        background-color: #21437A;
+        display:inline-block;
+        padding: 7.5px 15px;
+        text-align: center;
+    
+        &:hover,
+        &:visited,
+        &:active {
+            color: white;
+        }
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+@media (min-width: 640px){
+    .jobPostings{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width: 1024px){
+    .careers-wrapper{
+        padding: 0 50px 0 50px;
+    }
+}
+
+@media (min-width: 1366px){
+    .careers-wrapper{
+        padding: 0 0 0 100px;
+    }
+    .jobPostings{
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 960px;
+    }
+
+    .viewMore{
+        max-width: 960px;
+    }
+}
+
+@media(min-width: 1600px){
+    .jobPostings{
+        max-width: 1280px;
+    }
+
+    .viewMore{
+        max-width: 1280px;
+    }
+}

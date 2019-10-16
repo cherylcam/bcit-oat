@@ -15,7 +15,6 @@ get_header();
 	<div id="primary" class="content-area contact-page">
 		<main id="main" class="site-main container-main">
 
-			
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -34,30 +33,27 @@ get_header();
 	<div class="master-wrapper">
 		<div class="contact-left-container">			
 		<section class="faculty-container">
-				<h2>Faculty Contact</h2>	
-				<article class="faculty-staff">					
-					<p class="faculty-name">
-						<?php the_sub_field('faculty_name');	?>
-					</p>
-					<p class="faculty-position">
-						<?php the_sub_field('faculty_position'); ?>	
-					</p>
-					<p class="faculty-number">
-					<svg class="phone-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/></svg>
-						<?php the_sub_field('faculty_number');	?>
-					</p>
-					<p class="faculty-email">
-						<svg class="mail-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
-						<?php the_sub_field('faculty_email'); ?>
-					</p>
-				</article>
+			<h2>Faculty Contact</h2>	
+			<article class="faculty-staff">					
+				<p class="faculty-name">
+					<span><?php the_sub_field('faculty_name');	?></span>
+				</p>
+				<p class="faculty-position">
+					<span><?php the_sub_field('faculty_position'); ?></span>
+				</p>
+				<p class="faculty-number">
+				<svg class="phone-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/></svg>
+					<span><?php the_sub_field('faculty_number');?></span>
+				</p>
+				<p class="faculty-email">
+					<svg class="mail-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+						<span><?php the_sub_field('faculty_email'); ?></span>
+				</p>
+			</article>
 		</section>	<!-- End of Faculty Contact Container -->
 				<?php
-				
 					endwhile;
-					endif;
-
-						
+					endif;	
 				?>
 
 		<!-- Program Info -->

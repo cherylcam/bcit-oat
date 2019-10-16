@@ -1,229 +1,236 @@
-    /*--------------------------------------------------------------
-    # Contact Page
-    --------------------------------------------------------------*/
-    .customize-support {
+/*--------------------------------------------------------------
+# Contact Page
+--------------------------------------------------------------*/
+.customize-support {
+    margin: 0 auto;
+}
+
+.contact-page{
+    .container-main {
+        display: block;
+        font-family: 'Roboto', sans-serif;
         margin: 0 auto;
-    }
-    .contact-page{
-        .container-main {
-            display: block;
-            font-family: 'Roboto', sans-serif;
-            margin: 0 auto;
+    
+        .master-wrapper {
+            justify-items: center;
+            padding: 0px 20px;
+            margin: 0 auto; 
+            width: 100%;    
+    
         
-            .master-wrapper {
-                justify-items: center;
-                padding: 0px 20px;
-                margin: 0 auto; 
-                width: 100%;    
+            .faculty-staff,
+            .program-info {
+                background-color: $color__main-theme-light;
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.205), 0 2px 5px 0 rgba(0, 0, 0, 0.253);
+                min-height: 205px;
+                width: auto;
+                line-height: $font__line-height-body;
+                padding: 20px 20px;
+    
+            }   
         
-            
-                .faculty-staff,
-                .program-info {
-                    background-color: $color__main-theme-light;
-                    box-shadow: 10px 10px 10px rgba(0,0,0,0.16);
-                    min-height: 205px;
-                    width: auto;
-                    line-height: $font__line-height-body;
-                    padding: 20px 20px;
-        
-                }   
-            
-                .phone-svg, 
-                .mail-svg,
-                .website-svg {
-                    fill: $color__text-input-light;
-                    margin-right: 10px;
-                }
-                
+            .phone-svg, 
+            .mail-svg,
+            .website-svg {
+                fill: $color__text-input-light;
+                margin-right: 10px;
             }
-        
-            .faculty-container,
-            .program-container   {    
-        
-                h2 {
+            
+        }
+    
+        .faculty-container,
+        .program-container {    
+    
+            h2 {
                 color: $color__text-main;
                 text-transform: uppercase;
-                }
-        
-                p {
+            }
+    
+            p {
                 color: $color__text-input-light;
                 margin: 5px;
-                }
+            }
+
+            .faculty-name,
+            .program-name {
+                text-transform: uppercase;
+                font-weight: bold;
+                border-bottom: 1px $color__text-input-light solid;
+            }   
+
+            .faculty-staff {
+                height: auto;
+            
+            }
         
-                .faculty-name,
-                .program-name {
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    border-bottom: 1px $color__text-input-light solid;
-                }   
-        
+            .program-info {
+                height: auto;
+            }
+
+            .program-website a,
+            .bcit-website a {
+                text-decoration: none;
+                color: $color__text-input-light;
+            }
+
+        } 
+    
+    
+        .bcit-map {
+            width: auto;
+            height: 300px;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.16);
+        }
+
+        .wpcf7 {
+            width: auto;
+            height: auto;
+        input{
+            width: 100%;
+        } 
+
+        .contact-form-heading {
+        text-transform: uppercase;
+        }
+
+        .wpcf7-form-control.wpcf7-submit {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            background-color: #21437A;
+            outline: none;
+            font-size: 1.1em;
+            cursor: pointer;
+        } 
+
+        .wpcf7-form-control.wpcf7-submit:hover{
+            background-color: $color__main-theme-light;
+            font-stretch: 20px;
+        }
+    }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media only screen and (min-width: 500px){
+    .contact-page{
+
+        .master-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            justify-content: space-evenly;
+            width: 500px;
+    
+    
+            .faculty-container,
+            .program-container {
+                width: 500px;
+    
                 .faculty-staff {
-                    height: auto;
+                    width: 500px;
                 
                 }
                 
                 .program-info {
-                    height: auto;
+                    width: 500px;
                 }
-        
-                .program-website a,
-                .bcit-website a {
-                    text-decoration: none;
-                    color: $color__text-input-light;
-                }
-            } 
-        
-        
-            .bcit-map {
-                width: auto;
-                height: 300px;
-                box-shadow: 10px 10px 10px rgba(0,0,0,0.16);
+    
             }
-        
+    
             .wpcf7 {
-                width: auto;
-                height: auto;
-            input{
-                width: 100%;
-            } 
-        
-            .contact-form-heading {
-                text-transform: uppercase;
-            }
-        
-            .wpcf7-submit {
-                display: block;
-                width: 100%;
-                margin: 0 auto;
-                padding: 10px 20px;
-                text-decoration: none;
-                text-align: center;
-                color: white;
-                background-color: #21437A;
-            } 
-        
-        
-            }
-        
-        }
-    }
-
-
-    /*--------------------------------------------------------------
-    # Media Queries
-    --------------------------------------------------------------*/
-
-    @media only screen and (min-width: 500px){
-        .contact-page{
-
-            .master-wrapper {
-                display: flex;
-                flex-wrap: wrap;
-                flex-basis: 100%;
-                justify-content: space-evenly;
                 width: 500px;
-        
-        
-                .faculty-container,
-                .program-container {
-                    width: 500px;
-        
-                    .faculty-staff {
-                        width: 500px;
-                    
-                    }
-                    
-                    .program-info {
-                        width: 500px;
-                    }
-        
-                }
-        
-                .wpcf7 {
-                    width: 500px;
-        
-                    input{
-                        width: 500px;
-                    }
-                }
-                
-                .bcit-map {
+    
+                input{
                     width: 500px;
                 }
             }
-        }
-    }
-    // Media Query at 900
-    @media only screen and (min-width: 700px){
-
-        .contact-page{
-            .master-wrapper {
-                width: 1000px;
-                
-                .faculty-container,
-                .program-container {
-                    width: 600px;
-        
-                    .faculty-staff {
-                        width: 600px;
-                    
-                    }
-                    
-                    .program-info {
-                        width: 600px;
-                    }
-        
-                }
-        
-                .wpcf7 {
-                    width: 600px;
-        
-                    input{
-                        width: 600px;
-                    }
-                }
-                
-                .bcit-map {
-                    width: 600px;
-                }
-            }
-        }
-    }
-
-    // Media Query at 1200
-    @media only screen and (min-width: 1100px){
-
-        .contact-page{
-
-            .master-wrapper {
             
-                .faculty-container,
-                .program-container {
-                    margin-right: 50px;
-                    width: 450px;
-        
-                    .faculty-staff {
-                        width: 450px;
-                    
-                    }
-                    
-                    .program-info {
-                        width: 450px;
-                    }
-        
-                }
-        
-                .wpcf7 {
-                    width: 550px;
-        
-                    input{
-                        width: 550px;
-                    }
-                }
-                
-                .bcit-map {
-                    width: 1200px;
-                }
+            .bcit-map {
+                width: 500px;
             }
         }
     }
+}
+// Media Query at 700
+@media only screen and (min-width: 700px){
+
+    .contact-page{
+        .master-wrapper {
+            width: 1000px;
+            
+            .faculty-container,
+            .program-container {
+                width: 600px;
+    
+                .faculty-staff {
+                    width: 600px;
+                
+                }
+                
+                .program-info {
+                    width: 600px;
+                }
+    
+            }
+    
+            .wpcf7 {
+                width: 600px;
+    
+                input{
+                    width: 600px;
+                }
+            }
+            
+            .bcit-map {
+                width: 600px;
+            }
+        }
+    }
+}
+
+// Media Query at 1100
+@media only screen and (min-width: 1100px){
+
+    .contact-page{
+
+        .master-wrapper {
+        
+            .faculty-container,
+            .program-container {
+                margin-right: 50px;
+                width: 450px;
+    
+                .faculty-staff {
+                    width: 450px;
+                
+                }
+                
+                .program-info {
+                    width: 450px;
+                }
+    
+            }
+    
+            .wpcf7 {
+                width: 550px;
+    
+                input{
+                    width: 550px;
+                }
+            }
+            
+            .bcit-map {
+                width: 1200px;
+            }
+        }
+    }
+}

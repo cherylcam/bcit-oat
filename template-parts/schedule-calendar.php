@@ -21,19 +21,13 @@ while ($query->have_posts()):
 			$schedule[$month][] = $item; //Add the month as a key to the array
 		endforeach;
 		// print_r($schedule["April"]);
-
-?>
-		
-		
+	?>		
 		<?php $months = array_unique($allMonths); // Filter out all the duplicate values
 		// print_r($month);
 		$numberOfDaysInMonth = array(); //Empty array to get the number of days in a month	
 		$monthIndex = 0; // Define index so you can loop through all months 
 		?>
 
-			
-		
-			
 		<div class="schedule-calendar">
 				<button class="goto"><span>Go to today</span></button>
 			<?php foreach ($months as $month):
