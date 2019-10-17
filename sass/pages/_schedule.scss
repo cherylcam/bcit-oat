@@ -4,7 +4,7 @@
 
 .schedule-list {
 
-    margin-bottom: 35px;
+    margin-bottom: 120px;
     
     .swiper-navigation{
         margin: 0 auto;
@@ -132,6 +132,12 @@
 # Media Queries
 --------------------------------------------------------------*/
 
+@media only screen and (min-width: 600px){
+    .schedule-list {
+        margin-bottom: 160px;
+    }
+}
+
 @media only screen and (min-width: 700px){
     .schedule-list {
 
@@ -152,7 +158,7 @@
     }
 }
 
-@media only screen and (min-width: 1010px){
+@media only screen and (min-width: 1000px){
     .schedule-list {
         display: none;
     }
