@@ -26,6 +26,15 @@
                 width: auto;
                 line-height: $font__line-height-body;
                 padding: 20px 20px;
+
+                .faculty-numnber,
+                .faculty-email,
+                .program-phone,
+                .program-email,
+                .program-website,
+                .bcit-website {
+                    display: flex;
+                }
     
             }   
         
