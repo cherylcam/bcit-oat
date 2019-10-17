@@ -181,23 +181,9 @@
    }
 
     button  {
-        border-radius: 2px;
         width: 150px;
-        height: 35px;
-        background-color:$color__main-theme;
-        border: none;
-        box-shadow: $oat-box-shadow;
-        transition: all 0.3s ease 0s;
-        color: white;
-        font-size: 1em;
-        cursor: pointer;
-
-        &:hover {
-                transform: translateY(-3px);
-                background-color: $color__main-theme-light;
-            }    
-        
-    
+        height: 35px;  
+        @include oat-button; 
     }
 
     .calendar{

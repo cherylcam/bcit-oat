@@ -22,7 +22,7 @@ add_action( 'wp_dashboard_setup', 'oat_add_dashboard_widgets' );
  * Output the contents of the welcome dashboard widget
  */
 function oat_welcome_dashboard_function( $post, $callback_args ) {
-    esc_html_e( "Hello there, welcome to BCIT OAT dashboard!", "textdomain" );
+    echo "<h1>Hello there, welcome to BCIT OAT dashboard!</h1>";
 }
 
 /**
@@ -34,7 +34,8 @@ function add_course_tutorial() {
 	?>
 	<!-- <video width="320" height="240" controls>
 		<source src="./tutorials/add-new-course.mp4" type="video/mp4">
-	</video> -->
+    </video> -->
+    <img src="/images/oat-logo.jpg" alt="test">
 	<?php
 }
 
