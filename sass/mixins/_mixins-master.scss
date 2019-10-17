@@ -27,3 +27,20 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+// Buttons
+@mixin oat-button {
+	border-radius: 2px;
+	background-color:$color__main-theme;
+    border: none;
+    box-shadow: $oat-box-shadow;
+    transition: all 0.3s ease 0s;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-3px);
+        background-color: $color__main-theme-light;
+    } 
+}

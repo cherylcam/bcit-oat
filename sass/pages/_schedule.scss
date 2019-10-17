@@ -1,10 +1,14 @@
+/*--------------------------------------------------------------
+# Schedule Page
+--------------------------------------------------------------*/
+
 .schedule-calendar {
     display: none;
 }
 
 .schedule-list {
 
-    margin-bottom: 35px;
+    margin-bottom: 120px;
     
     .swiper-navigation{
         margin: 0 auto;
@@ -19,6 +23,8 @@
 
     .schedule-header {
         height: 50px;
+        position: relative;
+        margin: 20px;
     }
 
     .buttons {
@@ -33,14 +39,7 @@
         transform: translate(-50%, 50%);
         z-index: 2;
     }
-
-    .schedule-header{
-        position: relative;
-        margin: 20px;
-
-    }
-
-    
+  
     .grid-container {
         margin: 0 auto;
         display: grid;
@@ -137,10 +136,17 @@
 # Media Queries
 --------------------------------------------------------------*/
 
+@media only screen and (min-width: 600px){
+    .schedule-list {
+        margin-bottom: 160px;
+    }
+}
+
 @media only screen and (min-width: 700px){
     .schedule-list {
 
         .grid-container {
+            width: 550px;
     
             .grid-item{
                 max-width: 500px;
@@ -151,13 +157,16 @@
                     max-width: 350px;
                     flex-direction: row;
                     align-items: center;
+                    display: grid;
+                    grid-template-columns: 1fr 0.8fr;
+                    grid-gap: 15px;
                 }
             }
         }
     }
 }
 
-@media only screen and (min-width: 1010px){
+@media only screen and (min-width: 1000px){
     .schedule-list {
         display: none;
     }
@@ -175,29 +184,19 @@
 .schedule-calendar {
    margin: 60px auto;
    max-width:1000px;
+   position: relative;
 
    .schedule-header {
        margin-top: 40px;
    }
 
     button  {
-        border-radius: 2px;
         width: 150px;
-        height: 35px;
-        background-color:$color__main-theme;
-        border: none;
-        box-shadow: $oat-box-shadow;
-        transition: all 0.3s ease 0s;
-        color: white;
-        font-size: 1em;
-        cursor: pointer;
-
-        &:hover {
-                transform: translateY(-3px);
-                background-color: $color__main-theme-light;
-            }    
-        
-    
+        height: 35px; 
+        position: absolute;   
+        right: 0;
+        top: 7px;
+        @include oat-button; 
     }
 
     .calendar{
@@ -218,7 +217,6 @@
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         grid-gap: 0.1%;
-
     }
 
     .weekdays-grid{

@@ -1,3 +1,7 @@
+/*--------------------------------------------------------------
+# Careers Page
+--------------------------------------------------------------*/
+
 .careers-wrapper{
     width: 90%;
     max-width: 1550px;
@@ -127,17 +131,11 @@
     margin: 50px auto;
 
     .viewMoreBtn{
-        color: white;
-        background-color: #21437A;
-        display:inline-block;
+        display: inline-block;
         padding: 7.5px 15px;
         text-align: center;
-    
-        &:hover,
-        &:visited,
-        &:active {
-            color: white;
-        }
+
+        @include oat-button;
     }
 }
 

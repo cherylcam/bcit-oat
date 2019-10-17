@@ -3,21 +3,10 @@ footer{
 }
 
 .copyright-wrap{
-    background-color: #404040;
-    margin-bottom: 62px;
-    .copyright {
-        color: white;
-        width: 100%;
-        margin: 0 auto;
-        display: block;
-        line-height: 40px;
-        font-size: 0.866em;
-        text-align: center;
-        max-width: 1550px;
-    }
+    display: none;
 }
 
-@media (min-width: 375px){
+@media (min-width: 1000px){
     footer{
         display: block;
     
@@ -27,7 +16,7 @@ footer{
             .footer-headings {
                 max-width: 1550px;
                 margin: 0 auto;
-                padding: 0 10px;
+                padding: 0 12%;
                 background-color: #808080;
                 color: white;
             
@@ -54,15 +43,17 @@ footer{
                 display: flex;
                 background-color: #606060;
                 color: white;
-                padding: 20px 10px;
+                // padding: 20px 10px;
                 font-size: 0.866em;
                 position: relative;
+                padding: 20px 12%;
             
                 img {
                     width: 75px;
                     height: auto;
                     position: absolute;
                     bottom: 0;
+                    display: block;
                 }
             
                 .footer-section{
@@ -108,65 +99,21 @@ footer{
             }
         }
     }
-}
-
-
-@media (min-width: 414px){
-    footer{
-        .footer-headings {
-            h3:nth-of-type(2){
-                padding: 0 10px; 
-            }
-        }
-        .footer-links{
-            .footer-section:nth-of-type(2){
-                padding: 0 10px;
-            }
-        }
-    }
-}
-
-@media (min-width: 600px){
-    footer{
-        .footer-headings-wrap{
-            .footer-headings{
-                padding: 0 6%;
-            }
-        }
-
-        .footer-links-wrap{
-            .footer-links {
-                padding: 20px 6%;
-        
-            }
-        }
-    }
-    .copyright-wrap{
-        margin-bottom: 100px;
-    }
-}
-
-@media (min-width: 1000px){
-    footer{
-        .footer-headings-wrap{
-            .footer-headings{
-                padding: 0 12%;
-            }
-        }
-
-        .footer-links-wrap{
-            .footer-links {
-                padding: 20px 12%;
-        
-                img {
-                    display: block;
-                }
-            }
-        }
-    }
 
     .copyright-wrap{
-        margin-bottom: 0;
+        display: block;
+        background-color: #404040;
+
+        .copyright {
+            color: white;
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+            line-height: 40px;
+            font-size: 0.866em;
+            text-align: center;
+            max-width: 1550px;
+        }
     }
 }
 

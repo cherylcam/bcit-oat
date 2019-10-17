@@ -5,6 +5,9 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    
     .certification{
         max-width: 320px;
         height: 520px;
@@ -37,118 +40,13 @@
 
         a{
             display: block;
-            margin: 0 20%;
+            margin: 0 auto;
             text-decoration: none;
             width: 140px;
-            padding: 10px 20px;
-            border: 1px solid #21437A;
+            padding: 7px 17px;
             text-align:center;
-            display:inline-block;
-            text-transform:uppercase;
-            color:#fff;
-            text-decoration:none;
-            position: relative;
-            overflow: hidden;
-            animation:btnIn 1.05s forwards;
-            animation-timing-function: ease-in-out;
-            border-radius: 2px;
-            transition: border-radius 0.5s;
-        }
-
-        a:hover {
-            color:#21437A;
-            text-decoration:none;
-            border-radius: 20px;
-            border:1px solid #21437A;
-            animation:btnOut 1.05s forwards;
-            animation-timing-function: ease-in-out;
-        }
-
-        @keyframes btnIn {
-            0% { background-color:rgba(33, 67, 122, 0); }
-            50% { background-color:rgba(33, 67, 122, 0.404); }
-            100% { background-color:#21437A; }
-        }
-        @keyframes btnOut {
-            0% { background-color:#21437A;}
-            50% { background-color:rgba(33, 67, 122, 0.466);}
-            100% { background-color: rgba(33, 67, 122, 0); }
             
-        }
-          
-        a span {
-            position:relative;
-            z-index:9;
-        }
-        
-        a:before {
-            width: 120px;
-            height: 100px;
-            display: block;
-            background-color:#21437A;
-            content:'';
-            position:absolute;
-            left:calc(50% - 20px);
-            top:calc(50% - 10px);
-            border-radius:50%;
-            
-            animation:leftBallIn 1s forwards;
-            -webkit-animation:leftBallIn 1s forwards;
-            animation-timing-function:ease-in-out;
-            -webkit-animation-timing-function:ease-in-out;
-        }
-        
-        a:hover:before {
-            animation:leftBallOut 1s forwards;
-            -webkit-animation:leftBallOut 1s forwards;
-            animation-timing-function:ease-in;
-            -webkit-animation-timing-function:ease-in;
-        }
-        
-        a:after {
-            display: block;
-            background-color:#21437A;
-            content:'';
-            position:absolute;
-            border-radius:50%;
-            
-            animation:rightBallIn 1s forwards;
-            -webkit-animation:rightBallIn 1s forwards;
-            animation-timing-function:ease-in-out;
-            -webkit-animation-timing-function:ease-in-out;
-        }
-        
-        a:hover:after {
-            animation:rightBallOut 1s forwards;
-            -webkit-animation:rightBallOut 1s forwards;
-            
-            animation-timing-function:ease-in;
-            -webkit-animation-timing-function:ease-in;
-          
-        }
-        
-        @keyframes leftBallOut {
-            0%   { top:calc(50% - 75px); left:calc(50% - 75px); width:150px; height:150px; }
-            50%  { top:calc(30% - 25px); left:calc(30% - 25px); width:50px; height:50px; }
-            100% { top:calc(120% - 10px); left:calc(0% - 150px); width:0px; height:0px; }
-        }
-
-        @keyframes leftBallIn {
-            0% { top:calc(120% - 5px); left:calc(0% - 150px); width:0px; height:0px; }
-            50%  { top:calc(30% - 25px); left:calc(30% - 25px); width:50px; height:50px; }
-            100%   { top:calc(50% - 75px); left:calc(50% - 75px); width:150px; height:150px; }
-        }
-
-        @keyframes rightBallOut {
-            0%   { top:calc(50% - 75px); right:calc(50% - 75px); width:150px; height:150px; }
-            50%  { top:calc(30% - 25px); right:calc(30% - 25px); width:50px; height:50px; }
-            100% { top:calc(120% - 10px); right:calc(0% - 150px); width:0px; height:0px; }
-        }
-
-        @keyframes rightBallIn {
-            0% { top:calc(120% - 5px); right:calc(0% - 150px); width:0px; height:0px; }
-            50%  { top:calc(30% - 25px); right:calc(30% - 25px); width:50px; height:50px; }
-            100%   { top:calc(50% - 75px); right:calc(50% - 75px); width:150px; height:150px; }
+            @include oat-button;
         }
     }
 }
@@ -183,6 +81,12 @@
             max-width: 290px;
             height: 500px;
         }
+    }
+}
+
+@media (min-width: 1000px){
+    .certifications{
+        margin-bottom: 50px;
     }
 }
 

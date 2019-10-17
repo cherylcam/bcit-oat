@@ -1,5 +1,8 @@
+/*--------------------------------------------------------------
+# SchHome Page
+--------------------------------------------------------------*/
+
 .schedule-widget{
-    // background-color: $color__main-theme;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -13,6 +16,7 @@
     background-color: rgba(240, 240, 240, 0.521);
     box-shadow: 0 5px 10px rgba(154, 160, 185, 0.089), 0 15px 40px rgba(166, 173, 201, 0.233);
     border-radius: 4px;
+
 
     p {
         margin: 0;
@@ -28,7 +32,6 @@
 
         p {
             width: 60px;
-            margin: 10px;
         }
 
       
@@ -42,13 +45,15 @@
             font-size: 1.3em;
             margin-top: -20px;
             text-transform: uppercase;
+            padding: 7px 0;
         }
 
         .widget-weekday {
-            font-weight: 200;
-            font-size: 1rem;
+            font-weight: 300;
             margin-top: -10px;
+            font-size: 1rem;
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         
@@ -63,7 +68,7 @@
 
         .widget-class {
             font-size: 1rem;
-
+            line-height: 19px;
         }
 
         h3 {
@@ -72,16 +77,40 @@
             font-weight: 400;
             font-size: 1.3em;
             color: $color__main-theme;
+            padding-bottom: 5px;
         }
     }
 
     .widget-instructor,
     .widget-room  {
-        font-weight: 200;
+        font-weight: 300;
         font-size: 1rem;
 
 
 
 
+    }
+}
+
+/*--------------------------------------------------------------
+# Media Query
+--------------------------------------------------------------*/
+
+@media (min-width: 900px){
+    .schedule-widget{
+        top: 55%;
+        left: 25%;
+
+        // .widget-date{
+        //     .widget-month{
+        //         padding: 7px 0;
+        //     }
+
+        //     .widget-info{
+        //         h3{
+        //             padding-bottom: 5px;
+        //         }
+        //     }
+        // }
     }
 }
