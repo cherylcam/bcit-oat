@@ -34,10 +34,10 @@ while ($query->have_posts()):
 					$monthAsNumber = date("n", strtotime($month)); // Converting the months to a number so they can be used in cal_days_in_month function
 					array_push($numberOfDaysInMonth, cal_days_in_month(CAL_GREGORIAN, $monthAsNumber, $currentYear)); // Push the number of days for each month in an array
 					$firstWeekday = date("w",  mktime(0, 0, 0, $monthAsNumber, 1, $currentYear)); // Getting the first weekday of month. Number between 1 - 6?>
-						
 						<div class="schedule-header" id=<?php echo $month?>>
 							<h1><?php echo $month . " " . $currentYear ?> </h1>
 						</div>
+
 						<div class="calendar">
 							<div class="weekdays-grid">
 								<p class="weekday">Sunday</p>
