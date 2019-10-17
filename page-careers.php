@@ -33,7 +33,7 @@ get_header();
 					<?php
 						while(have_rows('recruitment_agencies')) : the_row();
 					?>
-							<li><a href='<?php the_sub_field('url'); ?>'><?php the_sub_field('agency_name'); ?></a></li>
+							<li><a href='<?php the_sub_field('url'); ?>' target="_blank"><?php the_sub_field('agency_name'); ?></a></li>
 					<?php
 						endwhile;
 					?>
@@ -54,7 +54,7 @@ get_header();
 					<?php
 						while(have_rows('job_sites')) : the_row();
 					?>
-							<li><a href='<?php the_sub_field('url'); ?>'><?php the_sub_field('website_name'); ?></a></li>
+							<li><a href='<?php the_sub_field('url'); ?>' target="_blank"><?php the_sub_field('website_name'); ?></a></li>
 					<?php
 						endwhile;
 					?>
