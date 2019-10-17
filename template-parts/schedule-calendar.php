@@ -61,7 +61,7 @@ while ($query->have_posts()):
 													</span>
 												<?php else: ?>
 													<div class="day-of-month" id=<?php echo "'" . $schedule[$month][$dayIndex][1] . "'" // Multidimensional array can be accessed with brackets - [2] is  the postion of the instructor?> >
-														<div class=<?php if ($schedule[$month][$$dayIndex][5] == 1):?>
+														<div class=<?php if ($schedule[$month][$dayIndex][5] == 1):?>
 																<?php echo "holiday"; 
 																else:
 																echo "weekday";
@@ -69,7 +69,7 @@ while ($query->have_posts()):
 															<div class="day-info">
 																<span class="class">
 																	<?php echo ($schedule[$month][$dayIndex][2]) 
-																		
+	
 																	?>
 																</span>
 																<span class="instructor">

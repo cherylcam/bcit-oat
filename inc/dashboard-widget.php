@@ -14,6 +14,12 @@ function oat_add_dashboard_widgets() {
 		'HOW TO ADD A NEW COURSE', 
 		'add_course_tutorial'
 	);
+
+    wp_add_dashboard_widget(
+		'schedule_tutorial_widget', 
+		'How to update the schedule', 
+		'update_schedule_tutorial'
+	);
 	
 }
 add_action( 'wp_dashboard_setup', 'oat_add_dashboard_widgets' );
@@ -36,6 +42,26 @@ function add_course_tutorial() {
 		<source src="./tutorials/add-new-course.mp4" type="video/mp4">
 	</video> -->
 	<?php
+}
+
+function update_schedule_tutorial(){
+    echo "<ol>";
+        echo "<li>";
+        echo "Select 'TablePress' in the sidebar";
+        echo "<img src='images/schedule_tutorial/schedule_tutorial_1.png'</img>";
+        echo "</li>";
+        echo "<li>";
+        echo "Select 'Import' and choose the .csv-file you want the update, please make sure to always use the same format";
+        echo "<img src='images/schedule_tutorial/schedule_tutorial_2.png'</img>";
+        echo "</li>";
+        echo "<li>";
+        echo "Click on 'Replace existing table' and select the table you want to replace";
+        echo "<img src='images/schedule_tutorial/schedule_tutorial_3.png'</img>";
+        echo "</li>";
+         echo "<li>";
+        echo "Save the changes and you're done!";
+        echo "</li>";
+    echo "</ol>";
 }
 
 function oat_remove_all_dashboard_metaboxes() {
