@@ -76,7 +76,7 @@ while ($query->have_posts()):
                     </p>
                 <?php endif; ?>
 
-            <?php elseif ($weekday == "Sat"):?>
+            <?php elseif ($weekdayUI == "Sat"):?>
                 <h3>Mondays's class</h3>
                 <p class="widget-class ">
                     <?php echo ($schedule[$currentMonth][$tomorrow + 1 - $firstDayOfMonth][2]) ?> 
@@ -90,7 +90,7 @@ while ($query->have_posts()):
                     </p>
                 <?php endif; ?>
 
-            <?php elseif ($weekday == "Fri" && date("H") >= 17):?>
+            <?php elseif ($weekdayUI == "Fri" && date("H") >= 17):?>
                 <h3>Mondays's class</h3>
                 <p class="widget-class ">
                     <?php echo ($schedule[$currentMonth][$tomorrow + 1 - $firstDayOfMonth][2]) ?> 
