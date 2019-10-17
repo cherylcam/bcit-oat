@@ -5,6 +5,9 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    
     .certification{
         max-width: 320px;
         height: 520px;
@@ -40,9 +43,8 @@
             margin: 0 auto;
             text-decoration: none;
             width: 140px;
-            padding: 10px 20px;
+            padding: 7px 17px;
             text-align:center;
-            text-transform: uppercase;
             
             @include oat-button;
         }
@@ -79,6 +81,12 @@
             max-width: 290px;
             height: 500px;
         }
+    }
+}
+
+@media (min-width: 1000px){
+    .certifications{
+        margin-bottom: 50px;
     }
 }
 
