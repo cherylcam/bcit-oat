@@ -1,5 +1,8 @@
+/*--------------------------------------------------------------
+# SchHome Page
+--------------------------------------------------------------*/
+
 .schedule-widget{
-    // background-color: $color__main-theme;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -42,6 +45,7 @@
             font-size: 1.3em;
             margin-top: -20px;
             text-transform: uppercase;
+            padding: 7px 0;
         }
 
         .widget-weekday {
@@ -64,7 +68,7 @@
 
         .widget-class {
             font-size: 1rem;
-
+            line-height: 19px;
         }
 
         h3 {
@@ -73,6 +77,7 @@
             font-weight: 400;
             font-size: 1.3em;
             color: $color__main-theme;
+            padding-bottom: 5px;
         }
     }
 
@@ -87,8 +92,25 @@
     }
 }
 
+/*--------------------------------------------------------------
+# Media Query
+--------------------------------------------------------------*/
+
 @media (min-width: 900px){
     .schedule-widget{
+        top: 55%;
         left: 25%;
+
+        // .widget-date{
+        //     .widget-month{
+        //         padding: 7px 0;
+        //     }
+
+        //     .widget-info{
+        //         h3{
+        //             padding-bottom: 5px;
+        //         }
+        //     }
+        // }
     }
 }
