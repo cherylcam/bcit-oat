@@ -138,7 +138,6 @@ function bcit_oat_scripts() {
 
 	wp_enqueue_script( 'bcit-oat-schedule', get_template_directory_uri() . '/js/schedule.js', array(), '20191001', true );
 
-
 	wp_enqueue_script( 'bcit-oat-swiper', get_template_directory_uri() . '/js/swiper.js', array(), '20190930', true );
 
 	wp_enqueue_script( 'bcit-oat-swiper-settings', get_template_directory_uri() . '/js/swiper-settings.js', array(), '20190930', true );
@@ -207,3 +206,8 @@ require get_template_directory() . '/inc/post-menu-order.php';
  * Customize Dashboard Widget
  */
 require get_template_directory() . '/inc/dashboard-widget.php';
+
+/**
+ * Customize Admin menu
+ */
+require get_template_directory() . '/inc/custom-admin-menu.php';
