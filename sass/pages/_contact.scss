@@ -37,6 +37,10 @@
             }
             
         }
+
+        .faculty-container{
+            margin-top: 50px;
+        }
     
         .faculty-container,
         .program-container {    
@@ -80,6 +84,7 @@
             width: auto;
             height: 300px;
             box-shadow: $contact-box-shadow;
+            margin-bottom: 100px;
         }
 
         .wpcf7 {
@@ -137,7 +142,6 @@
     
                 .faculty-staff {
                     width: 500px;
-                
                 }
                 
                 .program-info {
@@ -218,6 +222,10 @@
                     width: 450px;
                 }
     
+            }
+
+            .wpcf7-form{
+                margin-top: 50px;
             }
     
             .wpcf7 {
