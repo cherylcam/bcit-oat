@@ -19,6 +19,8 @@
 
     .schedule-header {
         height: 50px;
+        position: relative;
+        margin: 20px;
     }
 
     .buttons {
@@ -33,14 +35,7 @@
         transform: translate(-50%, 50%);
         z-index: 2;
     }
-
-    .schedule-header{
-        position: relative;
-        margin: 20px;
-
-    }
-
-    
+  
     .grid-container {
         margin: 0 auto;
         display: grid;
@@ -175,6 +170,7 @@
 .schedule-calendar {
    margin: 60px auto;
    max-width:1000px;
+   position: relative;
 
    .schedule-header {
        margin-top: 40px;
@@ -182,7 +178,10 @@
 
     button  {
         width: 150px;
-        height: 35px;  
+        height: 35px; 
+        position: absolute;   
+        right: 0;
+        top: 7px;
         @include oat-button; 
     }
 
