@@ -31,8 +31,10 @@ while ($query->have_posts()):
     $monthUI    = date("M");
     ?>
 
+    <a href="/oat/schedule<?php echo '/#D'. date(Ymd); ?>">
+
    
-    <a href="/oat/schedule">
+    <a href="/oat/schedule" >
     <div class="schedule-widget">
         <div class="widget-date">
             <p class="widget-day">

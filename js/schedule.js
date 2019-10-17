@@ -12,7 +12,9 @@ jQuery(document).ready(function($){
     }
 
     month = month+1
-    let todaysDate = year + "-" + month + "-" + day;   
+    let todaysDate = "D" + year + "-" + month + "-" + day;   
+
+    
 
     $("[id='" + todaysDate + "'").css("border","3px solid rgb(255, 166, 0)");
         let todaysSlide = $(".swiper-slide").find("#"+todaysDate).parent().parent().attr("slide_index");
@@ -35,8 +37,9 @@ jQuery(document).ready(function($){
     let scrollHeight = document.querySelector("[id='" + todaysDate + "'").offsetTop - navbarheight - 5;
     window.scroll(0,scrollHeight);
     /*properly updating the window location*/
-    window.location.hash = e.target.hash;
+    // window.location.hash = e.target.hash;
     /* do not execute default action*/
     e.preventDefault();
 });
+
 })
