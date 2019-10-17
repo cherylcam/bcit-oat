@@ -46,7 +46,7 @@ function oat_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-admin-network',
-        'supports'           => array('page-attributes'),
+        'supports'           => array('page-attributes', 'title'),
     );
     register_post_type( 'oat-certifications', $args );
 
@@ -81,6 +81,7 @@ function oat_register_custom_post_types() {
     $args = array(
         'labels'             => $labels,
         'public'             => true,
+        'show_title'              => true,
         'publicly_queryable' => true,
         'show_ui'            => true,
         'show_in_menu'       => true,
@@ -94,7 +95,7 @@ function oat_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 6,
         'menu_icon'          => 'dashicons-book-alt',
-        'supports'           => array('page-attributes'),
+        'supports'           => array('page-attributes', 'title'),
         // Prevent moving, inserting, deleting blocks
 		'template_lock' 	 => 'all',
     );

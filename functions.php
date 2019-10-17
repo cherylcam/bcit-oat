@@ -155,6 +155,17 @@ function bcit_oat_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bcit_oat_scripts' );
 
+
+/**
+ * ScrollReveal Scripts
+*/
+
+function oat_scroll_reveal() {
+	wp_enqueue_script ('scrollreveal', get_stylesheet_directory_uri() . '/js/scrollreveal.js', array( 'jquery' ),'20191015',true );
+}
+add_action( 'wp_enqueue_scripts', 'oat_scroll_reveal' );
+
+
 /**
  * Implement the Custom Header feature.
  */
@@ -192,12 +203,7 @@ require get_template_directory() . '/inc/register-cpt.php';
  */
 require get_template_directory() . '/inc/post-menu-order.php';
 
-
 /**
- * ScrollReveal Scripts
-*/
-
-function oat_scroll_reveal() {
-	wp_enqueue_script ('scrollreveal', get_stylesheet_directory_uri() . '/js/scrollreveal.js', array( 'jquery' ),'20191015',true );
-}
-add_action( 'wp_enqueue_scripts', 'oat_scroll_reveal' );
+ * Customize Dashboard Widget
+ */
+require get_template_directory() . '/inc/dashboard-widget.php';
