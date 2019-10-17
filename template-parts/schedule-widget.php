@@ -14,10 +14,8 @@ while ($query->have_posts()):
 		array_push($allMonths, $month);	// Push all months in an array --> It going to add the month info for every day
 		$schedule[$month][] = $item; //Add the month as a key to the array
 	endforeach;
-    $totalNumberOfDays = count($allMonths);
-    $currentDay = 0;
+   
 		 
-		//  while $totalNumberOfDays > currentNumber of day
     date_default_timezone_set('America/Vancouver');
     //Formats to get the correct schedule data
     $currentMonth = date('F');
@@ -31,7 +29,6 @@ while ($query->have_posts()):
     $dateUI = date("j");
     $weekdayUI = date("D");
     $monthUI    = date("M");
-    $weekdayUItomorrow = date("D"); 
     ?>
 
    
