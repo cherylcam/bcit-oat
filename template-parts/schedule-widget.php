@@ -22,9 +22,13 @@ while ($query->have_posts()):
     //Formats to get the correct schedule data
     $currentMonth = date('F');
     $today = date("j") ;
+    $tomorrow = date("j", strtotime('tomorrow'));
     $todaysDate = date("md");
+    $firstDayOfMonth = date("j", strtotime($schedule[$currentMonth][0][1])); 
+
     
     //Formats for the UI
+    $dateUI = date("j");
     $weekdayUI = date("D");
     $monthUI    = date("M");
     $weekdayUItomorrow = date("D"); 
@@ -35,7 +39,7 @@ while ($query->have_posts()):
     <div class="schedule-widget">
         <div class="widget-date">
             <p class="widget-day">
-                <?php echo $today ?>
+                <?php  echo $dateUI ?>
             </p>
             <p class="widget-month">
                 <?php echo $monthUI ?>
@@ -60,56 +64,57 @@ while ($query->have_posts()):
                     echo date("F d, Y", strtotime($schedule[$currentMonth][0][1]));
                     else:?> in April. </h3>
                     <?php endif; ?>
+
             <?php elseif (date("H") >= 17 || $weekdayUI == "Sun" || $schedule[$month][$today][5] == 1): // after 17, Sunday, or holiday  ?> 
                 <h3>Tomorrow's class</h3>
                 <p class="widget-class">
-                    <?php echo ($schedule[$currentMonth][$today][2])  // Weekdays start at 1 in php?> 
+                    <?php echo ($schedule[$currentMonth][$tomorrow - $firstDayOfMonth][2])  // Weekdays start at 1 in php?> 
                 </p>
                 <p class="widget-instructor">
-                    <?php echo ($schedule[$currentMonth][$today][4]) ?>
+                    <?php echo ($schedule[$currentMonth][$tomorrow - $firstDayOfMonthMonth][4]) ?>
                 </p>
-                <?php if ($schedule[$month][$today][5] != 1): ?>
+                <?php if ($schedule[$month][$tomorrow - $firstDayOfMonthMonth][5] != 1): ?>
                     <p class="widget-room ">
-                    Room:  <?php echo ($schedule[$currentMonth][$today][3]) ?>
+                    Room:  <?php echo ($schedule[$currentMonth][$tomorrow - $firstDayOfMonth][3]) ?>
                     </p>
                 <?php endif; ?>
             <?php elseif ($weekday == "Sat"):?>
                 <h3>Mondays's class</h3>
                 <p class="widget-class ">
-                    <?php echo ($schedule[$currentMonth][$today + 1][2]) ?> 
+                    <?php echo ($schedule[$currentMonth][$tomorrow + 1 - $firstDayOfMonth][2]) ?> 
                 </p>
                 <p class="widget-instructor ">
-                    <?php echo ($schedule[$currentMonth][$today + 1][4]) ?>
+                    <?php echo ($schedule[$currentMonth][$tomorrow + 1 - $firstDayOfMonth][4]) ?>
                 </p>
-                <?php if ($schedule[$month][$today + 1 ][5] != 1): ?>
+                <?php if ($schedule[$month][$tomorrow + 1 - $firstDayOfMonth ][5] != 1): ?>
                     <p class="widget-room ">
-                    Room:  <?php echo ($schedule[$currentMonth][$today + 1][3]) ?>
+                    Room:  <?php echo ($schedule[$currentMonth][$today + 1 - $firstDayOfMonth][3]) ?>
                     </p>
                 <?php endif; ?>
             <?php elseif ($weekday == "Fri" && date("H") >= 17):?>
                 <h3>Mondays's class</h3>
                 <p class="widget-class ">
-                    <?php echo ($schedule[$currentMonth][$today + 2][2])  ?> 
+                    <?php echo ($schedule[$currentMonth][$tomorrow + 1 - $firstDayOfMonth][2]) ?> 
                 </p>
                 <p class="widget-instructor ">
-                    <?php echo ($schedule[$currentMonth][$today + 2][4]) ?>
+                    <?php echo ($schedule[$currentMonth][$tomorrow + 1 - $firstDayOfMonth][4]) ?>
                 </p>
                 <?php if ($schedule[$month][$today + 2][5] != 1): ?>
                     <p class="widget-room ">
-                    Room:  <?php echo ($schedule[$currentMonth][$today + 2][3]) ?>
+                    Room:  <?php echo ($schedule[$currentMonth][$today + 1 - $firstDayOfMonth][3]) ?>
                     </p>
                 <?php endif; ?>
             <?php else: ?>
             <h3>Today's class</h3>
                 <p class="widget-class">
-                    <?php echo ($schedule[$currentMonth][$today - 1][2])  // Minus 1 because weekdays start at 1 in php?> 
+                    <?php echo ($schedule[$currentMonth][$today - $firstDayOfMonth][2])  // Minus 1 because weekdays start at 1 in php?> 
                 </p>
                 <p class="widget-instructor">
-                    <?php echo ($schedule[$currentMonth][$today - 1][4]) ?>
+                    <?php echo ($schedule[$currentMonth][$today - $firstDayOfMonth][4]) ?>
                 </p>
-                 <?php if ($schedule[$month][$today - 1][5] != 1): ?>
+                 <?php if ($schedule[$month][$today - $firstDayOfMonth][5] != 1): ?>
                     <p class="widget-room ">
-                    Room:  <?php echo ($schedule[$currentMonth][$today - 1][3]) ?>
+                    Room:  <?php echo ($schedule[$currentMonth][$today - $firstDayOfMonth][3]) ?>
                     </p>
                 <?php endif; ?>
             <?php endif; ?>
@@ -123,4 +128,3 @@ while ($query->have_posts()):
     
 
 <?php endwhile; ?>
-

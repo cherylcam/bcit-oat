@@ -19,8 +19,7 @@
 				<div class="buttons">
 					<div class="swiper-button-next"></div>
 					<div class="swiper-button-prev"></div>
-				</div>
-				
+				</div>	
 			
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
@@ -32,9 +31,6 @@
 									<h1><?php echo $month . " " . $year; ?></h1>	
 								</div>								
 								<div class="grid-container">
-								
-								
-
 									<?php foreach ($monthlySchedule as $weeks):
 									// Add the appropriate weekday to the array 
 									$weekday = date("l", strtotime($weeks[1])); 
@@ -51,11 +47,6 @@
 										$instructor	= $weeks[5];
 										$isWeekend	= $weeks[6];
 									endfor;?>
-									
-									
-
-		
-
 										<?php if ($isWeekend): ?>
 											<div class="weekend grid-item" id=<?php echo "'" . $weeks[2] . "'" ?>>
 												<div class="date">
@@ -81,30 +72,20 @@
 											</div>
 											</div>
 										<?php endif; ?>
-										
-
-										
-
 									<?php endforeach;?>
 								</div>
 							</div>
-							
 							<?php $slide_index++?>
 						<?php endforeach; ?>
 					</div>
-
 				</div>
-									<div class="swiper-pagination"></div>
+					<div class="swiper-pagination"></div>
 
 				</div>
 				<?php endwhile;
 				wp_reset_postdata();
-				/* Start the Loop */
 			
 				?>
-
-			</main><!-- #main -->
-		</section><!-- #primary -->
 	<?php
 	get_footer();
 				

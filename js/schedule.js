@@ -1,7 +1,7 @@
 let todaysSlide ;
 jQuery(document).ready(function($){
 
-    // Indicate todays class
+    /////////// Getting to todays class on mobile
     let d       = new Date();
     let month   = d.getMonth();
     let day     = d.getDate();
@@ -13,20 +13,19 @@ jQuery(document).ready(function($){
 
     month = month+1
     let todaysDate = year + "-" + month + "-" + day;   
-    $("[id='" + todaysDate + "'").css("border","5px solid rgb(255, 166, 0)");
-    
 
-    // Getting to today slide
-    let todaysSlide = $(".swiper-slide").find("#"+todaysDate).parent().parent().attr("slide_index");
+    $("[id='" + todaysDate + "'").css("border","3px solid rgb(255, 166, 0)");
+        let todaysSlide = $(".swiper-slide").find("#"+todaysDate).parent().parent().attr("slide_index");
     mySwiper.slideToLoop(todaysSlide, 900,false);
 
+
+    /////////// Only show "Go to today"-button when today is on the schedule
+
     if ($("#" + todaysDate).length <= 0 ){
-      $("button").css("display", "none") // Only show button when the current date is on the schedule
+      $("button").css("display", "none") 
     }
 
-
-
-
+    ////////// Scroll to todays date without weird offset
 
     document.querySelector(".goto").addEventListener("click",function(e){
     // dynamically determining the height of your navbar
