@@ -1,11 +1,12 @@
 
-
 			<?php
 			$args = array(
 				'post_type' 		=> 'tablepress_table',
 				'posts_per_page'	=> -1 
 			);
+
 			$query = new WP_Query( $args );
+
 			while ($query->have_posts()):
 				$query->the_post();
 				$table_data 	= json_decode(get_the_content());
@@ -36,6 +37,7 @@
 									$weekday = date("l", strtotime($weeks[1])); 
 									array_unshift($weeks, $weekday);
 									
+
 									// Format the date and define all the variables
 									for ($i = 0; $i < count($weeks); $i++):
 										$formatedDate = date("F d", strtotime($weeks[2]));
@@ -83,9 +85,10 @@
 
 				</div>
 				<?php endwhile;
+
 				wp_reset_postdata();
 			
 				?>
 	<?php
+
 	get_footer();
-				
