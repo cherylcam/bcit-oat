@@ -22,14 +22,20 @@ add_action( 'wp_dashboard_setup', 'oat_add_dashboard_widgets' );
  * Output the contents of the welcome dashboard widget
  */
 function oat_welcome_dashboard_function( $post, $callback_args ) {
-    echo "<h1>Hello there, welcome to BCIT OAT dashboard!</h1>";
+    esc_html_e( "Hello there, welcome to BCIT OAT dashboard!", "textdomain" );
 }
 
 /**
  * Output the contents of tutorials
 */
 function add_course_tutorial() {
-	echo "<p>hiiii</p>";
+ 	echo "<p>Hiii</p>";
+
+	?>
+	<!-- <video width="320" height="240" controls>
+		<source src="./tutorials/add-new-course.mp4" type="video/mp4">
+	</video> -->
+	<?php
 }
 
 function oat_remove_all_dashboard_metaboxes() {
