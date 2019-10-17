@@ -68,8 +68,8 @@
 											<div class="day-info">
 												<p class="class"><?php  echo $class  ?></p>
 												<div class="class-info">
-												<p class="instructor"> <?php echo $instructor ?> </p>
-												<p class="room">Room: <?php echo $room?> </p>
+													<p class="instructor"> <?php echo $instructor ?> </p>
+													<p class="room">Room: <?php echo $room?> </p>
 												</div>
 											</div>
 											</div>

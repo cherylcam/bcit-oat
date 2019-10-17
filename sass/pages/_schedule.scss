@@ -142,6 +142,7 @@
     .schedule-list {
 
         .grid-container {
+            width: 550px;
     
             .grid-item{
                 max-width: 500px;
@@ -152,6 +153,9 @@
                     max-width: 350px;
                     flex-direction: row;
                     align-items: center;
+                    display: grid;
+                    grid-template-columns: 1fr 0.8fr;
+                    grid-gap: 15px;
                 }
             }
         }
