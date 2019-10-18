@@ -10,7 +10,8 @@
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
-            
+            filter: blur(2px);
+            -webkit-filter: blur(2px); 
         }
         
         .site-header{
