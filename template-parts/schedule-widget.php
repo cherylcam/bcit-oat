@@ -32,8 +32,6 @@ while ($query->have_posts()):
     ?>
 
     <a href="/oat/schedule<?php echo '/#D'. date(Ymd); ?>">
-
-   
     <a href="/oat/schedule" >
     <div class="schedule-widget">
         <div class="widget-date">
