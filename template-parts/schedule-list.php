@@ -49,7 +49,7 @@
 										$isWeekend	= $weeks[6];
 									endfor;?>
 										<?php if ($isWeekend): ?>
-											<div class="weekend grid-item" id=<?php echo "'" . $weeks[2] . "'" ?>>
+											<div class="weekend grid-item" id=<?php echo "'D" . $weeks[2] . "'" ?>>
 												<div class="date">
 													<p id="day"><?php  echo $weekday ?></p>
 													<p id="date"><?php  echo $date ?></p>
@@ -59,7 +59,7 @@
 												</div>
 											</div>
 										<?php else: ?>
-											<div class=<?php echo "'week " . $week . " grid-item'"?> id=<?php echo "'" . $weeks[2] . "'" ?>> 
+											<div class=<?php echo "'week " . $week . " grid-item'"?> id=<?php echo "'D" . $weeks[2] . "'" ?>> 
 											<div class="date">
 												<p id="day"><?php  echo $weekday ?></p>
 												<p id="date"><?php  echo $date ?></p>
