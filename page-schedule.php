@@ -27,8 +27,6 @@ get_header();
 			<?php get_template_part( 'template-parts/schedule', 'list' ); ?>
 		</div>
 
-			
-			
 			</main><!-- #main -->
 		</section><!-- #primary -->
 	<?php
